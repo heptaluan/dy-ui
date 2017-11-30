@@ -1,43 +1,6 @@
 <template>
 	<div id="app">
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
-		<p>1</p>
+		<div style="height:1500px;"></div>
 		<backToTop></backToTop>
 	</div>
 </template>
