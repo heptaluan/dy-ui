@@ -1,0 +1,15 @@
+// Button
+@mixin button-variant($color, $border-color, $bg-color) {
+    color: $color;
+    border-color: $border-color;
+    background-color: $bg-color;
+}
+
+@mixin button-hover($color, $border-color, $bg-color) {
+    &:hover,
+    &:focus {
+        color: $color;
+        border-color: $border-color;
+        background-color: $bg-color;
+    }
+}
