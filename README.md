@@ -1,8 +1,22 @@
 ### dy-ui
 
-基于 `vue` 构建的一个 `ui` 组件库
+一个使用 `vue` 构建的 `ui` 组件库
+
+基于 `vue-cli` + `webpack` + `sass`
 
 开发进行中
+
+----
+
+相关参考：
+
+[amazeui](https://github.com/amazeui/amazeui)
+
+[iview](https://github.com/iview/iview)
+
+[element-ui](https://github.com/ElemeFE/element)
+
+> 没有经过严格测试，可能存在未知 BUG，请勿使用于生产环境
 
 
 ----
