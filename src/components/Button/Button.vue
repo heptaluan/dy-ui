@@ -6,7 +6,9 @@
     >
         <slot v-if="!loading"></slot>
         <span v-if="loading">
-            <span class="rotation"><i class="iconfont">&#xe62d;</i></span>
+            <span class="rotation">
+                <!-- <dy-icon size="14" type="&#xe631;"></dy-icon> -->
+            </span>
             {{ loadingText }}
         </span>
 
@@ -108,7 +110,7 @@
                 }
 
                 if (this.disabled || this.loading) {
-                    computedClass.push("dy-disabled")
+                    computedClass.push("dy-btn-disabled")
                 }
 
                 if (this.isPlanin) {

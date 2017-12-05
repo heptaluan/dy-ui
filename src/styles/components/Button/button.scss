@@ -48,11 +48,6 @@
     }
 }
 
-.dy-disabled {
-    opacity: .6;
-    pointer-events: none;
-}
-
 .dy-btn-default {
     @include button-hover($--color-primary, $--default-normal, $--primary-bg);
     &.dy-isPlanin {
@@ -102,5 +97,13 @@
     &.dy-isPlanin {
         @include button-variant($--danger-color, $--danger-border, $--danger-bg);
         @include button-hover($--color-white, $--danger-color, $--danger-color);
+    }
+}
+
+.dy-btn-disabled {
+    opacity: .5;
+    pointer-events: none;
+    &:hover {
+        cursor: not-allowed;
     }
 }

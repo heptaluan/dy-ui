@@ -1,0 +1,103 @@
+@import "../../global.scss";
+
+
+.dy-radio-group {
+
+    display: inline-block;
+    font-size: 0;
+
+    .dy-radio {
+        
+        margin-left: 15px;
+        cursor: pointer;
+        user-select: none;
+        font-size: $--font-size-base;
+    
+        .dy-radio-origin {
+            opacity: 0;
+            outline: none;
+            position: absolute;
+            z-index: -1;
+            margin: 0;
+        }
+    
+        .dy-checked-icons {
+            border: $--border-base;
+            border-radius: 100%;
+            width: 14px;
+            height: 14px;
+            background-color: $--color-white;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+    
+        .dy-checked-icons::after {
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+            background-color: $--color-white;
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: $--all-transition;
+        }
+        
+        &.dy-radio-disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    
+        &:first-child {
+            margin-left: 0;
+        }
+    
+        &.dy-radio-checked .dy-checked-icons {
+            border-color: $--color-primary;
+            background: $--color-primary;
+        }
+    
+        &.dy-radio-checked .dy-checked-icons::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    .dy-radio-button {
+        display: inline-block;
+        margin: 0;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: $--border-base;
+        cursor: pointer;
+        font-size: $--font-size-base;
+        border-left: 0;
+
+        &:first-child {
+            border-left: $--border-base;
+        }
+    
+        .dy-radio-origin {
+            display: none;
+        }
+
+        &.dy-radio-button-checked {
+            background: $--color-primary;
+            border-color: $--color-primary;
+            color: $--color-white;
+        }
+
+        &.dy-radio-disabled {
+            user-select: none;
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+}
+
+
+
+

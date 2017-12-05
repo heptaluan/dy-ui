@@ -6,10 +6,16 @@
 }
 
 @mixin button-hover($color, $border-color, $bg-color) {
-    &:hover,
-    &:focus {
+    &:hover {
         color: $color;
         border-color: $border-color;
         background-color: $bg-color;
+    }
+}
+
+@mixin disabled() {
+    opacity: .5;
+    &:hover {
+        cursor: not-allowed;
     }
 }

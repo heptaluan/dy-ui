@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App';
-import dyui from "./index";
 
+import dyui from "./index";
 import "./styles/index.scss";
 
 Vue.config.productionTip = false
