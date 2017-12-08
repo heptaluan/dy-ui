@@ -1,5 +1,10 @@
 <template>
-    <i class="iconfont" :style="styles" v-html="type"></i>
+    <i 
+        class="iconfont" 
+        :style="styles" 
+        v-html="type"
+        @click="clickHandle"
+    ></i>
 </template>
 
 <script>
@@ -19,6 +24,11 @@
                 }
 
                 return style;
+            }
+        },
+        methods: {
+            clickHandle(e) {
+                this.$emit("click", e)
             }
         }
     }

@@ -67,6 +67,9 @@ $--font-weight-primary: 500 !default;
 $--font-line-height-primary: 24px !default;
 
 
+/* Radius
+-------------------------- */
+$--border-radius-default: 4px;
 
 /* Button
 -------------------------- */
@@ -112,3 +115,24 @@ $--info-normal: #9fa4ad !default;
 $--disabled-color: #878d99 !default;
 $--disabled-border: #cfd1d6 !default;
 $--disabled-bg: #f3f4f5 !default;
+
+
+/* input
+-------------------------- */
+
+$--input-group-bg: #f5f7fa;
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: $--color-text-placeholder; }
+input:-moz-placeholder, textarea:-moz-placeholder { color: $--color-text-placeholder; }
+input::-moz-placeholder, textarea::-moz-placeholder { color: $--color-text-placeholder; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: $--color-text-placeholder; }
+
+
+
+/* notify
+-------------------------- */
+
+$--notify-width: 320px;
+$--notify-height: 42px;
+
+$--notify-shadow: 0 2px 12px 0 rgba(0,0,0,.4);

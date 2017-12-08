@@ -1,0 +1,20 @@
+@import "../global.scss";
+
+.back-to-top {
+    position: fixed;
+    bottom: 5%;
+    right: 50px;
+    z-index: 9999;
+    cursor: pointer;
+    padding: 8px 10px;
+    font-size: inherit;
+    box-sizing: border-box;
+    border: $--border-base;
+    transition: $--all-transition;
+
+    &:hover {
+        background: $--color-primary;
+        border-color: $--color-primary;
+    }
+}
+

@@ -1,0 +1,76 @@
+@import "../global.scss";
+
+.dy-notify {
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    z-index: 999;
+    margin-left: -160px;
+    padding: 6px 14px;
+    line-height: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: $--notify-shadow;
+    transition: $--all-transition;
+    width: $--notify-width;
+    height: $--notify-height;
+
+    &.dy-notify-active {
+        top: 28px;
+    }
+
+    &.dy-notify-center {
+        text-align: center;
+    }
+
+    .dy-notify-msg {
+        display: inline-block;
+        margin: 0;
+        font-size: 14px;
+        max-width: 250px;
+        text-overflow: ellipsis;
+        word-break: keep-all;
+        overflow: hidden;
+        vertical-align: top;
+        padding-left: 5px;
+    }
+
+    .dy-notify-close {
+        display: inline-block;
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        opacity: .2;
+        text-align: center;
+        text-shadow: 0 1px 0 $--color-white;
+        cursor: pointer;
+        color: $--color-black;
+        transition: $--all-transition;
+    }
+}
+
+
+.dy-notify-default {
+    background-color: $--info-bg;
+    border-color: $--info-bg;
+    color: $--info-color;
+}
+
+.dy-notify-success {
+    background-color: $--success-color;
+    border-color: $--success-color;
+    color: $--color-white;
+}
+
+.dy-notify-waring {
+    background-color: $--warning-color;
+    border-color: $--warning-color;
+    color: $--color-white;
+}
+
+.dy-notify-danger {
+    background-color: $--danger-color;
+    border-color: $--danger-color;
+    color: $--color-white;
+}

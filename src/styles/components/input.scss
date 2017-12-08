@@ -1,0 +1,80 @@
+@import "../global.scss";
+@import "../mixins/utils.scss";
+
+.dy-input {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    transition: $--all-transition;
+    border: $--border-base;
+    border-radius: $--border-radius-default;
+    &:focus {
+        border-color: $--color-primary;
+    }
+}
+
+.dy-textarea {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    min-height: 80px;
+    overflow: auto;
+    font-family: inherit;
+    transition: $--border-transition-base;
+    border: $--border-base;
+    border-radius: $--border-radius-default;
+    &:focus {
+        border-color: $--color-primary;
+    }
+}
+
+.dy-input-group {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border-collapse: separate;
+
+    .dy-input {
+        position: relative;
+        z-index: 2;
+        float: left;
+        width: 100%;
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+
+    .dy-input-group-prepend, .dy-input-group-append {
+        display: table-cell;
+        box-sizing: border-box;
+        padding: 0 15px;
+        font-size: $--font-size-base;
+        text-align: center;
+        width: auto;
+        white-space: nowrap;
+        vertical-align: middle;
+        height: 40px;
+        line-height: 40px;
+        background-color: $--input-group-bg;
+        color: $--color-text-secondary;
+        border: $--border-base;
+        border-radius: $--border-radius-default;
+        user-select: none;
+    }
+
+    .dy-input-group-prepend {
+        @include border-radius(left);
+        border-right: 0;
+    }
+
+    .dy-input-group-append {
+        @include border-radius(right);
+        border-left: 0;
+    }
+
+}

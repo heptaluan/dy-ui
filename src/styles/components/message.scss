@@ -1,0 +1,83 @@
+@import "../global.scss";
+
+.dy-message {
+    width: 330px;
+    padding: 14px 20px;
+    line-height: 30px;
+    overflow: hidden;
+    border-radius: 2px;
+    border: 1px solid #e6ebf5;
+    position: fixed;
+    z-index: 999999;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    background-color: #fff;
+    transition: all .2s ease-in;
+    box-sizing: border-box;
+
+    .dy-message-icon {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        font-size: 28px;
+        box-sizing: border-box;
+    }
+
+    .dy-message-inner {
+        height: auto;
+        margin-left: 30px;
+
+        .dy-message-title {
+            font-size: 14px;
+            line-height: 1;
+            color: #333;
+            margin: 0 0 6px 0;
+        }
+    
+        .dy-message-content {
+            font-size: 12px;
+            line-height: 1.4;
+            color: #666;
+            margin: 0;
+        }
+    }
+
+    
+
+    .dy-message-close {
+        display: inline-block;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        opacity: .2;
+        text-align: center;
+        text-shadow: 0 1px 0 $--color-white;
+        cursor: pointer;
+        color: $--color-black;
+        transition: $--all-transition;
+    }
+}
+
+
+.dy-message-default {
+    background-color: $--info-bg;
+    border-color: $--info-bg;
+    color: $--info-color;
+}
+
+.dy-message-success {
+    background-color: $--success-color;
+    border-color: $--success-color;
+    color: $--color-white;
+}
+
+.dy-message-waring {
+    background-color: $--warning-color;
+    border-color: $--warning-color;
+    color: $--color-white;
+}
+
+.dy-message-danger {
+    background-color: $--danger-color;
+    border-color: $--danger-color;
+    color: $--color-white;
+}

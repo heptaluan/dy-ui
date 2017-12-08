@@ -1,0 +1,110 @@
+@import "../global.scss";
+@import "../mixins/button.scss";
+@import "../animation.scss";
+
+.dy-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 12px 20px;
+    vertical-align: middle;
+    font-size: $--font-size-base;
+    font-weight: $--font-weight-primary;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    background-image: none;
+    border: $--border-base;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    user-select: none;
+    transition: $--all-transition;
+    background-color: $--color-white;
+    color: $--defaul-color;
+    border-radius: $--border-radius-default;
+    &.dy-btn.dy-round {
+        border-radius: 1000px;
+    }
+    &.dy-btn-s {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+    &.dy-btn-m {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    &.dy-btn-l {
+        padding: 10px 18px;
+    }
+    &.dy-btn-xl {
+        padding: 12px 20px;
+    }
+    &.dy-btn-xll {
+        padding: 14px 22px;
+        font-size: 16px;
+    }
+    &.dy-btn-xlll {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+}
+
+.dy-btn-default {
+    @include button-hover($--color-primary, $--default-normal, $--primary-bg);
+    &.dy-isPlanin {
+        @include button-hover($--color-primary, $--color-primary, $--color-white);
+    }
+}
+
+.dy-btn-primary {
+    @include button-variant($--color-white, $--primary-color, $--primary-color);
+    @include button-hover($--color-white, $--primary-normal, $--primary-normal);
+    &.dy-isPlanin {
+        @include button-variant($--primary-color, $--primary-border, $--primary-bg);
+        @include button-hover($--color-white, $--primary-color, $--primary-color);
+    }
+}
+
+.dy-btn-success {
+    @include button-variant($--color-white, $--success-color, $--success-color);
+    @include button-hover($--color-white, $--success-normal, $--success-normal);
+    &.dy-isPlanin {
+        @include button-variant($--success-color, $--success-border, $--success-bg);
+        @include button-hover($--color-white, $--success-color, $--success-color);
+    }
+}
+
+.dy-btn-info {
+    @include button-variant($--color-white, $--info-color, $--info-color);
+    @include button-hover($--color-white, $--info-normal, $--info-normal);
+    &.dy-isPlanin {
+        @include button-variant($--info-color, $--info-border, $--info-bg);
+        @include button-hover($--color-white, $--info-color, $--info-color);
+    }
+}
+
+.dy-btn-warning {
+    @include button-variant($--color-white, $--warning-color, $--warning-color);
+    @include button-hover($--color-white, $--warning-normal, $--warning-normal);
+    &.dy-isPlanin {
+        @include button-variant($--warning-color, $--warning-border, $--warning-bg);
+        @include button-hover($--color-white, $--warning-color, $--warning-color);
+    }
+}
+
+.dy-btn-danger {
+    @include button-variant($--color-white, $--danger-color, $--danger-color);
+    @include button-hover($--color-white, $--danger-normal, $--danger-normal);
+    &.dy-isPlanin {
+        @include button-variant($--danger-color, $--danger-border, $--danger-bg);
+        @include button-hover($--color-white, $--danger-color, $--danger-color);
+    }
+}
+
+.dy-btn-disabled {
+    opacity: .5;
+    pointer-events: none;
+    &:hover {
+        cursor: not-allowed;
+    }
+}

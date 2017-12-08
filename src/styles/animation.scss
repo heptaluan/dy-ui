@@ -27,3 +27,62 @@
         -webkit-transform: rotate(360deg);
     }
 }
+
+/**
+ * notify
+ */
+.notify-enter-active {
+    animation: notify .3s;
+}
+
+.notify-leave-active {
+    animation: notify .3s reverse;
+}
+
+@keyframes notify {
+    0% {
+        transform: translateY(-200%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/**
+ * message
+ */
+.message-right-enter-active {
+    animation: messageRight .3s;
+}
+
+.message-right-leave-active {
+    animation: messageRight .3s reverse;
+}
+
+@keyframes messageRight {
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+.message-left-enter-active {
+    animation: messageLeft .3s;
+}
+.message-left-leave-active {
+    animation: messageLeft .3s reverse;
+}
+
+@keyframes messageLeft {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
