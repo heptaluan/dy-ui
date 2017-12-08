@@ -51,8 +51,6 @@
 					return this.bindMsg;
 				} else if (Array.isArray(this.bindMsg)) {
 					return this.bindMsg.indexOf(this.label) > -1;
-				} else if (this.bindMsg !== null && this.bindMsg !== undefined) {
-					return this.bindMsg === this.trueLabel;
 				}
 			},
 			isGroup() {

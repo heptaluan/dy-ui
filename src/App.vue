@@ -1,5 +1,11 @@
 <template>
 	<div id="app">
+
+		<back-to-top>
+			<dy-icon size="14" type="&#xe62d;"></dy-icon>
+		</back-to-top>
+
+
 		<div class="box">
 			<h2>普通按钮（一）</h2>
 			<dy-button color="default">默认按钮</dy-button>
@@ -378,12 +384,68 @@
 			></dy-switch>
 		</div>
 
+
+
+
+		<hr>
+
+
+		<div class="box">
+			<div class="tooltip">
+				<div class="top">
+					<dy-tooltip content="这里是提示这里是提示" placement="top-start">
+						<dy-button>上左</dy-button>
+					</dy-tooltip>
+					<dy-tooltip content="这里是提示这里是提示" placement="top">
+						<dy-button>正上</dy-button>
+					</dy-tooltip>
+					<dy-tooltip content="这里是提示这里是提示" placement="top-end">
+						<dy-button>上右</dy-button>
+					</dy-tooltip>
+				</div>
+
+				<div class="left">
+					<dy-tooltip content="这里是提示这里是提示" placement="left-start">
+						<dy-button>左上</dy-button>
+					</dy-tooltip>
+					<dy-tooltip content="这里是提示这里是提示" placement="left">
+						<dy-button>正左</dy-button>
+					</dy-tooltip>
+					<dy-tooltip content="这里是提示这里是提示" placement="left-end">
+						<dy-button>左下</dy-button>
+					</dy-tooltip>
+				</div>
+				<div class="right">
+					<dy-tooltip content="这里是提示这里是提示" placement="right-start">
+						<dy-button>右上</dy-button>
+					</dy-tooltip>
+					<dy-tooltip content="这里是提示这里是提示" placement="right">
+						<dy-button>正右</dy-button>
+					</dy-tooltip>
+					<dy-tooltip content="这里是提示这里是提示" placement="right-end">
+						<dy-button>右下</dy-button>
+					</dy-tooltip>
+				</div>
+				<div class="bottom">
+					<dy-tooltip content="这里是提示这里是提示" placement="bottom-start">
+						<dy-button>下左</dy-button>
+					</dy-tooltip>
+					<dy-tooltip content="这里是提示这里是提示" placement="bottom">
+						<dy-button>正下</dy-button>
+					</dy-tooltip>
+					<dy-tooltip content="这里是提示这里是提示" placement="bottom-end">
+						<dy-button>右下</dy-button>
+					</dy-tooltip>
+				</div>
+			</div>
+		</div>
+
+
+		<hr>
 		
 
 
-
-		
-	</div>
+</div>
 </template>
 
 <script>
@@ -419,28 +481,68 @@
 </script>
 
 <style lang="scss">
-	#app {
-		width: 1000px;
-		margin: 50px auto;
+#app {
+	width: 1000px;
+	margin: 50px auto;
 
-		.box {
-			width: 100%;
-			margin-bottom: 20px;
+	.box {
+		width: 100%;
+		margin-bottom: 20px;
 
-			h2 {
-				font-size: 16px;
-				margin: 15px 0;
-			}
+		h2 {
+			font-size: 16px;
+			margin: 15px 0;
+		}
 
-			.m {
-				margin: 15px 0;
-			}
+		.m {
+			margin: 15px 0;
+		}
 
-			.subBox {
-				margin-top: 20px;
-			}
+		.subBox {
+			margin-top: 20px;
 		}
 	}
+}
+
+.tooltip {
+
+	width: 400px;
+	margin: 50px auto;
+
+	button {
+		margin: 10px;
+	}
+
+	.top {
+		text-align: center;
+		width: 430px;
+	}
+
+	.left {
+		float: left;
+		width: 90px;
+	}
+
+	.right {
+		float: right;
+		width: 60px;
+	}
+
+	.bottom {
+		clear: both;
+		text-align: center;
+		width: 430px;
+	}
+
+	.item {
+		margin: 4px;
+	}
+
+	.left .el-tooltip__popper,
+	.right .el-tooltip__popper {
+		padding: 8px 10px;
+	}
+}
 </style>
 
 

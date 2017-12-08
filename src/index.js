@@ -5,6 +5,8 @@ import { Input } from './components/Input';
 import { Radio, RadioGroup, RadioButton } from './components/Radio';
 import { Checkbox, CheckboxGroup } from './components/Checkbox';
 import { Switch } from './components/Switch';
+import { BackToTop } from './components/BackToTop';
+import { ToolTip } from './components/ToolTip';
 
 const install = function (Vue) {
     Vue.component(Button.name, Button);
@@ -19,6 +21,8 @@ const install = function (Vue) {
     Vue.component(CheckboxGroup.name, CheckboxGroup);
 
     Vue.component(Switch.name, Switch);
+    Vue.component(BackToTop.name, BackToTop);
+    // Vue.component(ToolTip.name, ToolTip);
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
