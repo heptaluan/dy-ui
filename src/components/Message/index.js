@@ -1,12 +1,12 @@
-import Message from './Message.vue';
+import Message from "./Message.vue";
 
 Message.install = (Vue) => {
     const _constructor = Vue.extend(Message);
     const instances = {
-        'left-top': [],
-        'left-bottom': [],
-        'right-top': [],
-        'right-bottom': []
+        "left-top": [],
+        "left-bottom": [],
+        "right-top": [],
+        "right-bottom": []
     };
 
     Vue.prototype.$message = (propsData) => {
@@ -20,8 +20,7 @@ Message.install = (Vue) => {
         });
         if (instance.isTop) {
             instance.offsetTop = distance;
-        }
-        else {
+        } else {
             instance.offsetBottom = distance;
         }
         instance.show();
@@ -42,10 +41,9 @@ Message.install = (Vue) => {
                 instances[this.placement].splice(index, 1);
                 instances[this.placement].forEach((_ins) => {
                     if (_ins.isTop) {
-                        _ins.$el.style.top = _distance + 'px';
-                    }
-                    else {
-                        _ins.$el.style.bottom = _distance + 'px';
+                        _ins.$el.style.top = _distance + "px";
+                    } else {
+                        _ins.$el.style.bottom = _distance + "px";
                     }
                     _distance += _ins.$el.offsetHeight + 16;
                 });

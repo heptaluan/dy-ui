@@ -531,6 +531,7 @@
 		<div class="msgBox">
 			<h2 class="h2">消息提示</h2>
 			<dy-button @click="click9">默认消息提示</dy-button>
+			<dy-button @click="click10">成功消息提示</dy-button>
 		</div>
 
 
@@ -647,8 +648,18 @@
 				this.$message({
                     title: '测试',
                     message: '测试测试测试测试测试测试',
-                    type: 'error',
+                    type: 'default',
 					placement: 'left-top',
+					delay: 2000,
+					close: true
+                })
+			},
+			click10() {
+				this.$message({
+                    title: '测试',
+                    message: '测试测试测试测试测试测试',
+                    type: 'success',
+					placement: 'right-top',
 					delay: 2000,
 					close: true
                 })
