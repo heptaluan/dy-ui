@@ -8,20 +8,18 @@
         >
             <dy-icon size="14" type="&#xe64c;"></dy-icon>
             <p class="dy-notify-msg">{{ message }}</p>
-            <dy-icon 
+            <dy-close
                 class="dy-notify-close"
                 v-if="close" 
                 @click="closeHandle"
-                size="10" 
-                type="&#xe626;"
-            ></dy-icon>
+            ></dy-close>
         </div>
     </transition>
 </template>
 
 <script>
 
-    import { Icon } from "../Icon"
+    import { Close } from "../Close"
     import Popup from "../../mixins/popup"
     
     export default {
@@ -123,7 +121,7 @@
             }
         },
         components: {
-            Icon
+            Close
         },
         mounted() {
             if (this.delay > 0) {

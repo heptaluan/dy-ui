@@ -532,7 +532,10 @@
 			<h2 class="h2">消息提示</h2>
 			<dy-button @click="click9">默认消息提示</dy-button>
 			<dy-button @click="click10">成功消息提示</dy-button>
+			<dy-button @click="click11">警告消息提示</dy-button>
+			<dy-button @click="click12">错误消息提示</dy-button>
 		</div>
+
 
 
 		
@@ -572,36 +575,36 @@
 			},
 			click1() {
 				this.$notify({
-					message: '这是一条默认信息',
-					delay: 3000,
+					message: "这是一条默认信息",
+					delay: 2000,
 					type: "default"
                 });
 			},
 			click2() {
 				this.$notify({
-					message: '这是一条成功信息',
-					delay: 99999,
+					message: "这是一条成功信息",
+					delay: 2000,
 					type: "success"
                 });
 			},
 			click3() {
 				this.$notify({
-					message: '这是一条警告信息',
-					delay: 3000,
+					message: "这是一条警告信息",
+					delay: 2000,
 					type: "waring"
                 });
 			},
 			click4() {
 				this.$notify({
-					message: '这是一条危险信息',
-					delay: 3000,
+					message: "这是一条危险信息",
+					delay: 2000,
 					type: "danger"
                 });
 			},
 			click5() {
 				this.$notify({
-					message: '这是一条默认信息',
-					delay: 3000,
+					message: "这是一条默认信息",
+					delay: 2000,
 					type: "default",
 					close: true,
 					onClick() {
@@ -611,8 +614,8 @@
 			},
 			click6() {
 				this.$notify({
-					message: '这是一条成功信息',
-					delay: 3000,
+					message: "这是一条成功信息",
+					delay: 2000,
 					type: "success",
 					close: true,
 					onClick() {
@@ -622,8 +625,8 @@
 			},
 			click7() {
 				this.$notify({
-					message: '这是一条默认信息',
-					delay: 3000,
+					message: "这是一条默认信息",
+					delay: 2000,
 					type: "default",
 					close: true,
 					onClick() {
@@ -634,8 +637,8 @@
 			},
 			click8() {
 				this.$notify({
-					message: '这是一条成功信息',
-					delay: 3000,
+					message: "这是一条成功信息",
+					delay: 2000,
 					type: "success",
 					close: true,
 					onClick() {
@@ -646,20 +649,38 @@
 			},
 			click9() {
 				this.$message({
-                    title: '测试',
-                    message: '测试测试测试测试测试测试',
-                    type: 'default',
-					placement: 'left-top',
-					delay: 2000,
-					close: true
+                    title: "测试",
+                    message: "测试测试测试测试测试测试",
+                    type: "default",
+					placement: "left-bottom",
+					delay: 2000
                 })
 			},
 			click10() {
 				this.$message({
-                    title: '测试',
-                    message: '测试测试测试测试测试测试',
-                    type: 'success',
-					placement: 'right-top',
+                    title: "测试",
+                    message: "测试测试测试测试测试测试",
+                    type: "success",
+					placement: "left-top",
+					delay: 2000
+                })
+			},
+			click11() {
+				this.$message({
+                    title: "测试",
+                    message: "测试测试测试测试测试测试",
+                    type: "waring",
+					placement: "right-bottom",
+					delay: 2000,
+					close: true
+                })
+			},
+			click12() {
+				this.$message({
+                    title: "测试",
+                    message: "测试测试测试测试测试测试",
+                    type: "danger",
+					placement: "right-top",
 					delay: 2000,
 					close: true
                 })
@@ -669,6 +690,7 @@
 </script>
 
 <style lang="scss">
+
 #app {
 	width: 1000px;
 	margin: 50px auto;
@@ -733,7 +755,7 @@
 }
 
 .msgBox {
-	width: 400px;
+	width: 525px;
 	margin: 0 auto;
 
 	h2 {
@@ -741,6 +763,7 @@
 		margin: 15px 0;
 	}
 }
+
 </style>
 
 

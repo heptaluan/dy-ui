@@ -55,6 +55,8 @@ $--border-radius-base: 4px !default;
 $--border-radius-small: 2px !default;
 $--border-radius-circle: 100% !default;
 
+$--border-shadow: 0 2px 12px 0 rgba(0,0,0,.4);
+
 
 /* Font
 -------------------------- */
@@ -135,4 +137,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: $--color-te
 $--notify-width: 320px;
 $--notify-height: 42px;
 
-$--notify-shadow: 0 2px 12px 0 rgba(0,0,0,.4);
+
+
+/* message
+-------------------------- */
+
+$--message-width: 330px;

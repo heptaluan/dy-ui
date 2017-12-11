@@ -3,7 +3,6 @@
         class="iconfont" 
         :style="styles" 
         v-html="type"
-        @click="clickHandle"
     ></i>
 </template>
 
@@ -24,11 +23,6 @@
                 }
 
                 return style;
-            }
-        },
-        methods: {
-            clickHandle(e) {
-                this.$emit("click", e)
             }
         }
     }

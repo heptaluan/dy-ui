@@ -13,20 +13,18 @@
                 <h2 class="dy-message-title">{{ title }}</h2>
                 <p class="dy-message-content">{{ message }}</p>
             </div>
-            <dy-icon 
+            <dy-close
                 class="dy-message-close"
                 v-if="close" 
                 @click="closeHandle"
-                size="10" 
-                type="&#xe626;"
-            ></dy-icon>
+            ></dy-close>
         </div>
     </transition>
 </template>
 
 <script>
 
-    import { Icon } from "../Icon"
+    import { Close } from "../Close"
     import Popup from "../../mixins/popup"
     
     export default {
@@ -66,7 +64,7 @@
                         "default",
                         "success",
                         "waring",
-                        "error"
+                        "danger"
                     ].includes(value);
                 }
             },
@@ -120,7 +118,7 @@
         watch: {
             visible(curVal, oldVal) {
                 if (curVal) {
-                    this.$el.addEventListener("transitioned", this.destoryElement)
+                    this.$el.addEventListener("transitioned", this.destory)
                 } else {
                     if (this.onClose) {
                         this.onClose.call(this);
@@ -141,7 +139,7 @@
                 return classes.join(" ")
             },
             transition() {
-                if (this.placement.indexOf("left" > -1)) {
+                if (this.placement.indexOf("left") > -1) {
                     return "message-left"
                 } else {
                     return "message-right"
@@ -152,7 +150,7 @@
             }
         },
         components: {
-            Icon
+            Close
         },
         mounted() {
             if (this.delay > 0) {

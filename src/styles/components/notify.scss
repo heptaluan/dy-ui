@@ -1,4 +1,5 @@
 @import "../global.scss";
+@import "../mixins/_close.scss";
 
 .dy-notify {
     position: fixed;
@@ -11,7 +12,7 @@
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 2px;
-    box-shadow: $--notify-shadow;
+    box-shadow: $--border-shadow;
     transition: $--all-transition;
     width: $--notify-width;
     height: $--notify-height;
@@ -37,16 +38,7 @@
     }
 
     .dy-notify-close {
-        display: inline-block;
-        position: absolute;
-        top: 8px;
-        right: 10px;
-        opacity: .2;
-        text-align: center;
-        text-shadow: 0 1px 0 $--color-white;
-        cursor: pointer;
-        color: $--color-black;
-        transition: $--all-transition;
+        @include closeButton();
     }
 }
 
