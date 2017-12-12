@@ -165,6 +165,32 @@
 			<dy-input w="70%" h="55px"></dy-input>
 		</div>
 
+
+
+
+		<div class="box">
+			<h2 class="h2">输入框（验证规则）</h2>
+			<dy-input
+				placeholder="请输入手机号码"
+				v-model="telMsg"
+				regex="^1\d{10}$"
+				errorNotice="请输入正确的手机号码"
+			></dy-input>
+		</div>
+
+		<div class="box">
+			<dy-input
+				placeholder="请输入邮箱地址"
+				v-model="emailMsg"
+				regex="[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?"
+				errorNotice="请输入正确的邮箱地址"
+			></dy-input>
+		</div>
+
+
+
+		
+
 		<div class="box">
 			<h2 class="h2">输入框（禁用状态）</h2>
 			<dy-input disabled></dy-input>
@@ -540,7 +566,7 @@
 
 
 		<hr>
-
+		<!-- alert -->
 		<div class="box">
 			<h2 class="h2">Alert</h2>
 			<dy-button @click="showAlert">Alert</dy-button>
@@ -550,29 +576,57 @@
 		</div>
 
 
-		<dy-close></dy-close>
-		<dy-close></dy-close>
-		<dy-close></dy-close>
-		<dy-close></dy-close>
-		<dy-close></dy-close>
-		<dy-close></dy-close>
+		<!-- confirm -->
+		<div class="box">
+			<h2 class="h2">Confirm</h2>
+			<dy-button @click="showConfirm">Confirm</dy-button>
+			<dy-confirm 
+				:isShow.sync="confirmVisible" 
+				titleText="删除文件" 
+				@cancel="cancelHandle" 
+				@confirm="confirmHandle"
+			>
+                此操作将会删除该文件, 是否继续?
+            </dy-confirm>
+		</div>
+
+
+		<!-- Prompt -->
+		<div class="box">
+			<h2 class="h2">Prompt</h2>
+			<dy-button @click="showPrompt001">请输入手机号码</dy-button>
+			<dy-prompt
+				:isShow.sync="prompt001" 
+				titleText="提示" 
+				@cancel="prompt1" 
+				@confirm="prompt2"
+				v-model="promptTel"
+				regex="^1\d{10}$"
+				errorNotice="请输入正确的手机号码"
+				placeholder="请输入手机号码"
+			>
+                请输入手机号码
+            </dy-prompt>
+
+
+			<dy-button @click="showPrompt002">请输入邮箱地址</dy-button>
+			<dy-prompt
+				:isShow.sync="prompt002" 
+				titleText="提示" 
+				@cancel="prompt3" 
+				@confirm="prompt4"
+				v-model="promptEmail"
+				regex="[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?"
+				errorNotice="请输入正确的邮箱地址"
+				placeholder="请输入邮箱地址"
+			>
+                请输入邮箱地址
+            </dy-prompt>
+
+		</div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
 		
 		
 
@@ -586,6 +640,8 @@
 		data() {
 			return {
 				loading: false,
+				telMsg: "",
+				emailMsg: "",
 				radio1: "",
 				radio2: "葡萄",
 				radio3: "",
@@ -601,7 +657,12 @@
 				v2: false,
 				v3: false,
 				v4: true,
-				alertVisible: false
+				alertVisible: false,
+				confirmVisible: false,
+				prompt001: false,
+				prompt002: false,
+				promptTel: "",
+				promptEmail: ""
 			}
 		},
 		methods: {
@@ -721,14 +782,91 @@
 					close: true
                 })
 			},
+
+
+
+			// Alert
 			showAlert() {
 				this.alertVisible = true;
 			},
 			alertSubmitHandle() {
 				setTimeout( () => {
 					this.$notify({
-						message: "点击了确定",
+						message: "成功提交",
 						type: "success",
+						delay: 2000
+					})
+				}, 300)
+			},
+
+
+			// Confirm
+			showConfirm() {
+				this.confirmVisible = true;
+			},
+			cancelHandle() {
+				setTimeout( () => {
+					this.$notify({
+						message: "删除成功",
+						type: "success",
+						delay: 2000
+					})
+				}, 300)
+			},
+			confirmHandle() {
+				setTimeout( () => {
+					this.$notify({
+						message: "删除取消",
+						type: "default",
+						delay: 2000
+					})
+				}, 300)
+			},
+
+
+
+			// Prompt
+			showPrompt001() {
+				this.prompt001 = true;
+			},
+			prompt1() {
+				setTimeout( () => {
+					this.$notify({
+						message: `您输入的手机号码为 ${this.promptTel}`,
+						type: "success",
+						delay: 2000
+					})
+				}, 300)
+			},
+			prompt2() {
+				setTimeout( () => {
+					this.$notify({
+						message: "取消输入",
+						type: "default",
+						delay: 2000
+					})
+				}, 300)
+			},
+
+
+
+			showPrompt002() {
+				this.prompt002 = true;
+			},
+			prompt3() {
+				setTimeout( () => {
+					this.$notify({
+						message: `您输入的邮箱地址为 ${this.promptEmail}`,
+						type: "success",
+						delay: 2000
+					})
+				}, 300)
+			},
+			prompt4() {
+				setTimeout( () => {
+					this.$notify({
+						message: "取消输入",
+						type: "default",
 						delay: 2000
 					})
 				}, 300)

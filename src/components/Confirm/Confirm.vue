@@ -11,8 +11,11 @@
             </div>
         </model-body>
         <model-footer>
-            <dy-button size="m" class="dy-model-btn" @click="submitHandle">
-                {{ submitButtonText }}
+            <dy-button size="m" class="dy-model-btn" @click="confirmHandle">
+                {{ confirBtnText }}
+            </dy-button>
+            <dy-button color="primary" size="m" class="dy-model-btn" @click="cancelHandle">
+                {{ cancelBtnText }}
             </dy-button>
         </model-footer>
     </model>
@@ -24,7 +27,7 @@
     import { Model, ModelHeader, ModelBody, ModelFooter } from "../Model";
     
     export default {
-        name: "dy-alert",
+        name: "dy-confirm",
         data() {
             return {
                 syncSlot: this.isShow
@@ -34,9 +37,13 @@
             titleText: {
                 type: String,
             },
-            submitButtonText: {
+            cancelBtnText: {
                 type: String,
                 default: "确定"
+            },
+            confirBtnText: {
+                type: String,
+                default: "取消"
             },
             isShow: {
                 type: Boolean,
@@ -47,9 +54,13 @@
             }
         },
         methods: {
-            submitHandle() {
+            cancelHandle() {
                 this.syncSlot = false;
-                this.$emit("submit")
+                this.$emit("cancel")
+            },
+            confirmHandle() {
+                this.syncSlot = false;
+                this.$emit("confirm")
             }
         },
         watch: {

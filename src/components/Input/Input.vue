@@ -1,45 +1,52 @@
 <template>
-    <input 
-        v-if=" type != 'textarea' "
-        class="dy-input"
-        :style="styles"
-        :type="type"
-        :placeholder="placeholder"
-        :readonly="readonly"
-        :disabled="disabled"
-        :name="name"
-        :max="max"
-        :min="min"
-        :step="step"
-        :autofocus="autofocus"
-        :autocomplete="autocomplete"
-        :form="form"
-        :value="curValue"
-        @input="inputHandle"
-        @focus="focusHandle"
-        @blur="blurHandle"
-        ref="input"
-    />
-    <textarea
-        v-else
-        class="dy-textarea"
-        :style="styles"
-        :placeholder="placeholder"
-        :readonly="readonly"
-        :disabled="disabled"
-        :name="name"
-        :max="max"
-        :min="min"
-        :step="step"
-        :autofocus="autofocus"
-        :autocomplete="autocomplete"
-        :form="form"
-        :value="curValue"
-        @input="inputHandle"
-        @focus="focusHandle"
-        @blur="blurHandle"
-        ref="input"
-    ></textarea>
+    <div>
+        <input 
+            v-if=" type != 'textarea' "
+            class="dy-input"
+            :class="computedClass"
+            :style="styles"
+            :type="type"
+            :placeholder="placeholder"
+            :readonly="readonly"
+            :disabled="disabled"
+            :name="name"
+            :max="max"
+            :min="min"
+            :step="step"
+            :autofocus="autofocus"
+            :autocomplete="autocomplete"
+            :form="form"
+            :value="curValue"
+            @input="inputHandle"
+            @focus="focusHandle"
+            @blur="blurHandle"
+            ref="input"
+        />
+        <textarea
+            v-else
+            class="dy-textarea"
+            :style="styles"
+            :placeholder="placeholder"
+            :readonly="readonly"
+            :disabled="disabled"
+            :name="name"
+            :max="max"
+            :min="min"
+            :step="step"
+            :autofocus="autofocus"
+            :autocomplete="autocomplete"
+            :form="form"
+            :value="curValue"
+            @input="inputHandle"
+            @focus="focusHandle"
+            @blur="blurHandle"
+            ref="input"
+        ></textarea>
+        <div
+            class="dy-input-error-msg"
+            v-if="isError"
+        >{{ errMsg }}</div>
+    </div>
 </template>
 
 <script>
@@ -67,6 +74,13 @@
             minLen: {
                 type: Number,
                 default: 0
+            },
+            regex: {
+                type: [Object, String]
+            },
+            errorNotice: {
+                type: String,
+                default: "输入信息有误"
             },
 
             // 原生属性
@@ -108,10 +122,39 @@
         },
         data() {
             return {
-                curValue: this.value
+                curValue: this.value,
+                isError: false,
+                errMsg: ""
+            }
+        },
+        watch: {
+            value(curVal, oldVal) {
+                if (this.validator(curVal)) {
+                    this.isError = true;
+                    return;
+                }
+
+                this.isError = false;
+                this.curValue = curVal;
+            },
+            isError(curVal, oldVal) {
+                if (curVal) {
+                    this.showError();
+                } else {
+                    this.hideError();
+                }
             }
         },
         computed: {
+            computedClass() {
+                const classes = [];
+
+                if (this.isError) {
+                    classes.push("dy-input-error")
+                }
+
+                return classes.join(" ")
+            },
             styles() {
                 let style = {}
 
@@ -141,7 +184,22 @@
             },
             blurHandle(e) {
                 this.$emit("blur", e)
+            },
+            validator(curVal) {
+                if (this.regex !== undefined && !new RegExp(this.regex).test(curVal)) {
+                    this.errMsg = this.errorNotice;
+                    return true;
+                }
+                return false;
+            },
+            showError(msg) {
+                this.isError = true;
+                this.errMsg = msg || this.errorNotice
+            },
+            hideError() {
+                this.isError = false;
             }
+
         }
     }
 

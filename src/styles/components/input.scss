@@ -10,9 +10,26 @@
     transition: $--all-transition;
     border: $--border-base;
     border-radius: $--border-radius-default;
+
     &:focus {
         border-color: $--color-primary;
     }
+
+}
+
+.dy-input-error {
+    border-color: $--danger-color;
+
+    &:focus {
+        border-color: $--danger-color;
+    }
+}
+
+.dy-input-error-msg {
+    color: $--danger-color;
+    font-size: $--font-size-small;
+    min-height: 18px;
+    margin-top: 2px;
 }
 
 .dy-textarea {

@@ -24,13 +24,6 @@
         methods: {
             closeModel() {
                 this.$emit("update:isShow", false);
-                setTimeout( () => {
-					this.$notify({
-						message: "取消了事件",
-						type: "waring",
-						delay: 2000
-					})
-				}, 300)
             }
         },
         computed: {

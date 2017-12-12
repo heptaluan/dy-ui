@@ -7,7 +7,7 @@
             v-if="visible" 
             @click="globalClickHandle"
         >
-            <div class="dy-model-dialog" :style="styles" @click="dialogClickHandle">
+            <div class="dy-model-dialog"  @click="dialogClickHandle">
                 <slot></slot>
             </div>
         </div>
@@ -23,12 +23,12 @@
         mixins: [Popup],
         props: {
             w: {
-                type: Number,
-                default: 0
+                type: String,
+                default: "420px"
             },
             h: {
-                type: Number,
-                default: 0
+                type: String,
+                default: "auto"
             },
             isShow: {
                 type: Boolean,
@@ -76,20 +76,6 @@
                 }
 
                 return classes.join(" ")
-            },
-            styles() {
-                const styles = [];
-
-                if (this.w !== 0) {
-                    styles["width"] = this.w + "px"
-                }
-
-                if (this.h !== 0) {
-                    styles["height"] = this.h + "px"
-                }
-
-                return styles;
-
             }
         },
         mounted() {
