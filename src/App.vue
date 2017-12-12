@@ -520,14 +520,6 @@
 
 
 
-
-
-
-
-
-
-		<hr>
-
 		<div class="msgBox">
 			<h2 class="h2">消息提示</h2>
 			<dy-button @click="click9">默认消息提示</dy-button>
@@ -538,6 +530,49 @@
 
 
 
+
+
+
+
+
+
+
+
+
+		<hr>
+
+		<div class="box">
+			<h2 class="h2">Alert</h2>
+			<dy-button @click="showAlert">Alert</dy-button>
+			<dy-alert :isShow.sync="alertVisible" titleText="标题" @submit="alertSubmitHandle">
+				信息内容
+			</dy-alert>
+		</div>
+
+
+		<dy-close></dy-close>
+		<dy-close></dy-close>
+		<dy-close></dy-close>
+		<dy-close></dy-close>
+		<dy-close></dy-close>
+		<dy-close></dy-close>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 		
 		
 
@@ -565,7 +600,8 @@
 				v1: false,
 				v2: false,
 				v3: false,
-				v4: true
+				v4: true,
+				alertVisible: false
 			}
 		},
 		methods: {
@@ -684,6 +720,18 @@
 					delay: 2000,
 					close: true
                 })
+			},
+			showAlert() {
+				this.alertVisible = true;
+			},
+			alertSubmitHandle() {
+				setTimeout( () => {
+					this.$notify({
+						message: "点击了确定",
+						type: "success",
+						delay: 2000
+					})
+				}, 300)
 			}
 		}
 	};
@@ -756,7 +804,7 @@
 
 .msgBox {
 	width: 525px;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 
 	h2 {
 		font-size: 16px;

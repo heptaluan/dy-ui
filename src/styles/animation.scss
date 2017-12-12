@@ -28,9 +28,11 @@
     }
 }
 
+
 /**
  * notify
  */
+
 .notify-enter-active {
     animation: notify .3s;
 }
@@ -43,7 +45,6 @@
     0% {
         transform: translateY(-200%);
     }
-
     100% {
         transform: translateY(0);
     }
@@ -53,6 +54,7 @@
 /**
  * message
  */
+
 .message-right-enter-active {
     animation: messageRight .3s;
 }
@@ -65,14 +67,15 @@
     0% {
         transform: translateX(200%);
     }
-
     100% {
         transform: translateX(0);
     }
 }
+
 .message-left-enter-active {
     animation: messageLeft .3s;
 }
+
 .message-left-leave-active {
     animation: messageLeft .3s reverse;
 }
@@ -81,8 +84,42 @@
     0% {
         transform: translateX(-200%);
     }
-
     100% {
         transform: translateX(0);
+    }
+}
+
+
+/**
+ * alert
+ */
+
+.alert-fade-enter-active {
+    animation: alert-fade-in .3s;
+}
+
+.alert-fade-leave-active {
+    animation: alert-fade-out .3s;
+}
+
+@keyframes alert-fade-in {
+    0% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes alert-fade-out {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
     }
 }

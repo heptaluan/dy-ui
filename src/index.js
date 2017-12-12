@@ -10,7 +10,9 @@ import { ToolTip } from './components/ToolTip';
 import { Notify } from './components/Notify';
 import { Message } from './components/Message';
 import { Close } from './components/Close';
-// import { Model, ModelHeader, ModelBody, ModelFooter } from "./components/Model";
+
+import { Alert } from "./components/Alert";
+import { Model, ModelHeader, ModelBody, ModelFooter } from "./components/Model";
 
 const install = function (Vue) {
     Vue.component(Button.name, Button);
@@ -30,10 +32,11 @@ const install = function (Vue) {
     Vue.component(BackToTop.name, BackToTop);
     Vue.component(Close.name, Close);
 
-    // Vue.component(Model.name, Model);
-    // Vue.component(ModelHeader.name, ModelHeader);
-    // Vue.component(ModelBody.name, ModelBody);
-    // Vue.component(ModelFooter.name, ModelFooter);
+    Vue.component(Model.name, Model);
+    Vue.component(ModelHeader.name, ModelHeader);
+    Vue.component(ModelBody.name, ModelBody);
+    Vue.component(ModelFooter.name, ModelFooter);
+    Vue.component(Alert.name, Alert);
     
 
     Vue.use(Notify);
