@@ -1,3 +1,5 @@
+@import "./global.scss";
+
 @import "./components/button.scss";
 @import "./components/input.scss";
 @import "./components/radio.scss";
@@ -5,8 +7,13 @@
 @import "./components/switch.scss";
 @import "./components/backtotop.scss";
 @import "./components/tooltip.scss";
+
+@import "./components/close.scss";
 @import "./components/notify.scss";
 @import "./components/message.scss";
-@import "./components/close.scss";
+
+@import "./components/dialog.scss";
 @import "./components/alert.scss";
+@import "./components/confirm.scss";
 @import "./components/prompt.scss";
+@import "./components/model.scss";

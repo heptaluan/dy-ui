@@ -1,7 +1,7 @@
 <template>
     <i 
         class="iconfont" 
-        :style="styles" 
+        :style="styles"
         v-html="type"
     ></i>
 </template>

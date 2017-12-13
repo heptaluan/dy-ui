@@ -627,6 +627,49 @@
 
 
 
+
+
+
+
+
+
+
+
+
+		<hr>
+		<!-- model -->
+		<div class="box">
+			<h2 class="h2">自定义弹窗内容</h2>
+
+			<dy-button @click="showModel">自定义弹窗</dy-button>
+			<dy-model :isShow.sync="modelVisible" :width="650">
+
+				<header class="model-header">这里是头部</header>
+
+				<article class="model-body">
+					<h2>这里是内容部分</h2>
+					<p>内容</p>
+					<p>内容</p>
+					<p>内容</p>
+					<p>内容</p>
+					<p>内容</p>
+					<p>内容</p>
+					<p>内容</p>
+					<p>内容</p>
+					<p>内容</p>
+				</article>
+
+				<footer class="model-footer">
+					<dy-button size="m" @click="model1">
+						取消
+					</dy-button>
+					<dy-button color="primary" size="m" @click="model2">
+						确定
+					</dy-button>
+				</footer>
+
+			</dy-model>
+		</div>
 		
 		
 
@@ -659,6 +702,7 @@
 				v4: true,
 				alertVisible: false,
 				confirmVisible: false,
+				modelVisible: false,
 				prompt001: false,
 				prompt002: false,
 				promptTel: "",
@@ -870,6 +914,21 @@
 						delay: 2000
 					})
 				}, 300)
+			},
+
+
+
+
+
+			// 自定义弹窗
+			showModel() {
+				this.modelVisible = true;
+			},
+			model1() {
+				this.modelVisible = false;
+			},
+			model2() {
+				this.modelVisible = false;
 			}
 		}
 	};

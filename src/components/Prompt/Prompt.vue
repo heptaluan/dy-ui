@@ -1,15 +1,15 @@
 <template>
     <model v-bind="$props" ref="model">
         <model-header :isShow.sync="syncSlot" :closeBtn="true">
-            <div class="dy-header-text">
+            <div class="dy-prompt-header">
                 {{ titleText }}
             </div>
         </model-header>
         <model-body>
-            <div class="dy-body-text">
+            <div class="dy-prompt-body">
                 <slot></slot>
             </div>
-            <div class="dy-model-prompt-input">
+            <div class="dy-prompt-input">
                 <dy-input
                     :placeholder="placeholder"
                     v-model="inputMsg"
@@ -21,12 +21,14 @@
             </div>
         </model-body>
         <model-footer>
-            <dy-button size="m" class="dy-model-btn" @click="confirmHandle">
-                {{ confirBtnText }}
-            </dy-button>
-            <dy-button color="primary" size="m" :disabled="waitError" class="dy-model-btn" @click="cancelHandle">
-                {{ cancelBtnText }}
-            </dy-button>
+            <div class="dy-prompt-footer">
+                <dy-button size="m" class="dy-model-btn" @click="confirmHandle">
+                    {{ confirBtnText }}
+                </dy-button>
+                <dy-button color="primary" size="m" :disabled="waitError" class="dy-model-btn" @click="cancelHandle">
+                    {{ cancelBtnText }}
+                </dy-button>
+            </div>
         </model-footer>
     </model>
 </template>

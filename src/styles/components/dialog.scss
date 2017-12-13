@@ -1,0 +1,77 @@
+// 弹窗主体
+.dy-model {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    outline: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition-property: opacity,-webkit-transform;
+    transition-property: transform,opacity;
+    transition-property: transform,opacity,-webkit-transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+
+    &.dy-model-active {
+        opacity: 1;
+        transition-duration: $--all-transition;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .dy-model-dialog {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 4px;
+        padding-bottom: 10px;
+        overflow: hidden;
+        backface-visibility: hidden;
+        border: $--border-base;
+        background-color: $--color-white;
+        box-shadow: $--border-shadow;
+        font-size: $--font-size-large;
+
+        .dy-close-model {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 0;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+// 遮罩
+.dy-dimmer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 1100;
+    opacity: 0;
+
+    &.dy-active {
+        opacity: 1;
+    }
+}

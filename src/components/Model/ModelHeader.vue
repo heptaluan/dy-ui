@@ -1,11 +1,11 @@
 <template>
     <div class="dy-model-header">
+        <slot></slot>
         <dy-close
             class="dy-close-model"
             v-if="closeBtn"
             @click="closeModel"
         ></dy-close>
-        <slot></slot>
     </div>
 </template>
 
@@ -24,18 +24,6 @@
         methods: {
             closeModel() {
                 this.$emit("update:isShow", false);
-            }
-        },
-        computed: {
-            model() {
-                let parent = this.parent;
-                while(parent) {
-                    if (parent.$options.name !== "dy-model") {
-                        parent = parent.$parent;
-                    } else {
-                        return parent;
-                    }
-                }
             }
         },
         components: {

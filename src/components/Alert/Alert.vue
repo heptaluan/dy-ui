@@ -1,19 +1,21 @@
 <template>
     <model v-bind="$props" ref="model">
         <model-header :isShow.sync="syncSlot" :closeBtn="true">
-            <div class="dy-header-text">
+            <div class="dy-alert-header">
                 {{ titleText }}
             </div>
         </model-header>
         <model-body>
-            <div class="dy-body-text">
+            <div class="dy-alert-body">
                 <slot></slot>
             </div>
         </model-body>
         <model-footer>
-            <dy-button size="m" class="dy-model-btn" @click="submitHandle">
-                {{ submitButtonText }}
-            </dy-button>
+            <div class="dy-alert-footer">
+                <dy-button color="primary" size="m" class="dy-alert-btn" @click="submitHandle">
+                    {{ submitButtonText }}
+                </dy-button>
+            </div>
         </model-footer>
     </model>
 </template>
