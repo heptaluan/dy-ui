@@ -636,6 +636,10 @@
 
 
 
+
+
+
+
 		<hr>
 		<!-- model -->
 		<div class="box">
@@ -674,6 +678,34 @@
 		
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<hr>
+		<div class="box">
+			<h2 class="h2">Slider 滑块</h2>
+			<dy-slider v-model="sliderVal1" show-input ></dy-slider>
+		</div>
+
+		<div class="box">
+			<h2 class="h2">Slider 滑块</h2>
+			<dy-slider v-model="sliderVal2" show-input :step="10" show-stops></dy-slider>
+		</div>
+
+
 </div>
 </template>
 
@@ -706,7 +738,9 @@
 				prompt001: false,
 				prompt002: false,
 				promptTel: "",
-				promptEmail: ""
+				promptEmail: "",
+				sliderVal1: 20,
+				sliderVal2: 30
 			}
 		},
 		methods: {

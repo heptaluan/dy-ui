@@ -16,6 +16,8 @@ import { Alert } from "./components/Alert";
 import { Confirm } from "./components/Confirm";
 import { Prompt } from "./components/Prompt";
 
+import { Slider } from "./components/Slider";
+
 const install = function (Vue) {
     Vue.component(Button.name, Button);
     Vue.component(Icon.name, Icon);
@@ -41,6 +43,8 @@ const install = function (Vue) {
     Vue.component(Alert.name, Alert);
     Vue.component(Confirm.name, Confirm);
     Vue.component(Prompt.name, Prompt);
+
+    Vue.component(Slider.name, Slider);
     
 
     Vue.use(Notify);

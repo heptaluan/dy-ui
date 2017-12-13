@@ -4,7 +4,7 @@ import Vue from "vue"
 // 根元素
 var RealTooltip = Vue.extend({
 	props: {
-		content: String,
+		content: [String, Number],
 		placement: {
 			type: String,
 			default: "bottom",
@@ -57,7 +57,6 @@ var RealTooltip = Vue.extend({
 
 		// show 事件
 		_showPopup() {
-			clearTimeout(this.hideTimer)
 
 			this._createPopup()
 			this._setPopupContent()
@@ -69,11 +68,7 @@ var RealTooltip = Vue.extend({
 
 		// hide 事件
 		_hidePopup() {
-			clearTimeout(this.hideTimer)
-
-			this.hideTimer = setTimeout( () => {
-				this.popup.hide()
-			}, 10)
+			this.popup.hide()
 		},
 
 		// 设置 tooltip 内容
