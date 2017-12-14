@@ -715,7 +715,7 @@
 		</div>
 		<div class="box">
 			<h2 class="h2">Slider 输入框限定范围值（100-1000）</h2>
-			<dy-slider v-model="sliderVal5" showTooltip showInput :min="100" :max="1000"></dy-slider>
+			<dy-slider v-model="sliderVal5" showTooltip showInput :min="100" :max="10000"></dy-slider>
 		</div>
 
 		<div class="box">
@@ -763,7 +763,7 @@
 				promptEmail: "",
 				sliderVal1: 0,
 				sliderVal2: 20,
-				sliderVal3: 10,
+				sliderVal3: 5,
 				sliderVal4: 30,
 				sliderVal5: 220,
 				sliderVal6: 10,

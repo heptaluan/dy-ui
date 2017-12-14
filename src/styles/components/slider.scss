@@ -32,7 +32,7 @@
             height: 36px;
             width: 36px;
             position: absolute;
-            z-index: 1001;
+            z-index: 99;
             top: -15px;
             transform: translateX(-50%);
             background-color: transparent;
@@ -80,7 +80,7 @@
             opacity: 0;
             position: absolute;
             top: -35px;
-            left: 1px;
+            left: 0;
             padding: 10px;
             background: $--color-primary;
             color: $--color-white;
@@ -89,7 +89,7 @@
             transition: $--all-transition;
         }
 
-        .dy-slider-stop {
+        .dy-slider-step {
             position: absolute;
             height: 6px;
             width: 6px;

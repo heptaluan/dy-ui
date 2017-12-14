@@ -20,7 +20,7 @@
 		name: "dy-slider-button",
 		props: {
 			value: {
-				type: Number,
+				type: [Number, String],
 				default: 0
 			},
 		},
@@ -31,8 +31,6 @@
 				isClick: false,
 				startX: 0,
 				currentX: 0,
-				startY: 0,
-				currentY: 0,
 				startPosition: 0,
 				newPosition: null,
 				oldValue: this.value
@@ -47,9 +45,6 @@
 			},
 			step() {
 				return this.$parent.step;
-			},
-			precision() {
-				return this.$parent.precision;
 			},
 			currentPosition() {
 				return `${ (this.value - this.min) / (this.max - this.min) * 100 }%`;
@@ -82,11 +77,9 @@
 			onDragStart(e) {
 				this.dragging = true;
 				this.isClick = true;
-				if (this.vertical) {
-					this.startY = e.clientY;
-				} else {
-					this.startX = e.clientX;
-				}
+
+				// 记录开始拖拽的位置
+				this.startX = e.clientX;
 				this.startPosition = parseFloat(this.currentPosition);
 				this.newPosition = this.startPosition;
 			},
@@ -94,16 +87,20 @@
 				if (this.dragging) {
 					this.isClick = false;
 					let diff = 0;
+
+					// 需要判断是否有 input 的存在
 					this.$parent.resetSize();
-					if (this.vertical) {
-						this.currentY = e.clientY;
-						diff = (this.startY - this.currentY) / this.$parent.sliderSize * 100;
-					} else {
-						this.currentX = e.clientX;
-						diff = (this.currentX - this.startX) / this.$parent.sliderSize * 100;
-					}
+					
+					// 记录鼠标位置
+					this.currentX = e.clientX;
+
+					// 计算插值
+					diff = (this.currentX - this.startX) / this.$parent.sliderSize * 100;
+
+					// 设置位置					
 					this.newPosition = this.startPosition + diff;
 					this.setPosition(this.newPosition);
+					this.$parent.setToolTipPosition()
 				}
 			},
 			onDragEnd() {
@@ -127,11 +124,14 @@
 				} else if (newPosition > 100) {
 					newPosition = 100;
 				}
+
+				// 计算 step
 				const lengthPerStep = 100 / ((this.max - this.min) / this.step);
 				const steps = Math.round(newPosition / lengthPerStep);
-				let value = steps * lengthPerStep * (this.max - this.min) * 0.01 + this.min;
-				value = parseFloat(value.toFixed(this.precision));
+
+				let value = (steps * lengthPerStep * (this.max - this.min) * 0.01 + this.min).toFixed(0);
 				this.$emit("input", value);
+
 				if (!this.dragging && this.value !== this.oldValue) {
 					this.oldValue = this.value;
 				}

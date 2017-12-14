@@ -14,9 +14,9 @@
 		<div class="dy-slider-box" :class="{ 'show-input': showInput }" @click="onSliderClick" ref="slider">
 			<div class="dy-slider-bar" :style="barStyle"></div>
 			<slider-button v-model="inputValue" ref="button">
-				<span class="dy-slider-box-tooltip" :style="tooltipStyle" v-if="showTooltip">{{ inputValue }}</span>
+				<span class="dy-slider-box-tooltip" v-if="showTooltip" ref="tooltip">{{ inputValue }}</span>
 			</slider-button>
-			<div class="dy-slider-stop" v-for="item in stops" :key="item" :style="{ 'left': item + '%' }" v-if="showStops"></div>
+			<div class="dy-slider-step" v-for="item in steps" :key="item" :style="{ 'left': item + '%' }" v-if="showSteps"></div>
 		</div>
 		
 	</div>
@@ -50,7 +50,7 @@
 				type: Boolean,
 				default: false
 			},
-			showStops: {
+			showSteps: {
 				type: Boolean,
 				default: false
 			},
@@ -72,7 +72,8 @@
 		},
 		watch: {
 			value(val, oldVal) {
-				if (this.dragging ||
+				if (
+					this.dragging ||
 					Array.isArray(val) &&
 					Array.isArray(oldVal) &&
 					val.every((item, index) => item === oldVal[index])) {
@@ -87,6 +88,7 @@
 			},
 			inputValue(val) {
 				this.$emit("input", val);
+				this.setToolTipPosition();
 			},
 			min() {
 				this.setValues();
@@ -114,17 +116,16 @@
 					}
 				}
 			},
-			setPosition(percent) {
-				const targetValue = this.min + percent * (this.max - this.min) / 100;
-				this.$refs.button.setPosition(percent);
-			},
-			onSliderClick(event) {
+			onSliderClick(e) {
 				if (this.dragging) return;
 				this.resetSize();
-				const sliderOffsetLeft = this.$refs.slider.getBoundingClientRect().left;
-				this.setPosition((event.clientX - sliderOffsetLeft) / this.sliderSize * 100);
 				this.emitChange();
+
+				// 调用 SliderButton 组件的 setPosition() 方法来定位按钮
+				const sliderOffsetLeft = this.$refs.slider.getBoundingClientRect().left;
+				this.$refs.button.setPosition((e.clientX - sliderOffsetLeft) / this.sliderSize * 100);
 			},
+			// 避免 input 出现或者消失引起的定位问题
 			resetSize() {
 				if (this.$refs.slider) {
 					this.sliderSize = this.$refs.slider[`clientWidth`];
@@ -134,17 +135,32 @@
 				this.$nextTick(() => {
 					this.$emit("change", this.value);
 				});
+			},
+			setToolTipPosition() {
+				// 避免数字过大 tooltip 定位偏差
+				if (this.showTooltip) {
+					let l = this.inputValue.toString().length;
+					if (l == 2) {
+						this.$refs.tooltip.style.left = `0px`
+					} else if (l < 2) {
+						this.$refs.tooltip.style.left = `3px`
+					} else {
+						this.$refs.tooltip.style.left = `-${ (l - 2) * 4 }px`
+					}
+				}
 			}
 		},
 		computed: {
-			stops() {
+			steps() {
 				if (this.step === 0) {
 					return [];
 				}
-				const stopCount = (this.max - this.min) / this.step;
+
+				// 计算间断点距离
+				const stepCount = (this.max - this.min) / this.step;
 				const stepWidth = 100 * this.step / (this.max - this.min);
 				const result = [];
-				for (let i = 1; i < stopCount; i++) {
+				for (let i = 1; i < stepCount; i++) {
 					result.push(i * stepWidth);
 				}
 				return result.filter(step => step > 100 * (this.inputValue - this.min) / (this.max - this.min));
@@ -155,35 +171,23 @@
 			barStart() {
 				return `0%`;
 			},
-			precision() {
-				let precisions = [this.min, this.max, this.step].map(item => {
-					let decimal = ("" + item).split(".")[1];
-					return decimal ? decimal.length : 0;
-				});
-				return Math.max.apply(null, precisions);
-			},
 			barStyle() {
 				return {
 					width: this.barSize,
 					left: this.barStart
 				};
-			},
-			tooltipStyle() {
-				return {
-					left: this.barSize + "0%"
-				}
 			}
 		},
 		mounted() {
-			let valuetext;
+			// 初始化 赋值显示
 			if (typeof this.value !== "number" || isNaN(this.value)) {
 				this.inputValue = this.min;
 			} else {
 				this.inputValue = Math.min(this.max, Math.max(this.min, this.value));
 			}
 			this.oldValue = this.inputValue;
-			valuetext = this.inputValue;
 			this.resetSize();
+			this.setToolTipPosition();
 			window.addEventListener("resize", this.resetSize);
 		},
 		beforeDestroy() {
@@ -191,3 +195,13 @@
 		}
 	};
 </script>
+
+
+
+3    7
+
+4    10
+
+5    13
+
+6    16
