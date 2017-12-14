@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="dy-input-group-box">
         <input 
             v-if=" type != 'textarea' "
             class="dy-input"

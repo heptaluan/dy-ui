@@ -1,5 +1,5 @@
 <template>
-	<div class="dy-slider" :class="{ 'dy-slider--with-input': showInput }">
+	<div class="dy-slider">
 		<dy-input 
 			v-model="inputValue" 
 			v-if="showInput" 
@@ -12,21 +12,21 @@
 		>
 		</dy-input>
 		<div class="dy-slider-box" :class="{ 'show-input': showInput }" @click="onSliderClick" ref="slider">
-			<div class="dy-slider-bar" :style="barStyle">
-			</div>
-			<slider-button v-model="inputValue" ref="button1">
+			<div class="dy-slider-bar" :style="barStyle"></div>
+			<slider-button v-model="inputValue" ref="button">
+				<span class="dy-slider-box-tooltip" :style="tooltipStyle" v-if="showTooltip">{{ inputValue }}</span>
 			</slider-button>
-			<div class="dy-slider-stop" v-for="item in stops" :key="item" :style="{ 'left': item + '%' }" v-if="showStops">
-			</div>
+			<div class="dy-slider-stop" v-for="item in stops" :key="item" :style="{ 'left': item + '%' }" v-if="showStops"></div>
 		</div>
+		
 	</div>
 </template>
 
 <script type="text/babel">
-	import {
-		Input
-	} from "../Input";
+
+	import { Input } from "../Input";
 	import SliderButton from "./SliderButton";
+
 	export default {
 		name: "dy-slider",
 		props: {
@@ -51,6 +51,10 @@
 				default: false
 			},
 			showStops: {
+				type: Boolean,
+				default: false
+			},
+			showTooltip: {
 				type: Boolean,
 				default: false
 			}
@@ -112,7 +116,7 @@
 			},
 			setPosition(percent) {
 				const targetValue = this.min + percent * (this.max - this.min) / 100;
-				this.$refs.button1.setPosition(percent);
+				this.$refs.button.setPosition(percent);
 			},
 			onSliderClick(event) {
 				if (this.dragging) return;
@@ -163,6 +167,11 @@
 					width: this.barSize,
 					left: this.barStart
 				};
+			},
+			tooltipStyle() {
+				return {
+					left: this.barSize + "0%"
+				}
 			}
 		},
 		mounted() {

@@ -1,5 +1,7 @@
 <template>
-    <div class="dy-input-group">
+    <div class="dy-input-group"
+        :class="{ 'dy-prepend': prepend, 'dy-append': append }"
+    >
         <span v-if="prepend" class="dy-input-group-prepend">
             <slot name="prepend" v-if="$slots.prepend"></slot>
         </span>

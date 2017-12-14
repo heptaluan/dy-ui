@@ -11,6 +11,7 @@
 		@blur="mouseLeaveHandle"
 	>
 		<div class="dy-slider-button" :class="{ 'hover': hovering, 'dragging': dragging }"></div>
+		<slot></slot>
 	</div>
 </template>
  
@@ -93,6 +94,7 @@
 				if (this.dragging) {
 					this.isClick = false;
 					let diff = 0;
+					this.$parent.resetSize();
 					if (this.vertical) {
 						this.currentY = e.clientY;
 						diff = (this.startY - this.currentY) / this.$parent.sliderSize * 100;

@@ -57,13 +57,12 @@
     align-items: flex-start;
     border-collapse: separate;
 
-    .dy-input {
+    .dy-input-group-box {
         position: relative;
         z-index: 2;
         float: left;
         width: 100%;
         margin-bottom: 0;
-        border-radius: 0;
     }
 
     .dy-input-group-prepend, .dy-input-group-append {
@@ -83,6 +82,14 @@
         border-radius: $--border-radius-default;
         user-select: none;
     }
+}
+
+
+// 处理圆角和边框
+.dy-input-group.dy-prepend.dy-append {
+    .dy-input {
+        border-radius: 0;
+    }
 
     .dy-input-group-prepend {
         @include border-radius(left);
@@ -93,5 +100,27 @@
         @include border-radius(right);
         border-left: 0;
     }
-
 }
+
+.dy-input-group.dy-prepend {
+    .dy-input {
+        @include border-radius(right);
+    }
+
+    .dy-input-group-prepend {
+        @include border-radius(left);
+        border-right: 0;
+    }
+}
+
+.dy-input-group.dy-append {
+    .dy-input {
+        @include border-radius(left);
+    }
+
+    .dy-input-group-append {
+        @include border-radius(right);
+        border-left: 0;
+    }
+}
+

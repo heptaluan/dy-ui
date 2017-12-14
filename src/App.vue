@@ -696,13 +696,35 @@
 
 		<hr>
 		<div class="box">
-			<h2 class="h2">Slider 滑块</h2>
-			<dy-slider v-model="sliderVal1" show-input ></dy-slider>
+			<h2 class="h2">Slider 默认</h2>
+			<dy-slider v-model="sliderVal1"></dy-slider>
+		</div>
+		<div class="box">
+			<h2 class="h2">Slider 默认（自定义初始值）</h2>
+			<dy-slider v-model="sliderVal2"></dy-slider>
 		</div>
 
 		<div class="box">
-			<h2 class="h2">Slider 滑块</h2>
-			<dy-slider v-model="sliderVal2" show-input :step="10" show-stops></dy-slider>
+			<h2 class="h2">Slider 显示tooltip</h2>
+			<dy-slider v-model="sliderVal3" showTooltip></dy-slider>
+		</div>
+
+		<div class="box">
+			<h2 class="h2">Slider 显示输入框</h2>
+			<dy-slider v-model="sliderVal4" showTooltip showInput></dy-slider>
+		</div>
+		<div class="box">
+			<h2 class="h2">Slider 输入框限定范围值（100-1000）</h2>
+			<dy-slider v-model="sliderVal5" showTooltip showInput :min="100" :max="1000"></dy-slider>
+		</div>
+
+		<div class="box">
+			<h2 class="h2">Slider 离散值</h2>
+			<dy-slider v-model="sliderVal6" showTooltip show-input :step="10"></dy-slider>
+		</div>
+		<div class="box">
+			<h2 class="h2">Slider 离散值（显示间断点）</h2>
+			<dy-slider v-model="sliderVal7" showTooltip show-input :step="20" show-stops></dy-slider>
 		</div>
 
 
@@ -739,8 +761,13 @@
 				prompt002: false,
 				promptTel: "",
 				promptEmail: "",
-				sliderVal1: 20,
-				sliderVal2: 30
+				sliderVal1: 0,
+				sliderVal2: 20,
+				sliderVal3: 10,
+				sliderVal4: 30,
+				sliderVal5: 220,
+				sliderVal6: 10,
+				sliderVal7: 20
 			}
 		},
 		methods: {
