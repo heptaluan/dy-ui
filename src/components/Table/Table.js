@@ -24,14 +24,6 @@ export default {
             type: Boolean,
             default: false
         },
-        compact: {
-            type: Boolean,
-            default: false
-        },
-        nowrap: {
-            type: Boolean,
-            default: false
-        },
         select: {
             type: Boolean,
             default: false
@@ -49,6 +41,7 @@ export default {
         appendField(field) {
             this.rowFields.push(field);
         },
+        // 全选事件
         selectAllHandle(checked) {
             if (checked) {
                 const selectModel = [];
@@ -60,14 +53,17 @@ export default {
                 this.selectModel = [];
             }
         },
+        // 单选值
         selectModelInput(val) {
             this.selectModel = val;
         },
+        // 全选值
         selectAllModelInput(val) {
             this.selectAllModel = val;
         }
     },
     watch: {
+        // 单选与全选关联
         selectModel(curVal, oldVal) {
             const data = [];
             curVal.forEach( (index) => {
@@ -96,14 +92,6 @@ export default {
 
             if (this.hover) {
                 classes.push("dy-table-hover");
-            }
-
-            if (this.compact) {
-                classes.push("dy-table-compact");
-            }
-
-            if (this.nowrap) {
-                classes.push("dy-text-nowrap");
             }
 
             return classes.join(" ");
@@ -142,6 +130,7 @@ export default {
         }
     },
     render(h) {
+        // 挂载方法
         const {
             computedClass,
             data,
@@ -153,6 +142,7 @@ export default {
             selectAll,
             selectAllModel
         } = this;
+        // jsx 渲染
         return (
             <table class={ computedClass }>
                 {
@@ -194,13 +184,8 @@ export default {
                                             rowFields.map( (field, key) => {
                                                 const { render, value, color } = item[field.prop];
                                                 return (
-                                                    <td
-                                                        key={key}
-                                                        class={color ? `dy-${color}` : ""}
-                                                    >
-                                                        {
-                                                            typeof render === "function" ? render(h, item, field.prop, index) : value
-                                                        }
+                                                    <td key={key} class={color ? `dy-${color}` : ""}>
+                                                        { typeof render === "function" ? render(h, item, field.prop, index) : value }
                                                     </td>
                                                 )
                                             })

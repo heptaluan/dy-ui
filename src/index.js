@@ -1,15 +1,17 @@
 
-import { Button } from './components/Button';
-import { Icon } from './components/Icon';
-import { Input, InputGroup } from './components/Input';
-import { Radio, RadioGroup, RadioButton } from './components/Radio';
-import { Checkbox, CheckboxGroup } from './components/Checkbox';
-import { Switch } from './components/Switch';
-import { BackToTop } from './components/BackToTop';
-import { ToolTip } from './components/ToolTip';
-import { Notify } from './components/Notify';
-import { Message } from './components/Message';
-import { Close } from './components/Close';
+import { Button } from "./components/Button";
+import { Icon } from "./components/Icon";
+import { Input, InputGroup } from "./components/Input";
+import { Radio, RadioGroup, RadioButton } from "./components/Radio";
+import { Checkbox, CheckboxGroup } from "./components/Checkbox";
+import { Switch } from "./components/Switch";
+import { BackToTop } from "./components/BackToTop";
+import { ToolTip } from "./components/ToolTip";
+import { Notify } from "./components/Notify";
+import { Message } from "./components/Message";
+
+import { Close } from "./components/Close";
+import { Code } from "./components/Code";
 
 import { Model, ModelHeader, ModelBody, ModelFooter } from "./components/Model";
 import { Alert } from "./components/Alert";
@@ -37,7 +39,9 @@ const install = function (Vue) {
 
     Vue.component(Switch.name, Switch);
     Vue.component(BackToTop.name, BackToTop);
+
     Vue.component(Close.name, Close);
+    Vue.component(Code.name, Code);
 
     Vue.component(Model.name, Model);
     Vue.component(ModelHeader.name, ModelHeader);
@@ -58,7 +62,7 @@ const install = function (Vue) {
     Vue.use(Message);
 };
 
-if (typeof window !== 'undefined' && window.Vue) {
+if (typeof window !== "undefined" && window.Vue) {
     install(window.Vue);
 }
 
