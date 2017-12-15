@@ -8,105 +8,103 @@
 
 		<div class="box">
 			<h2 class="h2">普通按钮（一）</h2>
-			<dy-button color="default">默认按钮</dy-button>
-			<dy-button color="primary">主要按钮</dy-button>
-			<dy-button color="success">成功按钮</dy-button>
-			<dy-button color="info">信息按钮</dy-button>
-			<dy-button color="warning">警告按钮</dy-button>
-			<dy-button color="danger">危险按钮</dy-button>
+			<dy-button type="default">默认按钮</dy-button>
+			<dy-button type="primary">主要按钮</dy-button>
+			<dy-button type="success">成功按钮</dy-button>
+			<dy-button type="info">信息按钮</dy-button>
+			<dy-button type="warning">警告按钮</dy-button>
+			<dy-button type="danger">危险按钮</dy-button>
 		</div>
 
 		<div class="box">
 			<h2 class="h2">普通按钮（二）</h2>
-			<dy-button isPlanin color="default">默认按钮</dy-button>
-			<dy-button isPlanin color="primary">主要按钮</dy-button>
-			<dy-button isPlanin color="success">成功按钮</dy-button>
-			<dy-button isPlanin color="info">信息按钮</dy-button>
-			<dy-button isPlanin color="warning">警告按钮</dy-button>
-			<dy-button isPlanin color="danger">危险按钮</dy-button>
+			<dy-button isPlanin type="default">默认按钮</dy-button>
+			<dy-button isPlanin type="primary">主要按钮</dy-button>
+			<dy-button isPlanin type="success">成功按钮</dy-button>
+			<dy-button isPlanin type="info">信息按钮</dy-button>
+			<dy-button isPlanin type="warning">警告按钮</dy-button>
+			<dy-button isPlanin type="danger">危险按钮</dy-button>
 		</div>
 
 		<div class="box">
 			<h2 class="h2">圆角按钮</h2>
 			<div class="m">
-				<dy-button  isRound color="default">默认按钮</dy-button>
-				<dy-button  isRound color="primary">主要按钮</dy-button>
-				<dy-button  isRound color="success">成功按钮</dy-button>
-				<dy-button  isRound color="info">信息按钮</dy-button>
-				<dy-button  isRound color="warning">警告按钮</dy-button>
-				<dy-button  isRound color="danger">危险按钮</dy-button>
+				<dy-button  isRound type="default">默认按钮</dy-button>
+				<dy-button  isRound type="primary">主要按钮</dy-button>
+				<dy-button  isRound type="success">成功按钮</dy-button>
+				<dy-button  isRound type="info">信息按钮</dy-button>
+				<dy-button  isRound type="warning">警告按钮</dy-button>
+				<dy-button  isRound type="danger">危险按钮</dy-button>
 			</div>
 			<div class="m">
-				<dy-button isPlanin isRound color="default">默认按钮</dy-button>
-				<dy-button isPlanin isRound color="primary">主要按钮</dy-button>
-				<dy-button isPlanin isRound color="success">成功按钮</dy-button>
-				<dy-button isPlanin isRound color="info">信息按钮</dy-button>
-				<dy-button isPlanin isRound color="warning">警告按钮</dy-button>
-				<dy-button isPlanin isRound color="danger">危险按钮</dy-button>
+				<dy-button isPlanin isRound type="default">默认按钮</dy-button>
+				<dy-button isPlanin isRound type="primary">主要按钮</dy-button>
+				<dy-button isPlanin isRound type="success">成功按钮</dy-button>
+				<dy-button isPlanin isRound type="info">信息按钮</dy-button>
+				<dy-button isPlanin isRound type="warning">警告按钮</dy-button>
+				<dy-button isPlanin isRound type="danger">危险按钮</dy-button>
 			</div>
 		</div>
 
 		<div class="box">
 			<h2 class="h2">禁用状态</h2>
 			<div class="m">
-				<dy-button disabled color="default">默认按钮</dy-button>
-				<dy-button disabled color="primary">主要按钮</dy-button>
-				<dy-button disabled color="success">成功按钮</dy-button>
-				<dy-button disabled color="info">信息按钮</dy-button>
-				<dy-button disabled color="warning">警告按钮</dy-button>
-				<dy-button disabled color="danger">危险按钮</dy-button>
+				<dy-button disabled type="default">默认按钮</dy-button>
+				<dy-button disabled type="primary">主要按钮</dy-button>
+				<dy-button disabled type="success">成功按钮</dy-button>
+				<dy-button disabled type="info">信息按钮</dy-button>
+				<dy-button disabled type="warning">警告按钮</dy-button>
+				<dy-button disabled type="danger">危险按钮</dy-button>
 			</div>
 			<div class="m">
-				<dy-button isPlanin disabled color="default">默认按钮</dy-button>
-				<dy-button isPlanin disabled color="primary">主要按钮</dy-button>
-				<dy-button isPlanin disabled color="success">成功按钮</dy-button>
-				<dy-button isPlanin disabled color="info">信息按钮</dy-button>
-				<dy-button isPlanin disabled color="warning">警告按钮</dy-button>
-				<dy-button isPlanin disabled color="danger">危险按钮</dy-button>
+				<dy-button isPlanin disabled type="default">默认按钮</dy-button>
+				<dy-button isPlanin disabled type="primary">主要按钮</dy-button>
+				<dy-button isPlanin disabled type="success">成功按钮</dy-button>
+				<dy-button isPlanin disabled type="info">信息按钮</dy-button>
+				<dy-button isPlanin disabled type="warning">警告按钮</dy-button>
+				<dy-button isPlanin disabled type="danger">危险按钮</dy-button>
 			</div>
 		</div>
 
 		<div class="box">
 			<h2 class="h2">按钮大小</h2>
-			<dy-button size="xlll" color="default">最大的</dy-button>
-			<dy-button size="xll" color="primary">比较大</dy-button>
-			<dy-button size="xl" color="success">默认大小</dy-button>
-			<dy-button size="l" color="info">稍微小一点</dy-button>
-			<dy-button size="m" color="warning">比较小</dy-button>
-			<dy-button size="s" color="danger">最小的</dy-button>
+			<dy-button type="primary">默认按钮</dy-button>
+			<dy-button size="l" type="info">按钮</dy-button>
+			<dy-button size="m" type="warning">按钮</dy-button>
+			<dy-button size="s" type="danger">按钮</dy-button>
 		</div>
 
 		<div class="box">
 			<h2 class="h2">图标按钮</h2>
-			<dy-button color="default">
+			<dy-button type="default">
 				<dy-icon size="14" type="&#xe62f;"></dy-icon>
 			</dy-button>
-			<dy-button color="default">
+			<dy-button type="default">
 				<dy-icon size="14" type="&#xe62e;"></dy-icon>
 			</dy-button>
-			<dy-button color="default">
+			<dy-button type="default">
 				<dy-icon size="14" type="&#xe62d;"></dy-icon>
 			</dy-button>
-			<dy-button color="default">
+			<dy-button type="default">
 				<dy-icon size="14" type="&#xe62c;"></dy-icon>
 			</dy-button>
 		</div>
 
 		<div class="box">
 			<h2 class="h2">图标按钮（组合使用）</h2>
-			<dy-button color="default">
+			<dy-button type="default">
 				<dy-icon size="14" type="&#xe62f;"></dy-icon>
 				下一页
 			</dy-button>
-			<dy-button color="default">
+			<dy-button type="default">
 				下一页
 				<dy-icon size="14" type="&#xe62e;"></dy-icon>
 			</dy-button>
-			<dy-button color="default">
+			<dy-button type="default">
 				上一页
 				<dy-icon size="14" type="&#xe62d;"></dy-icon>
 			</dy-button>
-			<dy-button color="default">
+			<dy-button type="default">
 				<dy-icon size="14" type="&#xe62c;"></dy-icon>
 				上一页
 			</dy-button>
@@ -114,7 +112,7 @@
 
 		<div class="box">
 			<h2 class="h2">点击加载</h2>
-			<dy-button color="primary" @click="click" :loading="loading">点击加载</dy-button>
+			<dy-button type="primary" @click="click" :loading="loading">点击加载</dy-button>
 		</div>
 
 
@@ -667,7 +665,7 @@
 					<dy-button size="m" @click="model1">
 						取消
 					</dy-button>
-					<dy-button color="primary" size="m" @click="model2">
+					<dy-button type="primary" size="m" @click="model2">
 						确定
 					</dy-button>
 				</footer>
@@ -715,7 +713,7 @@
 		</div>
 		<div class="box">
 			<h2 class="h2">Slider 输入框限定范围值（100-1000）</h2>
-			<dy-slider v-model="sliderVal5" showTooltip showInput :min="100" :max="10000"></dy-slider>
+			<dy-slider v-model="sliderVal5" showTooltip showInput :min="100" :max="1000"></dy-slider>
 		</div>
 
 		<div class="box">
@@ -725,6 +723,87 @@
 		<div class="box">
 			<h2 class="h2">Slider 离散值（显示间断点）</h2>
 			<dy-slider v-model="sliderVal7" showTooltip show-input :step="20" show-stops></dy-slider>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<hr>
+		<div class="box">
+			<h2 class="h2">表格 - Table（默认）</h2>
+			<dy-table :data="tableData">
+				<dy-table-col prop="num" label="序号"></dy-table-col>
+				<dy-table-col prop="title" label="名称"></dy-table-col>
+				<dy-table-col prop="date" label="日期"></dy-table-col>
+			</dy-table>
+		</div>
+		<div class="box">
+			<h2 class="h2">表格 - Table（带边框）</h2>
+			<dy-table :data="tableData" :border="true">
+				<dy-table-col prop="num" label="序号"></dy-table-col>
+				<dy-table-col prop="title" label="名称"></dy-table-col>
+				<dy-table-col prop="date" label="日期"></dy-table-col>
+			</dy-table>
+		</div>
+		<div class="box">
+			<h2 class="h2">表格 - Table（背景色）</h2>
+			<dy-table :data="tableData" :border="true" :striped="true">
+				<dy-table-col prop="num" label="序号"></dy-table-col>
+				<dy-table-col prop="title" label="名称"></dy-table-col>
+				<dy-table-col prop="date" label="日期"></dy-table-col>
+			</dy-table>
+		</div>
+		<div class="box">
+			<h2 class="h2">表格 - Table（鼠标移入效果）</h2>
+			<dy-table :data="tableData" :border="true" :striped="true" :hover="true">
+				<dy-table-col prop="num" label="序号"></dy-table-col>
+				<dy-table-col prop="title" label="名称"></dy-table-col>
+				<dy-table-col prop="date" label="日期"></dy-table-col>
+			</dy-table>
+		</div>
+		<div class="box">
+			<h2 class="h2">表格 - Table（单选框）</h2>
+			<dy-table v-model="tableSelect1" :select="true" :data="tableData" :border="true" :striped="true" :hover="true">
+				<dy-table-col prop="num" label="序号"></dy-table-col>
+				<dy-table-col prop="title" label="名称"></dy-table-col>
+				<dy-table-col prop="date" label="日期"></dy-table-col>
+			</dy-table>
+			<div class="subBox">
+				当前选择的是：{{ tableSelect1 }}
+			</div>
+		</div>
+		<div class="box">
+			<h2 class="h2">表格 - Table（全选框）</h2>
+			<dy-table 
+				v-model="tableSelect2" 
+				:selectAll="true" 
+				:select="true" 
+				:data="tableData" 
+				:border="true" 
+				:striped="true" 
+				:hover="true"
+			>
+				<dy-table-col prop="num" label="序号"></dy-table-col>
+				<dy-table-col prop="title" label="名称"></dy-table-col>
+				<dy-table-col prop="date" label="日期"></dy-table-col>
+				<div slot="tfoot">全选行自定义内容</div>
+			</dy-table>
+			<div class="subBox">
+				当前选择的是：{{ tableSelect2 }}
+			</div>
 		</div>
 
 
@@ -765,9 +844,25 @@
 				sliderVal2: 20,
 				sliderVal3: 5,
 				sliderVal4: 30,
-				sliderVal5: 220,
+				sliderVal5: 420,
 				sliderVal6: 10,
-				sliderVal7: 20
+				sliderVal7: 20,
+				tableData: [{
+                    num: 1,
+                    title: '苹果',
+                    date: '2017-10-01'
+                },{
+                    num: 2,
+                    title: '香蕉',
+                    date: '2017-10-02'
+                },
+                {
+                    num: 3,
+                    title: '葡萄',
+                    date: '2017-10-03'
+				}],
+				tableSelect1: [],
+				tableSelect2: []
 			}
 		},
 		methods: {

@@ -7,7 +7,7 @@
         <slot v-if="!loading"></slot>
         <span v-if="loading">
             <span class="rotation">
-                <!-- <dy-icon size="14" type="&#xe631;"></dy-icon> -->
+                <dy-icon size="14" type="&#xe631;"></dy-icon>
             </span>
             {{ loadingText }}
         </span>
@@ -19,7 +19,7 @@
     export default {
         name: "dy-button",
         props: {
-            color: {
+            type: {
                 type: String,
                 default: "default",
                 validator(value) {
@@ -52,7 +52,7 @@
             size: {
                 type: String,
                 validator(value) {
-                    return ["s", "m", "l", "xl", "xll", "xlll"].includes(value)
+                    return ["s", "m", "l"].includes(value)
                 }
             },
             customClass: {
@@ -83,7 +83,7 @@
                 const computedClass = [];
                 // 默认样式
                 computedClass.push("dy-btn");
-                computedClass.push("dy-btn-" + this.color);
+                computedClass.push("dy-btn-" + this.type);
 
                 if (this.isRound) {
                     computedClass.push("dy-round");

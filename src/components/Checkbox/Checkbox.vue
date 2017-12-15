@@ -11,7 +11,7 @@
 				/> 
 	        </span>
 	        <slot></slot>
-			<template v-if="!$slots.default">{{ label }}</template>
+			<template v-if="!$slots.default && showLabel">{{ label }}</template>
     </label>
 </template>
 
@@ -32,6 +32,10 @@
 			disabled: {
 				type: Boolean,
 				default: false
+			},
+			showLabel: {
+				type: Boolean,
+				default: true
 			}
 		},
 		computed: {

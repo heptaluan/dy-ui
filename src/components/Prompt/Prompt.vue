@@ -25,7 +25,7 @@
                 <dy-button size="m" class="dy-model-btn" @click="confirmHandle">
                     {{ confirBtnText }}
                 </dy-button>
-                <dy-button color="primary" size="m" :disabled="waitError" class="dy-model-btn" @click="cancelHandle">
+                <dy-button type="primary" size="m" :disabled="waitError" class="dy-model-btn" @click="cancelHandle">
                     {{ cancelBtnText }}
                 </dy-button>
             </div>

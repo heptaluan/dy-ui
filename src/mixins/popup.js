@@ -7,7 +7,7 @@ export default {
         return {
             visible: false,
             overlay: false,
-            overlayClassName: 'dy-dimmer',
+            overlayClassName: "dy-dimmer",
             pageOffset: {
                 top: 0,
                 left: 0
@@ -39,15 +39,15 @@ export default {
             let top = 0;
             let left = 0;
 
-            if (typeof window.pageYOffset !== 'undefined') {
+            if (typeof window.pageYOffset !== "undefined") {
                 top = window.pageYOffset;
                 left = window.pageXOffset;
             }
-            else if (typeof document.compatMode !== 'undefined' && document.compatMode !== 'BackCompat') {
+            else if (typeof document.compatMode !== "undefined" && document.compatMode !== "BackCompat") {
                 top = document.documentElement.scrollTop;
                 left = document.documentElement.scrollLeft;
             }
-            else if (typeof document.body !== 'undefined') {
+            else if (typeof document.body !== "undefined") {
                 top = document.body.scrollTop;
                 left = document.body.scrollLeft;
             }
@@ -62,25 +62,25 @@ export default {
         visible(curVal, oldVal) {
             if (curVal) {
                 this.$nextTick(() => {
-                    if (typeof this.popupPosition === 'function') {
+                    if (typeof this.popupPosition === "function") {
                         dom.css(this.$el, this.popupPosition());
                     }
                 });
             }
             if (this.overlay) {
                 if (curVal) {
-                    this.$overlay = document.createElement('div');
-                    dom.addClass(this.$overlay, this.overlayClassName + ' dy-active');
+                    this.$overlay = document.createElement("div");
+                    dom.addClass(this.$overlay, this.overlayClassName + " dy-active");
                     dom.css(this.$overlay, {zIndex: this.getZIndex()});
                     document.body.appendChild(this.$overlay);
                     this.stopListener = true;
-                    window.addEventListener('mousewheel', this.stopScroll);
+                    window.addEventListener("mousewheel", this.stopScroll);
                 }
                 else {
                     setTimeout(() => {
                         document.body.removeChild(this.$overlay);
                         this.stopListener = false;
-                        window.removeEventListener('mousewheel', this.stopScroll);
+                        window.removeEventListener("mousewheel", this.stopScroll);
                     }, 300);
                 }
             }
@@ -88,12 +88,12 @@ export default {
     },
     created() {
         this.autoGetPageOffset();
-        window.addEventListener('scroll', this.autoGetPageOffset, false);
+        window.addEventListener("scroll", this.autoGetPageOffset, false);
     },
     beforeDestroy() {
-        window.removeEventListener('scroll', this.autoGetPageOffset);
+        window.removeEventListener("scroll", this.autoGetPageOffset);
         if (this.stopListener) {
-            window.removeEventListener('mousewheel', this.stopScroll);
+            window.removeEventListener("mousewheel", this.stopScroll);
         }
     }
 };

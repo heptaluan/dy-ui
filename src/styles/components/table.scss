@@ -1,0 +1,51 @@
+.dy-table {
+    width: 100%;
+    margin-bottom: 1.6rem;
+    border-spacing: 0;
+    border-collapse: separate;
+    font-size: $--font-size-base;
+    border-radius: $--border-radius-base;
+
+    thead td, tbody td, tfoot td {
+        padding: .7rem;
+        line-height: 1.4;
+        vertical-align: top;
+        border-top: $--border-base;
+        transition: $--all-transition;
+    }
+
+    thead td {
+        border-top: 0;
+    }
+
+    tbody td {
+        border-top: $--border-base;
+    }
+
+
+    // 边框
+    &.dy-table-border {
+        border: $--border-base;
+        border-left: 0;
+
+        thead td, tbody td, tfoot td {
+            border-left: $--border-base;
+        }
+    }
+
+    // 背景色
+    &.dy-table-striped {
+        tbody tr:nth-child(odd) td {
+            background-color: $--disabled-bg;
+            transition: $--all-transition;
+        }
+    }
+
+    // hover
+    &.dy-table-hover {
+        tbody tr:hover td {
+            background-color: $--disabled-border;
+            transition: $--all-transition;
+        }
+    }
+}

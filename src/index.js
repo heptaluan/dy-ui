@@ -18,6 +18,9 @@ import { Prompt } from "./components/Prompt";
 
 import { Slider } from "./components/Slider";
 
+import { Table, TableCol } from "./components/Table";
+
+
 const install = function (Vue) {
     Vue.component(Button.name, Button);
     Vue.component(Icon.name, Icon);
@@ -45,6 +48,10 @@ const install = function (Vue) {
     Vue.component(Prompt.name, Prompt);
 
     Vue.component(Slider.name, Slider);
+
+    Vue.component(Table.name, Table);
+    Vue.component(TableCol.name, TableCol);
+    
     
 
     Vue.use(Notify);

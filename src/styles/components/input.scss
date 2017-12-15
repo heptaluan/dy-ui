@@ -45,7 +45,9 @@
     transition: $--border-transition-base;
     border: $--border-base;
     border-radius: $--border-radius-default;
-    &:focus {
+    
+    &:focus,
+    &:hover {
         border-color: $--color-primary;
     }
 }

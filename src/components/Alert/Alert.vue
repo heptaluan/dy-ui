@@ -12,7 +12,7 @@
         </model-body>
         <model-footer>
             <div class="dy-alert-footer">
-                <dy-button color="primary" size="m" class="dy-alert-btn" @click="submitHandle">
+                <dy-button type="primary" size="m" class="dy-alert-btn" @click="submitHandle">
                     {{ submitButtonText }}
                 </dy-button>
             </div>
