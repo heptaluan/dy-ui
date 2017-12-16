@@ -13,6 +13,7 @@ import "./styles/index.scss";
 import VueHighlightJS from "vue-highlightjs"
 
 Vue.config.productionTip = false
+
 Vue.use(dyui);
 Vue.use(VueHighlightJS)
 
