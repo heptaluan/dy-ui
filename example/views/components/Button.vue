@@ -9,7 +9,7 @@
 
 
 <div class="components-content">
-    <h2 class="h2">基本按钮</h2>
+    <h2 class="h2">普通按钮</h2>
     <dy-button type="default">默认按钮</dy-button>
     <dy-button type="primary">主要按钮</dy-button>
     <dy-button type="success">成功按钮</dy-button>
@@ -21,7 +21,7 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        使用 type 属性来指定对应种类按钮
+        使用 <code>type</code> 属性来指定对应种类按钮
     </div>
 </div>
 
@@ -63,7 +63,7 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        用法同基本按钮类似，只需指定 isPlanin 参数即可
+        指定 <code>isPlanin</code> 参数即可
     </div>
 </div>
 
