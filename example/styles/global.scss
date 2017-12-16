@@ -1,0 +1,38 @@
+.components-box {
+
+    .components-title {
+        font-size: 18px;
+        margin: 24px 0;
+    }
+
+    .components-wrapper {
+
+        ul {
+        
+            li {
+                margin-bottom: 30px;
+
+
+                .components-content {
+                    h2 {
+                        font-size: 14px;
+                        font-weight: normal;
+                        margin: 15px 0;
+                    }
+                }
+
+                .components-code {
+
+                    .hljs {
+                        text-align: left;
+                    }
+                }
+    
+                
+            }
+        }
+
+    }
+
+    
+}

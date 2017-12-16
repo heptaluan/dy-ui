@@ -3,13 +3,13 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const AAA = () => import('./views/components/AAA.vue')
+const Button = () => import('./views/components/Button.vue')
 const BBB = () => import('./views/components/BBB.vue')
 
 export default new VueRouter({
     routes: [
-        { path: '/aaa', component: AAA },
+        { path: '/button', component: Button },
         { path: '/bbb', component: BBB},
-        { path: '*', redirect: '/aaa'}
+        { path: '*', redirect: '/button'}
     ]
 });
