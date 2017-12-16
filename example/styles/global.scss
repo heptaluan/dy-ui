@@ -1,8 +1,9 @@
 .components-box {
 
     .components-title {
-        font-size: 18px;
+        font-size: 22px;
         margin: 24px 0;
+        color: #409EFF;
     }
 
     .components-wrapper {
@@ -14,25 +15,43 @@
 
 
                 .components-content {
+                    margin: 15px 0;
+                    
                     h2 {
-                        font-size: 14px;
+                        font-size: 16px;
                         font-weight: normal;
                         margin: 15px 0;
+                        font-weight: 600;
                     }
                 }
 
                 .components-code {
+                    font-family: Consolas,Menlo,Courier,monospace;
 
-                    .hljs {
-                        text-align: left;
+                    .code-title {
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                    }
+
+                    .code-tip {
+                        display: block;
+                        padding: .5em;
+                        background: #23241f;
+                        color: #fff;
+                        font-size: 14px;
+                        text-indent: 10px;
                     }
                 }
-    
-                
             }
         }
 
     }
 
-    
+    pre {
+        display: block;
+        font-size: 14px;
+        margin: -35px 0 0 0;
+        padding: 0;
+        width: 100%;
+    }
 }

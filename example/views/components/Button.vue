@@ -1,43 +1,92 @@
 <template>
 <div class="components-box">
 
-
-        <div class="components-title">
-            按钮
-        </div>
+        <div class="components-title">Button 按钮</div>
 
         <div class="components-wrapper">
             <ul>
                 <li>
 
-                    <div class="components-content">
-                        <h2 class="h2">普通按钮（一）</h2>
-                        <dy-button type="default">默认按钮</dy-button>
-                        <dy-button type="primary">主要按钮</dy-button>
-                        <dy-button type="success">成功按钮</dy-button>
-                        <dy-button type="info">信息按钮</dy-button>
-                        <dy-button type="warning">警告按钮</dy-button>
-                        <dy-button type="danger">危险按钮</dy-button>
-                    </div>
 
-                    <div class="components-code">
-                        <div class="code-title">示例代码</div>
-                        <dy-code syntax="javascript">
-                            <dy-button type="warning">警告按钮</dy-button>
-                            <dy-button type="danger">危险按钮</dy-button>
+<div class="components-content">
+    <h2 class="h2">基本按钮</h2>
+    <dy-button type="default">默认按钮</dy-button>
+    <dy-button type="primary">主要按钮</dy-button>
+    <dy-button type="success">成功按钮</dy-button>
+    <dy-button type="info">信息按钮</dy-button>
+    <dy-button type="warning">警告按钮</dy-button>
+    <dy-button type="danger">危险按钮</dy-button>
+</div>
 
-                        </dy-code>
-                    </div>
+<div class="components-code">
+    <div class="code-title">示例代码</div>
+    <div class="code-tip">
+        使用 type 属性来指定对应种类按钮
+    </div>
+</div>
+
+<pre v-highlightjs>
+    <code class="html">
+    &lt;template&gt;
+        &lt;dy-button type="default"&gt;默认按钮&lt;/dy-button&gt;
+        &lt;dy-button type="primary"&gt;主要按钮&lt;/dy-button&gt;
+        &lt;dy-button type="success"&gt;成功按钮&lt;/dy-button&gt;
+        &lt;dy-button type="info"&gt;信息按钮&lt;/dy-button&gt;
+        &lt;dy-button type="warning"&gt;警告按钮&lt;/dy-button&gt;
+        &lt;dy-button type="danger"&gt;危险按钮&lt;/dy-button&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+        export default {
+            // ...
+        }
+    &lt;/script&gt;
+    </code>
+</pre>
+
+
                 </li>
 
                 <li>
-                    <h2 class="h2">普通按钮（二）</h2>
-                    <dy-button isPlanin type="default">默认按钮</dy-button>
-                    <dy-button isPlanin type="primary">主要按钮</dy-button>
-                    <dy-button isPlanin type="success">成功按钮</dy-button>
-                    <dy-button isPlanin type="info">信息按钮</dy-button>
-                    <dy-button isPlanin type="warning">警告按钮</dy-button>
-                    <dy-button isPlanin type="danger">危险按钮</dy-button>
+
+
+<div class="components-content">
+    <h2 class="h2">普通按钮（带有渐变色）</h2>
+    <dy-button isPlanin type="default">默认按钮</dy-button>
+    <dy-button isPlanin type="primary">主要按钮</dy-button>
+    <dy-button isPlanin type="success">成功按钮</dy-button>
+    <dy-button isPlanin type="info">信息按钮</dy-button>
+    <dy-button isPlanin type="warning">警告按钮</dy-button>
+    <dy-button isPlanin type="danger">危险按钮</dy-button>
+</div>
+
+<div class="components-code">
+    <div class="code-title">示例代码</div>
+    <div class="code-tip">
+        用法同基本按钮类似，只需指定 isPlanin 参数即可
+    </div>
+</div>
+
+<pre v-highlightjs>
+    <code class="html">
+    &lt;template&gt;
+        &lt;dy-button isPlanin type="default"&gt;默认按钮&lt;/dy-button&gt;
+        &lt;dy-button isPlanin type="primary"&gt;主要按钮&lt;/dy-button&gt;
+        &lt;dy-button isPlanin type="success"&gt;成功按钮&lt;/dy-button&gt;
+        &lt;dy-button isPlanin type="info"&gt;信息按钮&lt;/dy-button&gt;
+        &lt;dy-button isPlanin type="warning"&gt;警告按钮&lt;/dy-button&gt;
+        &lt;dy-button isPlanin type="danger"&gt;危险按钮&lt;/dy-button&gt;
+    &lt;/template&gt;
+
+    &lt;script&gt;
+        export default {
+            // ...
+        }
+    &lt;/script&gt;
+    </code>
+</pre>
+
+                    
                 </li>
 
                 <li>

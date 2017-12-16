@@ -53,7 +53,11 @@
 						display: inline-block;
                         width: 100%;
                         font-size: 14px;
-                        color: #495060;
+						color: #495060;
+						
+						&.router-link-active {
+							color: #409EFF;
+						}
                     }
                     
                     &:hover {
