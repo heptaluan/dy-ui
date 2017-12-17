@@ -19,7 +19,10 @@
 							<router-link to="/button">Button 按钮</router-link>
 						</li>
 						<li>
-							<router-link to="/bbb">分页</router-link>
+							<router-link to="/input">待定</router-link>
+						</li>
+						<li>
+							<router-link to="/icon">待定</router-link>
 						</li>
 
 					</ul>
