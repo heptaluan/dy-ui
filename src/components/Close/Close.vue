@@ -3,10 +3,11 @@
         type="button"
         @click="clickHandle"
         class="dy-close"
+        :size="size"
     >
         <dy-icon 
             class="dy-close" 
-            size="10" 
+            :size="closeSize" 
             type="&#xe626;"
         ></dy-icon>
     </button>
@@ -18,7 +19,17 @@
 
     export default {
         name: "dy-close",
-        props: {},
+        props: {
+            size: {
+                type: [String, Number],
+                default: 10
+            }
+        },
+        computed: {
+            closeSize() {
+                return this.size
+            }
+        },
         methods: {
             clickHandle(e) {
                 this.$emit("click", e)

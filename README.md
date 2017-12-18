@@ -6,11 +6,11 @@
 
 开发进行中
 
-预览地址：[中文文档地址](https://hanekaoru.github.io)
+预览地址：[dy-ui](https://hanekaoru.github.io)
 
 ----
 
-参考：
+相关参考：
 
 [amazeui](https://github.com/amazeui/amazeui)
 
@@ -28,9 +28,8 @@
 目录结构为：
 
 ```js
-├── example               文档地址
-└── src                   组件所在目录
-    ├── components        
+└── src              
+    ├── components        组件所在目录
     │    ├── Button
     │    └── ...
     ├── mixins            组件依赖的 mixins

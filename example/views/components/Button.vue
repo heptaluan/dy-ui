@@ -335,7 +335,7 @@
 
 
                 <li>
-<div class="components-content">
+<div class="components-content" style="height:100px;">
     <h2 class="h2">按钮点击后的加载状态</h2>
     <dy-button type="primary" @click="click" :loading="loading">点击加载</dy-button>
 </div>
@@ -344,7 +344,6 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>绑定一个 <code>loading</code> 参数用于指定状态切换</p>
-        <p>图标旋转动画需要手动来指定</p>
     </div>
 </div>
 
@@ -395,11 +394,7 @@
 		methods: {
 			click() {
 				this.loading = true;
-				// ..
-			},
-		},
-		mounted() {
-			// console.log(hljs)
+			}
 		}
 	};
 </script>

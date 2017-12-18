@@ -21,8 +21,20 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>使用 <code>dy-table</code> 组件来包裹 <code>dy-table-col</code> 组件使用</p>
-        <p>指定 <code>:data</code> 方法来渲染指定的 <code>tableData</code> 当中的数据，<code>label</code> 为表头内容</p>
-        <p><code>prop</code> 为数据载体当中的各项 <code>key</code>，数据载体 <code>tableData</code> 为一个标准 <code>JSON</code> 格式数据</p>
+        <br>
+        <p><code>:data</code> -- 绑定用来渲染的数据列表数组</p>
+        <p><code>prop</code> -- 绑定用来渲染的数据列表数组当中的 <code>key</code></p>
+        <p><code>label</code> -- 表格表头的内容</p>
+        <br>
+        <p><code>:border</code> -- 布尔值，是否显示边框，默认为 <code>false</code></p>
+        <p><code>:striped</code> -- 布尔值，是否显示隔行背景色，默认为 <code>false</code></p>
+        <p><code>:hover</code> -- 布尔值，是否显示鼠标移入样式，默认为 <code>false</code></p>
+        <p><code>:select</code> -- 布尔值，是否显示单选框，默认为 <code>false</code></p>
+        <p><code>:selectAll</code> -- 布尔值，是否显示全选框，默认为 <code>false</code></p>
+        <p><code>:selectText</code> -- 用于标记全选按钮的文本，默认为 <code>全选</code> 两字</p>
+        <p><code>slot="tfoot"</code> -- 用于自定义全选行的显示内容</p>
+
+
     </div>
 </div>
 
