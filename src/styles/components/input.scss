@@ -15,6 +15,13 @@
         border-color: $--color-primary;
     }
 
+    &.dy-input-disabled {
+        opacity: .8;
+        pointer-events: none;
+        user-select: none;
+        background-color: $--input-group-bg;
+    }
+
 }
 
 .dy-input-error {

@@ -5,6 +5,7 @@
         
     >
         <span
+            class="dy-switch-inActiveText"
             :class="{ 'dy-switch-text-toggle': !value, 'dy-switch-text': true }"
             v-if="inActiveText"
         >
@@ -24,6 +25,7 @@
             </span>
         </span>
         <span
+            class="dy-switch-activeText"
             :class="{ 'dy-switch-text-toggle': value, 'dy-switch-text': true }"
             v-if="activeText"
         >

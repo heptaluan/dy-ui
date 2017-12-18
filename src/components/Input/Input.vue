@@ -153,6 +153,10 @@
                     classes.push("dy-input-error")
                 }
 
+                if (this.disabled) {
+                    classes.push("dy-input-disabled");
+                }
+
                 return classes.join(" ")
             },
             styles() {

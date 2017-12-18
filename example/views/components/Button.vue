@@ -387,7 +387,6 @@
 
 <script>
 	export default {
-		name: "Home",
 		data() {
 			return {
 				loading: false,
@@ -411,11 +410,14 @@
 
     .dy-btn {
         margin-left: 20px;
-        margin-bottom: 20px;
     
         &:first-child {
             margin-left: 0;
         }
+    }
+
+    .dy-round, .dy-btn-disabled {
+        margin-bottom: 20px;
     }
 }
 </style>
