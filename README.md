@@ -6,7 +6,7 @@
 
 开发进行中
 
-预览地址：[dy-ui](https://hanekaoru.github.io)
+预览地址：[中文文档地址](https://hanekaoru.github.io)
 
 ----
 

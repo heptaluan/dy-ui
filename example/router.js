@@ -37,6 +37,6 @@ export default new VueRouter({
         { path: '/dialog', component: Dialog },
         { path: '/slider', component: Slider },
         { path: '/select', component: Select },
-        { path: '*', redirect: '/box'}
+        { path: '*', redirect: '/table'}
     ]
 });
