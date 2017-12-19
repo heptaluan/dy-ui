@@ -31,11 +31,13 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button @click="showAlert"&gt;Alert&lt;/dy-button&gt;
 
         &lt;dy-alert :isShow.sync="alertVisible" titleText="标题" @submit="alertSubmitHandle"&gt;
             信息内容
         &lt;/dy-alert&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -86,14 +88,15 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p><code>@cancel=""</code> -- 确定事件回调</p>
-        <p><code>@confirm=""</code> -- 取消事件回调</p>
+        <p><code>@cancel</code> -- 确定事件回调</p>
+        <p><code>@confirm</code> -- 取消事件回调</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button @click="showConfirm"&gt;Confirm&lt;/dy-button&gt;
 
         &lt;dy-confirm 
@@ -104,6 +107,7 @@
         &gt;
             此操作将会删除该文件, 是否继续?
         &lt;/dy-confirm&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -183,8 +187,8 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p><code>prompt001，prompt001</code> -- 控制弹窗显示状态</p>
-        <p><code>@cancel=""</code> -- 确定事件回调</p>
-        <p><code>@confirm=""</code> -- 取消事件回调</p>
+        <p><code>@cancel</code> -- 确定事件回调</p>
+        <p><code>@confirm</code> -- 取消事件回调</p>
         <p><code>v-model</code> -- 弹窗内 <code>input</code> 绑定所用</p>
         <br>
         
@@ -197,7 +201,9 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button @click="showPrompt001"&gt;请输入手机号码&lt;/dy-button&gt;
+
         &lt;dy-prompt
             :isShow.sync="prompt001" 
             titleText="提示" 
@@ -213,6 +219,7 @@
 
 
         &lt;dy-button @click="showPrompt002"&gt;请输入邮箱地址&lt;/dy-button&gt;
+
         &lt;dy-prompt
             :isShow.sync="prompt002" 
             titleText="提示" 
@@ -225,6 +232,7 @@
         &gt;
             请输入邮箱地址
         &lt;/dy-prompt&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -341,6 +349,7 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button @click="showModel"&gt;自定义弹窗&lt;/dy-button&gt;
     
         &lt;dy-model :isShow.sync="modelVisible" :width="650"&gt;
@@ -370,6 +379,7 @@
             &lt;/footer&gt;
 
         &lt;/dy-model&gt;
+        
     &lt;/template&gt;
 
     &lt;script&gt;

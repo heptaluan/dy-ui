@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 const Table = () => import('./views/components/Table.vue');
 const Icon = () => import('./views/components/Icon.vue');
 const Close = () => import('./views/components/Close.vue');
+const BackToTop = () => import('./views/components/BackToTop.vue');
 const Button = () => import('./views/components/Button.vue');
 const Input = () => import('./views/components/Input.vue');
 const Radio = () => import('./views/components/Radio.vue');
@@ -23,6 +24,7 @@ export default new VueRouter({
         { path: '/table', component: Table },
         { path: '/icon', component: Icon },
         { path: '/close', component: Close },
+        { path: '/backtotop', component: BackToTop },
         { path: '/button', component: Button },
         { path: '/input', component: Input },
         { path: '/radio', component: Radio },

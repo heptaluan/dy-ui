@@ -22,6 +22,7 @@
 						<li><router-link to="/table">Table 表格</router-link></li>
 						<li><router-link to="/icon">Icon 图标</router-link></li>
 						<li><router-link to="/close">Close 关闭按钮</router-link></li>
+						<li><router-link to="/backtotop">BackToTop 回到顶部</router-link></li>
 						<li><router-link to="/button">Button 按钮</router-link></li>
 						<li><router-link to="/input">Input 输入框</router-link></li>
 						<li><router-link to="/radio">Radio 单选框</router-link></li>
@@ -39,7 +40,9 @@
 
 				<div class="wrapper-content">
 					<article>
-						<router-view></router-view>
+						<transition name="fade">
+							<router-view></router-view>
+						</transition>
 					</article>
 				</div>
 
@@ -47,3 +50,13 @@
 		</div>
 	</div>
 </template>
+
+<style lang="scss">
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .3s
+}
+
+.fade-enter, .fade-leave-to  {
+	opacity: 0
+}
+</style>

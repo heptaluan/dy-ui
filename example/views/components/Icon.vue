@@ -26,6 +26,23 @@
     </div>
 </div>
 
+<div class="components-content">
+    <div class="components-content">
+        <div>
+            <dy-icon size="36" type="&#xe62f;"></dy-icon>
+            <dy-icon size="36" type="&#xe62e;"></dy-icon>
+            <dy-icon size="36" type="&#xe62d;"></dy-icon>
+            <dy-icon size="36" type="&#xe62d;"></dy-icon>
+            <dy-icon size="36" type="&#xe62c;"></dy-icon>
+            <dy-icon size="36" type="&#xe629;"></dy-icon>
+            <dy-icon size="36" type="&#xe628;"></dy-icon>
+            <dy-icon size="36" type="&#xe627;"></dy-icon>
+            <dy-icon size="36" type="&#xe631;"></dy-icon>
+            <dy-icon size="36" type="&#xe625;"></dy-icon>
+        </div>
+    </div>
+</div>
+
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
@@ -39,7 +56,7 @@
     <code class="html">
     &lt;template&gt;
         
-        &lt;dy-icon size="36" type="&#xe6b2;"&gt;&lt;/dy-icon&gt;
+        &lt;dy-icon size="36" type="&amp;#xe6b2;"&gt;&lt;/dy-icon&gt;
 
     &lt;/template&gt;
 
@@ -58,7 +75,8 @@
             </ul>
         </div>
         
-
+<!-- 测试用 div -->
+<div style="height:500px;"></div>
 
 
 
