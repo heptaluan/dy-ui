@@ -23,8 +23,8 @@
         <br>
         <p><code>alertVisible</code> -- 根据该值的状态来判断弹窗的显示与隐藏</p>
         <p><code>titleText</code> -- 弹窗的标题内容</p>
-        <p><code>信息内容</code> -- 弹窗的主体内容</p>
-        <p><code>@submit="..."</code> -- 弹窗内的按钮事件回调</p>
+        <p><code>信息内容</code> -- 弹窗主体中的自定义内容</p>
+        <p><code>@submit</code> -- 弹窗内的按钮事件回调</p>
     </div>
 </div>
 
@@ -186,14 +186,15 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p><code>prompt001，prompt001</code> -- 控制弹窗显示状态</p>
+        <p><code>:isShow.sync</code> -- 用来控制弹窗显示状态</p>
+        <p><code>titleText</code> -- 弹窗标题</p>
         <p><code>@cancel</code> -- 确定事件回调</p>
         <p><code>@confirm</code> -- 取消事件回调</p>
         <p><code>v-model</code> -- 弹窗内 <code>input</code> 绑定所用</p>
         <br>
         
-        <p>下面两个参数为选填，可以提供简单的验证</p>
-        <p><code>regex</code> -- 验证用的正则，不需要添加<code>"/.../"</code></p>
+        <p>下面两个参数为选填，可以提供简单的验证，原理为使用正则去匹配输入框内的输入值，验证不通过的时候显示提示文字</p>
+        <p><code>regex</code> -- 验证用的正则，不需要添加<code>"/ /"</code></p>
         <p><code>errorNotice</code> -- 验证时候的提示文字</p>
     </div>
 </div>
@@ -338,10 +339,11 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p><code>dy-model</code> 是提供的一个容器盒子，内部的内容都可以自定义，只需使用 <code>:isShow.sync</code> 绑定状态值控制弹窗的显示即可</p>
-        <p>内部的按钮点击事件可以自定义的进行添加</p>
+        <p><code>dy-model</code> 组件仅仅只是提供一个居中显示的带遮罩的容器盒子，内部的内容都可以自定义</p>
+        <p>只需使用 <code>:isShow.sync</code> 绑定状态值控制弹窗的显示和隐藏即可</p>
+        <p>内部的按钮点击事件可以根据需要来进行自定义的添加和删除</p>
         <br>
-        <p><code>:width</code> -- 自定义容器的宽度（高度为自适应）</p>
+        <p><code>:width</code> -- 自定义容器的宽度（不需要单位）【容器的高度为居中自适应】</p>
         <p><code>model1，model2</code> -- 为内部自定义按钮事件的回调</p>
     </div>
 </div>

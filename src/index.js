@@ -22,6 +22,9 @@ import { Slider } from "./components/Slider";
 
 import { Table, TableCol } from "./components/Table";
 
+import { Select } from "./components/Select";
+
+
 
 const install = function (Vue) {
     Vue.component(Button.name, Button);
@@ -56,6 +59,7 @@ const install = function (Vue) {
     Vue.component(Table.name, Table);
     Vue.component(TableCol.name, TableCol);
     
+    Vue.component(Select.name, Select);
     
 
     Vue.use(Notify);

@@ -24,7 +24,7 @@
         <p><code>title</code> -- 标题文本</p>
         <p><code>message</code> -- 内容文本</p>
         <p><code>close</code> -- 布尔值，是否出现关闭按钮，默认为 <code>false</code></p>
-        <p><code>onClose</code> -- 通知关闭后的回调事件</p>
+        <p><code>onClose</code> -- 侧边提示信息关闭后的回调事件</p>
         <p><code>delay</code> -- 自动关闭时间，默认为 <code>2000</code> 毫秒</p>
         <p><code>type</code> -- 弹窗的主题，分为 <code>default</code>，<code>success</code>，<code>waring</code>，<code>danger</code>，默认为 <code>default</code></p>
         <p><code>placement</code> -- 弹窗出现的方位，分为 <code>left-top</code>，<code>left-bottom</code>，<code>right-top</code>，<code>right-bottom</code>，默认为 <code>right-top</code></p>
@@ -34,10 +34,12 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button @click="message01"&gt;默认通知&lt;/dy-button&gt;
         &lt;dy-button @click="message02"&gt;成功通知&lt;/dy-button&gt;
         &lt;dy-button @click="message03"&gt;警告通知&lt;/dy-button&gt;
         &lt;dy-button @click="message04"&gt;危险通知&lt;/dy-button&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -140,10 +142,3 @@
         }
 	};
 </script>
-
-<style lang="scss">
-
-
-</style>
-
-

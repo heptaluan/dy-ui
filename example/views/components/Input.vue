@@ -16,14 +16,17 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p><code>input</code> 的一些原生属性还是一样的使用，比如 <code>placeholder</code>，默认的文本为请输入内容，可以手动指定将其覆盖掉</p>
+        <p><code>input</code> 的原生属性可以正常使用，比如 <code>placeholder</code>，默认的文本为请输入内容，可以手动指定将其覆盖掉</p>
+        <p><code>input</code> 的默认宽度为 <code>100%</code>，高度为 <code>40px</code>（包含边框在内）</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-input&gt;&lt;/dy-input&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -46,21 +49,24 @@
 </div>
 
 <div class="components-content">
-    <dy-input w="40%" h="45px"></dy-input>
+    <dy-input w="35%" h="45px"></dy-input>
 </div>
 
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>使用 <code>w</code> 和 <code>h</code> 参数来指定 <code>input</code> 框的长度和高度，需要带上单位，支持 <code>px</code>，<code>%</code>，<code>em/rem</code></p>
-        <p>图标旋转动画需要手动来指定</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-input w="50%" h="40px"&gt;&lt;/dy-input&gt;
+
+        &lt;dy-input w="35%" h="45px"&gt;&lt;/dy-input&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -99,13 +105,15 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p>使用 <code>regex</code> 参数来指定验证的规则，<code>errorNotice</code> 参数来指定验证时提示的文字</p>
+        <p>使用 <code>regex</code> 参数来指定验证的规则（注意：只需要添加正则即可，不需要 <code>/ /</code>），<code>errorNotice</code> 参数来指定验证时提示的文字</p>
+        <p>错误提示默认为红色字样，当匹配验证规则后会恢复原样</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-input
             placeholder="请输入手机号码"
             v-model="telMsg"
@@ -120,6 +128,7 @@
             regex="^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$"
             errorNotice="请输入正确的邮箱地址"
         &gt;&lt;/dy-input&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -155,7 +164,9 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-input disabled&gt;&lt;/dy-input&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -195,13 +206,15 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>需要使用 <code>dy-input-group</code> 来包裹 <code>dy-input</code> 使用</p>
-        <p>然后指定一个 <code>span</code> 标签，使用 <code>slot="prepend" / slot="append"</code> 来指定左右位置</p>
+        <p>然后指定一个 <code>span</code> 标签，使用 <code>slot="prepend"</code> 和 <code>slot="append"</code> 参数来指定左右位置</p>
+        <p>固定框中的文字是自适应长度的，如果只添加头部标签，尾部标签默认不显示（反之同理）</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-input-group&gt;
             &lt;span slot="prepend"&gt;http://&lt;/span&gt;
             &lt;span slot="append"&gt;.com&lt;/span&gt;
@@ -219,6 +232,7 @@
             &lt;span slot="append"&gt;密码&lt;/span&gt;
             &lt;dy-input&gt;&lt;/dy-input&gt;
         &lt;/dy-input-group&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -256,9 +270,11 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-input type="textarea"&gt;&lt;/dy-input&gt;
 
         &lt;dy-input resize type="textarea"&gt;&lt;/dy-input&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;

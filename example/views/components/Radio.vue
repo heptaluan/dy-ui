@@ -25,19 +25,21 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>需要使用 <code>dy-radio-group</code> 来包裹 <code>dy-radio</code> 使用</p>
-        <p>然后指定 <code>dy-radio</code> 的 <code>label</code> 属性来指定各个选项的名称</p>
+        <p>然后指定 <code>dy-radio</code> 的 <code>label</code> 属性来指定各个选项的名称，使用 <code>v-model</code> 来绑定选中的数据</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-radio-group v-model="radio1"&gt;
             &lt;dy-radio label="苹果"&gt;&lt;/dy-radio&gt;
             &lt;dy-radio label="香蕉"&gt;&lt;/dy-radio&gt;
             &lt;dy-radio label="葡萄"&gt;&lt;/dy-radio&gt;
             &lt;dy-radio label="鸭梨"&gt;&lt;/dy-radio&gt;
         &lt;/dy-radio-group&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -81,12 +83,14 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-radio-group v-model="radio2"&gt;
             &lt;dy-radio label="苹果"&gt;&lt;/dy-radio&gt;
             &lt;dy-radio label="香蕉"&gt;&lt;/dy-radio&gt;
             &lt;dy-radio label="葡萄"&gt;&lt;/dy-radio&gt;
             &lt;dy-radio label="鸭梨"&gt;&lt;/dy-radio&gt;
         &lt;/dy-radio-group&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -116,7 +120,7 @@
         <dy-radio label="鸭梨"></dy-radio>
     </dy-radio-group>
 
-    <h2 class="h2">单选框（单个禁用）</h2>
+    <h2 class="h2">单选框（部分禁用）</h2>
     <dy-radio-group v-model="radio4">
         <dy-radio disabled label="苹果"></dy-radio>
         <dy-radio label="香蕉"></dy-radio>
@@ -139,6 +143,7 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-radio-group disabled v-model="radio3"&gt;
             &lt;dy-radio label="苹果"&gt;&lt;/dy-radio&gt;
             &lt;dy-radio label="香蕉"&gt;&lt;/dy-radio&gt;
@@ -202,13 +207,14 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p>使用 <code>dy-radio-button</code> 组件即可</p>
+        <p>将 <code>dy-radio</code> 组件替换为 <code>dy-radio-button</code> 组件即可</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-radio-group v-model="radio5"&gt;
             &lt;dy-radio-button label="苹果"&gt;&lt;/dy-radio-button&gt;
             &lt;dy-radio-button label="香蕉"&gt;&lt;/dy-radio-button&gt;
@@ -223,6 +229,7 @@
             &lt;dy-radio-button label="葡萄"&gt;&lt;/dy-radio-button&gt;
             &lt;dy-radio-button label="鸭梨"&gt;&lt;/dy-radio-button&gt;
         &lt;/dy-radio-group&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;

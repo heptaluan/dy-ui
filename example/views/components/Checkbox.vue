@@ -25,19 +25,21 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>需要使用 <code>dy-checkbox-group</code> 组件来包裹 <code>dy-checkbox</code> 组件使用</p>
-        <p>指定 <code>v-model</code> 绑定渲染后生成的数据，<code>label</code> 为各个选项的名称</p>
+        <p>指定 <code>v-model</code> 绑定当前选中的数据，<code>label</code> 为各个选项的名称</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-checkbox-group v-model="checkbox1"&gt;
             &lt;dy-checkbox label="苹果"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="香蕉"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="葡萄"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="鸭梨"&gt;&lt;/dy-checkbox&gt;
         &lt;/dy-checkbox-group&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -80,12 +82,14 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-checkbox-group v-model="checkbox1"&gt;
             &lt;dy-checkbox label="苹果"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="香蕉"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="葡萄"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="鸭梨"&gt;&lt;/dy-checkbox&gt;
         &lt;/dy-checkbox-group&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -128,12 +132,14 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-checkbox-group disabled v-model="checkbox3"&gt;
             &lt;dy-checkbox label="苹果"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="香蕉"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="葡萄"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="鸭梨"&gt;&lt;/dy-checkbox&gt;
         &lt;/dy-checkbox-group&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -176,12 +182,14 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-checkbox-group v-model="checkbox4"&gt;
             &lt;dy-checkbox disabled label="苹果"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="香蕉"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="葡萄"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="鸭梨"&gt;&lt;/dy-checkbox&gt;
         &lt;/dy-checkbox-group&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -225,12 +233,14 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-checkbox-group v-model="checkbox5" :min="1" :max="3"&gt;
             &lt;dy-checkbox label="苹果"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="香蕉"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="葡萄"&gt;&lt;/dy-checkbox&gt;
             &lt;dy-checkbox label="鸭梨"&gt;&lt;/dy-checkbox&gt;
         &lt;/dy-checkbox-group&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;

@@ -1,7 +1,7 @@
 <template>
 <div class="components-box">
 
-        <div class="components-title">Input 输入框</div>
+        <div class="components-title">Slider 滑块</div>
 
         <div class="components-wrapper">
             <ul>

@@ -19,11 +19,11 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p>绑定 <code>click</code> 方法后调用指令 <code>$notify({})</code> 方法即可</p>
+        <p>绑定 <code>click</code> 方法后调用 <code>$notify({})</code> 方法即可</p>
         <br>
         <p><code>message</code> -- 通知内容</p>
         <p><code>close</code> -- 布尔值，是否出现关闭按钮，默认为 <code>false</code></p>
-        <p><code>onClose</code> -- 通知关闭后的回调事件</p>
+        <p><code>onClose</code> -- 消息通知关闭后的回调事件</p>
         <p><code>delay</code> -- 自动关闭时间，默认为 <code>2000</code> 毫秒</p>
         <p><code>type</code> -- 通知框的主题，分为 <code>default</code>，<code>success</code>，<code>waring</code>，<code>danger</code>，默认为 <code>default</code></p>
         <p><code>align</code> -- 字体显示方向，默认为 <code>left</code>，可选值为 <code>center</code></p>
@@ -33,10 +33,12 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button @click="notify01"&gt;默认通知&lt;/dy-button&gt;
         &lt;dy-button @click="notify02"&gt;成功通知&lt;/dy-button&gt;
         &lt;dy-button @click="notify03"&gt;警告通知&lt;/dy-button&gt;
         &lt;dy-button @click="notify04"&gt;危险通知&lt;/dy-button&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -97,8 +99,10 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button @click="notify05"&gt;默认通知&lt;/dy-button&gt;
         &lt;dy-button @click="notify06"&gt;成功通知&lt;/dy-button&gt;
+        
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -153,8 +157,10 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button @click="notify07"&gt;默认通知&lt;/dy-button&gt;
         &lt;dy-button @click="notify08"&gt;成功通知&lt;/dy-button&gt;
+        
     &lt;/template&gt;
 
     &lt;script&gt;

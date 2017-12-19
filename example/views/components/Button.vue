@@ -28,12 +28,14 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button type="default"&gt;默认按钮&lt;/dy-button&gt;
         &lt;dy-button type="primary"&gt;主要按钮&lt;/dy-button&gt;
         &lt;dy-button type="success"&gt;成功按钮&lt;/dy-button&gt;
         &lt;dy-button type="info"&gt;信息按钮&lt;/dy-button&gt;
         &lt;dy-button type="warning"&gt;警告按钮&lt;/dy-button&gt;
         &lt;dy-button type="danger"&gt;危险按钮&lt;/dy-button&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -70,12 +72,14 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button isPlanin type="default"&gt;默认按钮&lt;/dy-button&gt;
         &lt;dy-button isPlanin type="primary"&gt;主要按钮&lt;/dy-button&gt;
         &lt;dy-button isPlanin type="success"&gt;成功按钮&lt;/dy-button&gt;
         &lt;dy-button isPlanin type="info"&gt;信息按钮&lt;/dy-button&gt;
         &lt;dy-button isPlanin type="warning"&gt;警告按钮&lt;/dy-button&gt;
         &lt;dy-button isPlanin type="danger"&gt;危险按钮&lt;/dy-button&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -119,6 +123,7 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button  isRound type="default"&gt;默认按钮&lt;/dy-button&gt;
         &lt;dy-button  isRound type="primary"&gt;主要按钮&lt;/dy-button&gt;
         &lt;dy-button  isRound type="success"&gt;成功按钮&lt;/dy-button&gt;
@@ -132,6 +137,7 @@
         &lt;dy-button isPlanin isRound type="info"&gt;信息按钮&lt;/dy-button&gt;
         &lt;dy-button isPlanin isRound type="warning"&gt;警告按钮&lt;/dy-button&gt;
         &lt;dy-button isPlanin isRound type="danger"&gt;危险按钮&lt;/dy-button&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -174,6 +180,7 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button disabled type="default"&gt;默认按钮&lt;/dy-button&gt;
         &lt;dy-button disabled type="primary"&gt;主要按钮&lt;/dy-button&gt;
         &lt;dy-button disabled type="success"&gt;成功按钮&lt;/dy-button&gt;
@@ -187,6 +194,7 @@
         &lt;dy-button isPlanin disabled type="info"&gt;信息按钮&lt;/dy-button&gt;
         &lt;dy-button isPlanin disabled type="warning"&gt;警告按钮&lt;/dy-button&gt;
         &lt;dy-button isPlanin disabled type="danger"&gt;危险按钮&lt;/dy-button&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -222,10 +230,12 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button size="l" type="info"&gt;按钮&lt;/dy-button&gt;
         &lt;dy-button type="primary"&gt;按钮&lt;/dy-button&gt;
         &lt;dy-button size="m" type="warning"&gt;按钮&lt;/dy-button&gt;
         &lt;dy-button size="s" type="danger"&gt;按钮&lt;/dy-button&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -237,11 +247,8 @@
 </pre>
 
 
-                    
                 </li>
-
                 <li>
-
 
 
 <div class="components-content">
@@ -291,6 +298,7 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button type="default"&gt;
             &lt;dy-icon size="14" type="&amp;#xe62f;"&gt;&lt;/dy-icon&gt;
         &lt;/dy-button&gt;
@@ -321,6 +329,7 @@
             &lt;dy-icon size="14" type="&amp;#xe62c;"&gt;&lt;/dy-icon&gt;
             上一页
         &lt;/dy-button&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -333,8 +342,11 @@
 
 
 
-
+                </li>
                 <li>
+
+
+
 <div class="components-content" style="height:100px;">
     <h2 class="h2">按钮点击后的加载状态</h2>
     <dy-button type="primary" @click="click" :loading="loading">点击加载</dy-button>
@@ -344,13 +356,16 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>绑定一个 <code>loading</code> 参数用于指定状态切换</p>
+        <p>点击后按钮禁止使用，同时出现加载中的字样以及加载图标</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-button type="primary" @click="click" :loading="loading"&gt;点击加载&lt;/dy-button&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;

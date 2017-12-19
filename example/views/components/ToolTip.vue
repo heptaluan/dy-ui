@@ -74,6 +74,7 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+    
             &lt;dy-tooltip content="这里是提示这里是提示" placement="top-start"&gt;
                 &lt;dy-button&gt;上左&lt;/dy-button&gt;
             &lt;/dy-tooltip&gt;
@@ -116,6 +117,7 @@
             &lt;dy-tooltip content="这里是提示这里是提示" placement="bottom-end"&gt;
                 &lt;dy-button&gt;右下&lt;/dy-button&gt;
             &lt;/dy-tooltip&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -144,47 +146,3 @@
 		// ...
 	};
 </script>
-
-<style lang="scss">
-.tooltip {
-
-	margin-left: 120px;
-
-	button {
-		margin: 10px;
-	}
-
-	.top {
-		text-align: center;
-		width: 430px;
-	}
-
-	.left {
-		float: left;
-		width: 90px;
-	}
-
-	.right {
-		float: left;
-        width: 60px;
-        margin-left: 255px;
-	}
-
-	.bottom {
-		clear: both;
-		text-align: center;
-		width: 430px;
-	}
-
-	.item {
-		margin: 4px;
-	}
-
-	.left .el-tooltip__popper,
-	.right .el-tooltip__popper {
-		padding: 8px 10px;
-	}
-}
-</style>
-
-

@@ -1,7 +1,7 @@
 <template>
 <div class="components-box">
 
-        <div class="components-title">Radio 单选框</div>
+        <div class="components-title">Switch 开关</div>
 
         <div class="components-wrapper">
             <ul>
@@ -20,16 +20,18 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p>默认样式，使用 <code>v-model</code> 所绑定的值来决定初始值</p>
+        <p>使用 <code>v-model</code> 所绑定的值来决定初始值</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-switch v-model="switch1"&gt;&lt;/dy-switch&gt;
 
         &lt;dy-switch v-model="switch2"&gt;&lt;/dy-switch&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -63,12 +65,14 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>使用 <code>inActiveText</code> 和 <code>activeText</code> 参数来设置左右显示的文字</p>
+        <p>具体样式可以配合生成的 <code>class</code> 的值 <code>dy-switch-inActiveText</code> 和 <code>dy-switch-activeText</code> 来进行设置</p>
     </div>
 </div>
 
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-switch
             v-model="switch3"
             inActiveText="左侧"
@@ -76,6 +80,7 @@
         &gt;&lt;/dy-switch&gt;
 
         &lt;dy-switch v-model="switch3"&gt;&lt;/dy-switch&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -124,6 +129,7 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-switch 
             disabled
             v-model="switch4"
@@ -137,6 +143,7 @@
             inActiveText="左侧"
             activeText="右侧"
         &gt;&lt;/dy-switch&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;

@@ -33,6 +33,7 @@
 						<li><router-link to="/message">Message 侧边信息提示</router-link></li>
 						<li><router-link to="/dialog">Dialog 对话框</router-link></li>
 						<li><router-link to="/slider">Slider 滑块</router-link></li>
+						<li><router-link to="/select">Select 下拉菜单</router-link></li>
 
 					</ul>
 					
@@ -58,5 +59,46 @@
 
 .fade-enter, .fade-leave-to  {
 	opacity: 0
+}
+
+// tooltip 展示布局
+.tooltip {
+
+	margin-left: 120px;
+
+	button {
+		margin: 10px;
+	}
+
+	.top {
+		text-align: center;
+		width: 430px;
+	}
+
+	.left {
+		float: left;
+		width: 90px;
+	}
+
+	.right {
+		float: left;
+        width: 60px;
+        margin-left: 255px;
+	}
+
+	.bottom {
+		clear: both;
+		text-align: center;
+		width: 430px;
+	}
+
+	.item {
+		margin: 4px;
+	}
+
+	.left .el-tooltip__popper,
+	.right .el-tooltip__popper {
+		padding: 8px 10px;
+	}
 }
 </style>

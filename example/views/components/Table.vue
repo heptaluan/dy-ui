@@ -41,11 +41,13 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-table :data="tableData"&gt;
             &lt;dy-table-col prop="num" label="序号"&gt;&lt;/dy-table-col&gt;
             &lt;dy-table-col prop="title" label="名称"&gt;&lt;/dy-table-col&gt;
             &lt;dy-table-col prop="date" label="日期"&gt;&lt;/dy-table-col&gt;
         &lt;/dy-table&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -101,11 +103,13 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-table :data="tableData" :border="true"&gt;
             &lt;dy-table-col prop="num" label="序号"&gt;&lt;/dy-table-col&gt;
             &lt;dy-table-col prop="title" label="名称"&gt;&lt;/dy-table-col&gt;
             &lt;dy-table-col prop="date" label="日期"&gt;&lt;/dy-table-col&gt;
         &lt;/dy-table&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -141,11 +145,13 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-table :data="tableData" :striped="true" :border="true"&gt;
             &lt;dy-table-col prop="num" label="序号"&gt;&lt;/dy-table-col&gt;
             &lt;dy-table-col prop="title" label="名称"&gt;&lt;/dy-table-col&gt;
             &lt;dy-table-col prop="date" label="日期"&gt;&lt;/dy-table-col&gt;
         &lt;/dy-table&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -181,11 +187,13 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-table :data="tableData" :striped="true" :hover="true" :border="true"&gt;
             &lt;dy-table-col prop="num" label="序号"&gt;&lt;/dy-table-col&gt;
             &lt;dy-table-col prop="title" label="名称"&gt;&lt;/dy-table-col&gt;
             &lt;dy-table-col prop="date" label="日期"&gt;&lt;/dy-table-col&gt;
         &lt;/dy-table&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -225,6 +233,7 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-table 
             v-model="tableSelect1" 
             :select="true" 
@@ -237,6 +246,7 @@
             &lt;dy-table-col prop="title" label="名称"&gt;&lt;/dy-table-col&gt;
             &lt;dy-table-col prop="date" label="日期"&gt;&lt;/dy-table-col&gt;
         &lt;/dy-table&gt;
+
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -287,6 +297,7 @@
 <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
+
         &lt;dy-table 
             v-model="tableSelect2" 
             :selectAll="true" 
@@ -301,6 +312,7 @@
             &lt;dy-table-col prop="date" label="日期"&gt;&lt;/dy-table-col&gt;
             &lt;div slot="tfoot"&gt;全选行自定义内容&lt;/div&gt;
         &lt;/dy-table&gt;
+        
     &lt;/template&gt;
 
     &lt;script&gt;
@@ -315,10 +327,6 @@
 </pre>
 
                 </li>
-
-
-
-
             </ul>
         </div>
         
