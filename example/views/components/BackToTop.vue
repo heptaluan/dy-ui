@@ -32,14 +32,6 @@
         &lt;/back-to-top&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-
-        export default {
-            // ...
-        }
-
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -50,21 +42,12 @@
         
 
 <!-- 测试用 div -->
-<div style="height:500px;"></div>
+<div style="height:800px;"></div>
 
 
 </div>
 </template>
 
-<script>
-	export default {
-		methods: {
-            closeHandle() {
-                alert(`123`)
-            }
-        }
-	};
-</script>
 
 <style lang="scss">
 .dy-close {

@@ -37,12 +37,6 @@
         &lt;dy-button type="danger"&gt;危险按钮&lt;/dy-button&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -81,12 +75,6 @@
         &lt;dy-button isPlanin type="danger"&gt;危险按钮&lt;/dy-button&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -139,12 +127,6 @@
         &lt;dy-button isPlanin isRound type="danger"&gt;危险按钮&lt;/dy-button&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -196,12 +178,6 @@
         &lt;dy-button isPlanin disabled type="danger"&gt;危险按钮&lt;/dy-button&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -237,12 +213,6 @@
         &lt;dy-button size="s" type="danger"&gt;按钮&lt;/dy-button&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -331,12 +301,6 @@
         &lt;/dy-button&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 

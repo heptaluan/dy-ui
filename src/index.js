@@ -17,12 +17,10 @@ import { Model, ModelHeader, ModelBody, ModelFooter } from "./components/Model";
 import { Alert } from "./components/Alert";
 import { Confirm } from "./components/Confirm";
 import { Prompt } from "./components/Prompt";
-
 import { Slider } from "./components/Slider";
-
 import { Table, TableCol } from "./components/Table";
-
 import { Select } from "./components/Select";
+import { Progress } from "./components/Progress";
 
 
 
@@ -60,6 +58,7 @@ const install = function (Vue) {
     Vue.component(TableCol.name, TableCol);
     
     Vue.component(Select.name, Select);
+    Vue.component(Progress.name, Progress);
     
 
     Vue.use(Notify);

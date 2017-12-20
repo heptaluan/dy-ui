@@ -28,12 +28,6 @@
         &lt;dy-input&gt;&lt;/dy-input&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -68,12 +62,6 @@
         &lt;dy-input w="35%" h="45px"&gt;&lt;/dy-input&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -168,12 +156,6 @@
         &lt;dy-input disabled&gt;&lt;/dy-input&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -234,12 +216,6 @@
         &lt;/dy-input-group&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -276,12 +252,6 @@
         &lt;dy-input resize type="textarea"&gt;&lt;/dy-input&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 

@@ -1,0 +1,81 @@
+.dy-progress-box {
+    padding-right: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    margin-right: -55px;
+    box-sizing: border-box;
+
+    .dy-progress-wrapper {
+        height: 6px;
+        border-radius: 100px;
+        background-color: $--progress-bg;
+        overflow: hidden;
+        position: relative;
+        vertical-align: middle;
+
+        .dy-progress-bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: $--color-primary;
+            text-align: right;
+            border-radius: 100px;
+            line-height: 12px;
+            white-space: nowrap;
+        }
+    }
+
+    &.dy-progress-inside {
+        height: 12px;
+
+        .dy-progress-wrapper {
+            height: 12px;
+
+            .dy-progress-text-inside {
+                display: inline-block;
+                vertical-align: middle;
+                color: $--color-white;
+                font-size: $--font-size-small;
+                margin: 0 10px;
+                line-height: 12px;
+            }
+        }
+    }
+
+    &.dy-progress-striped {
+        .dy-progress-bar {
+            background-image: $--progress-images-gradient;
+            background-size: 36px 36px;
+        }
+    }
+
+    &.dy-progress-active {
+        .dy-progress-bar {
+            animation: progress-bar-stripes 2s linear infinite;
+        }
+    }
+}
+
+.dy-progress-text-outside {
+    font-size: $--font-size-base;
+    color: $--color-text-secondary;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    line-height: 1;
+}
+
+
+.dy-progress-bar-success {
+    background-color: $--success-color !important;
+}
+
+.dy-progress-bar-waring {
+    background-color: $--warning-color !important;
+}
+
+.dy-progress-bar-danger {
+    background-color: $--danger-color !important;
+}

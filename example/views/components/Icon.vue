@@ -59,14 +59,6 @@
         &lt;dy-icon size="36" type="&amp;#xe6b2;"&gt;&lt;/dy-icon&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-
-        export default {
-            // ...
-        }
-
-    &lt;/script&gt;
     </code>
 </pre>
 

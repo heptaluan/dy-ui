@@ -18,6 +18,7 @@ const Message = () => import('./views/components/Message.vue');
 const Dialog = () => import('./views/components/Dialog.vue');
 const Slider = () => import('./views/components/Slider.vue');
 const Select = () => import('./views/components/Select.vue');
+const Progress = () => import('./views/components/Progress.vue');
 
 
 export default new VueRouter({
@@ -37,6 +38,7 @@ export default new VueRouter({
         { path: '/dialog', component: Dialog },
         { path: '/slider', component: Slider },
         { path: '/select', component: Select },
+        { path: '/progress', component: Progress },
         { path: '*', redirect: '/table'}
     ]
 });

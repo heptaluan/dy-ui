@@ -181,3 +181,19 @@ $--message-width: 330px;
 
 $--slider-bg: #e4e7ed;
 $--slider-border: 2px solid $--color-primary;
+
+/* progress
+-------------------------- */
+
+$--progress-bg: #ebeef5;
+$--progress-images-gradient: linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);
+
+// 斑马线动画
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 36px 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
