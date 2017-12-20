@@ -1,17 +1,19 @@
 <template>
     <transition :name="transition">
         <div class="dy-select-box" v-if="visible">
-            <ul class="dy-select-list" ref="lists">
-                <li
-                    v-for="(item, index) in renderOptions"
-                    :key="index"
-                    :class="{ 'dy-checked': isSelected(item) }"
-                    @click.stop="selectHandle(item, index)"
-                >
-                    <span class="dy-select-text">{{ item.label }}</span>
-                    <i class="dy-select-icon"></i>
-                </li>
-            </ul>
+            <div class="dy-select-wrapper" :style="wrapperStyle">
+                <ul class="dy-select-list" ref="lists">
+                    <li
+                        v-for="(item, index) in renderOptions"
+                        :key="index"
+                        :class="{ 'dy-checked': isSelected(item) }"
+                        @click.stop="selectHandle(item, index)"
+                    >
+                        <span class="dy-select-text">{{ item.label }}</span>
+                        <i class="dy-select-icon"></i>
+                    </li>
+                </ul>
+            </div>
         </div>
     </transition>
 </template>
@@ -37,11 +39,10 @@
                 selectValue,
                 saveOptions: this.options,
                 renderOptions: this.options,
-                selectHeight: this.maxHeight + "px"
             }
         },
         props: ["value", "options", "maxHeight", "isFocus",
-         "multiple", "transition"],
+         "multiple", "transition", "width"],
         methods: {
             isSelected(item) {
                 let is = false;
@@ -81,8 +82,6 @@
                 const ret = {
                     top: `${top + offsetTop + height}px`,
                     left: `${left + offsetLeft}px`,
-                    width: `${width}px`,
-                    height: `${this.selectHeight}` || "auto",
                     zIndex: this.getZIndex()
                 }
 
@@ -127,6 +126,23 @@
                 } else {
                     this.$parent.isFocus = false;
                 }
+            }
+        },
+        computed: {
+            wrapperStyle() {
+                let style= {};
+
+                if (this.maxHeight) {
+                    style["maxHeight"] = `${this.maxHeight - 30}px`;
+                }
+
+                if (this.width) {
+                    style["width"] = `${this.width}px`;
+                } else {
+                    style["width"] = `200px`;
+                }
+
+                return style;
             }
         },
         mounted() {

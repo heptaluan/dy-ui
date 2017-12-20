@@ -46,7 +46,6 @@
     background-color: $--color-white;
     border: 1px solid $--border-color-base;
     border-radius: $--border-radius-base;
-    overflow-y: scroll;
 
     &:before {
         position: absolute;
@@ -82,79 +81,86 @@
         pointer-events: none;
     }
 
-    .dy-select-list {
-        font-size: 14px;
-
-        li {
-            position: relative;
-            cursor: pointer;
-            padding: 5px 10px;
-            transition: background-color .15s;
-
-            .dy-select-text {
-                display: block;
-                word-wrap: normal;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-                margin-right: 30px;
-                color: $--color-text-regular;
-            }
-
-            &.dy-checked {
-                .dy-select-icon {
-                    opacity: 1;
-
-                    &:after {
-                        border-color: $--color-primary;
-                        opacity: 1;
-                    }
+    .dy-select-wrapper {
+        overflow-y: scroll;
+        box-sizing: border-box;
+        
+        .dy-select-list {
+            font-size: 14px;
+    
+            li {
+                position: relative;
+                cursor: pointer;
+                padding: 5px 10px;
+                transition: background-color .15s;
+    
+                .dy-select-text {
+                    display: block;
+                    word-wrap: normal;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    margin-right: 30px;
+                    color: $--color-text-regular;
                 }
-
-                &:hover {
+    
+                &.dy-checked {
                     .dy-select-icon {
                         opacity: 1;
+    
+                        &:after {
+                            border-color: $--color-primary;
+                            opacity: 1;
+                        }
+                    }
+    
+                    &:hover {
+                        .dy-select-icon {
+                            opacity: 1;
+                        }
                     }
                 }
-            }
-
-            &:hover {
-                background-color: $--input-group-bg;
-
-                .dy-select-icon {
-                    opacity: .6;
-                    transition: $--all-transition;
+    
+                &:hover {
+                    background-color: $--input-group-bg;
+    
+                    .dy-select-icon {
+                        opacity: .6;
+                        transition: $--all-transition;
+                    }
+    
                 }
-
-            }
-
-            .dy-select-icon {
-                position: absolute;
-                right: 8px;
-                top: 5px;
-                opacity: 0;
-                width: 14px;
-                height: 14px;
-                cursor: pointer;
-                display: inline-block;
-                vertical-align: middle;
-            
-                &::after {
-                    border: 3px solid $--border-color-base;
-                    border-color: #999;
-                    -webkit-box-sizing: content-box;
-                    box-sizing: content-box;
-                    content: "";
-                    border-left: 0;
-                    border-top: 0;
+    
+                .dy-select-icon {
                     position: absolute;
-                    width: 4px;
-                    height: 9px;
-                    left: 4px;
-                    top: 1px;
-                    transform: rotate(45deg);
+                    right: 8px;
+                    top: 5px;
+                    opacity: 0;
+                    width: 14px;
+                    height: 14px;
+                    cursor: pointer;
+                    display: inline-block;
+                    vertical-align: middle;
+                
+                    &::after {
+                        border: 3px solid $--border-color-base;
+                        border-color: #999;
+                        -webkit-box-sizing: content-box;
+                        box-sizing: content-box;
+                        content: "";
+                        border-left: 0;
+                        border-top: 0;
+                        position: absolute;
+                        width: 4px;
+                        height: 9px;
+                        left: 4px;
+                        top: 1px;
+                        transform: rotate(45deg);
+                    }
                 }
             }
         }
     }
+
+    
 }

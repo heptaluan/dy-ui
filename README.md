@@ -28,20 +28,31 @@
 目录结构为：
 
 ```js
+├── build                 webpack 运行脚本
+├── config                目录配置
+├── example               预览地址，文档所在目录
+│    ├── styles           文档 sass 文件
+│    │   └── ...   
+│    ├── views            文档中的各个组件的 API 介绍页面
+│    │   ├── components
+│    │   └── ...
+│    ├── App.vue          文档主入口，路由根目录
+│    ├── index.html       挂载页面
+│    ├── index.js         文档主入口
+│    └── router.js        路由配置文件
+│
 └── src              
     ├── components        组件所在目录
     │    ├── Button
     │    └── ...
-    ├── mixins            组件依赖的 mixins
+    ├── mixins            mixins
     ├── utils             工具
     ├── styles            
     │    ├── components   组件对应样式表
     │    ├── iconfont     字体图标（基于阿里图标库）
     │    ├── mixins       sass 的 mixins 集合
     │    └── ...
-    ├── App.vue           组件预览页面
-    ├── index.js          组件根目录（分发处）
-    ├── main.js           程序主入口
+    ├── index.js          组件入口
     └── ...
 ```
 
@@ -54,10 +65,19 @@
 npm install
 ```
 
-然后运行
+运行
 
 ```js
 npm run dev
 ```
 
 访问 `localhost:8080`
+
+然后在入口文件处引入组件和对应样式文件，使用即可
+
+```js
+import dyui from "../src/index";
+import "../src/styles/index.scss";
+
+Vue.use(dyui);
+```

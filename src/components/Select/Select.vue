@@ -4,6 +4,7 @@
         :class="{ 'dy-select-active': isFocus }"
         ref="selectButton"
         @click.stop="toggleSelect"
+        :style="selectBoxStyle"
     >
         <button class="dy-select-button dy-btn">
             <span class="dy-button-text">{{ text }}</span>
@@ -41,10 +42,12 @@
                 type: String,
                 default: "请选择"
             },
-            width: String,
+            width: {
+                type: [String, Number]
+            },
             maxHeight: {
                 type: Number,
-                default: 200
+                default: 300
             },
             multiple: {
                 type: Boolean,
@@ -91,6 +94,17 @@
                     text.push(item.label);
                 })
                 return text.join(",");
+            },
+            selectBoxStyle() {
+                let style= {};
+
+                if (this.width) {
+                    style["width"] = `${this.width}px`;
+                } else {
+                    style["width"] = `200px`;
+                }
+
+                return style;
             }
         },
         components: {
@@ -98,9 +112,6 @@
         },
         mounted() {
             doms.on(document.body, "click", this.bodyClickHandle);
-            if (this.width !== undefined) {
-                doms.css(this.$el, "width", this.width)
-            }
         },
         beforeDestroy() {
             doms.off(document.body, "click", this.bodyClickHandle)
