@@ -26,7 +26,7 @@
 
     &.dy-model-active {
         opacity: 1;
-        transition-duration: $--all-transition;
+        transition: $--all-transition;
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -67,11 +67,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.7);
     z-index: 99;
     opacity: 0;
+    animation: dimmer .3s;
 
     &.dy-active {
+        opacity: 1;
+        animation: dimmer .3s;
+    }
+}
+
+@keyframes dimmer {
+    from {
+        opacity: 0;
+    }
+    to {
         opacity: 1;
     }
 }

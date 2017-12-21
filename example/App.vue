@@ -40,6 +40,9 @@
 						<li><router-link to="/progress">Progress 进度条</router-link></li>
 						<li><router-link to="/tooltip">ToolTip 文字提示</router-link></li>
 
+						<li><router-link to="/loading">Loading 加载中</router-link></li>
+						<li><router-link to="/tab">Tab 选项卡</router-link></li>
+
 					</ul>
 					
 				</div>

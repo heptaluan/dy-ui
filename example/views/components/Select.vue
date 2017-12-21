@@ -23,7 +23,6 @@
         <p><code>:multiple</code> -- 是否开启多选模式，默认为单选模式</p>
         <p><code>:width</code> -- 设定下拉按钮和下拉框的长度，默认为 <code>200</code></p>
         <p><code>:maxHeight</code> -- 设定下拉框的最大高度，默认为 <code>300</code>，超出最大高度后出现滚动条 </p>
-        <p><code>:width</code> -- 设定下拉按钮和下拉框的长度，默认为 <code>200</code></p>
     </div>
 </div>
 

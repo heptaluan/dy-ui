@@ -9,38 +9,30 @@
 
 
 <div class="components-content">
-    <div class="components-content">
-        <h2 class="h2">Icon 图标</h2>
-        <div>
-            <dy-icon size="36" type="&#xe6b2;"></dy-icon>
-            <dy-icon size="36" type="&#xe6af;"></dy-icon>
-            <dy-icon size="36" type="&#xe6ae;"></dy-icon>
-            <dy-icon size="36" type="&#xe6ac;"></dy-icon>
-            <dy-icon size="36" type="&#xe6ab;"></dy-icon>
-            <dy-icon size="36" type="&#xe6a4;"></dy-icon>
-            <dy-icon size="36" type="&#xe69d;"></dy-icon>
-            <dy-icon size="36" type="&#xe69c;"></dy-icon>
-            <dy-icon size="36" type="&#xe631;"></dy-icon>
-            <dy-icon size="36" type="&#xe6a0;"></dy-icon>
-        </div>
-    </div>
+    <h2 class="h2">Icon 图标</h2>
+    <dy-icon size="36" type="&#xe6b2;"></dy-icon>
+    <dy-icon size="36" type="&#xe6af;"></dy-icon>
+    <dy-icon size="36" type="&#xe6ae;"></dy-icon>
+    <dy-icon size="36" type="&#xe6ac;"></dy-icon>
+    <dy-icon size="36" type="&#xe6ab;"></dy-icon>
+    <dy-icon size="36" type="&#xe6a4;"></dy-icon>
+    <dy-icon size="36" type="&#xe69d;"></dy-icon>
+    <dy-icon size="36" type="&#xe69c;"></dy-icon>
+    <dy-icon size="36" type="&#xe631;"></dy-icon>
+    <dy-icon size="36" type="&#xe6a0;"></dy-icon>
 </div>
 
 <div class="components-content">
-    <div class="components-content">
-        <div>
-            <dy-icon size="36" type="&#xe62f;"></dy-icon>
-            <dy-icon size="36" type="&#xe62e;"></dy-icon>
-            <dy-icon size="36" type="&#xe62d;"></dy-icon>
-            <dy-icon size="36" type="&#xe62d;"></dy-icon>
-            <dy-icon size="36" type="&#xe62c;"></dy-icon>
-            <dy-icon size="36" type="&#xe629;"></dy-icon>
-            <dy-icon size="36" type="&#xe628;"></dy-icon>
-            <dy-icon size="36" type="&#xe627;"></dy-icon>
-            <dy-icon size="36" type="&#xe631;"></dy-icon>
-            <dy-icon size="36" type="&#xe625;"></dy-icon>
-        </div>
-    </div>
+    <dy-icon size="36" type="&#xe62f;"></dy-icon>
+    <dy-icon size="36" type="&#xe62e;"></dy-icon>
+    <dy-icon size="36" type="&#xe62d;"></dy-icon>
+    <dy-icon size="36" type="&#xe62d;"></dy-icon>
+    <dy-icon size="36" type="&#xe62c;"></dy-icon>
+    <dy-icon size="36" type="&#xe629;"></dy-icon>
+    <dy-icon size="36" type="&#xe628;"></dy-icon>
+    <dy-icon size="36" type="&#xe627;"></dy-icon>
+    <dy-icon size="36" type="&#xe631;"></dy-icon>
+    <dy-icon size="36" type="&#xe625;"></dy-icon>
 </div>
 
 <div class="components-code">
@@ -89,10 +81,6 @@
 <style lang="scss">
 .iconfont {
     margin-left: 25px;
-
-    &:first-child {
-        margin-left: 0;
-    }
 }
 </style>
 

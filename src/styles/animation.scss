@@ -130,15 +130,38 @@
 /**
  * slide-down
  */
-.slide-down-enter-active,
-.slide-down-leave-active {
-    opacity: 1;
-    transform: scaleY(1);
-    transition: $--md-fade-transition;
-    transform-origin: center top;
-}
-.slide-down-enter,
-.slide-down-leave-active {
+.slide-down-enter-active {
     opacity: 0;
-    transform: scaleY(0);
+    animation-timing-function: ease-in-out;
+    animation: SlideUpIn .3s;
+}
+
+.slide-down-leave-active {
+    animation: SlideUpOut .3s;
+}
+
+@keyframes SlideUpIn {
+    0% {
+        opacity: 0;
+        transform-origin: 0% 0%;
+        transform: scaleY(.8);
+    }
+    100% {
+        opacity: 1;
+        transform-origin: 0% 0%;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes SlideUpOut {
+    0% {
+        opacity: 1;
+        transform-origin: 0% 0%;
+        transform: scaleY(1);
+    }
+    100% {
+        opacity: 0;
+        transform-origin: 0% 0%;
+        transform: scaleY(.8);
+    }
 }

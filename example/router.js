@@ -19,6 +19,8 @@ const Dialog = () => import('./views/components/Dialog.vue');
 const Slider = () => import('./views/components/Slider.vue');
 const Select = () => import('./views/components/Select.vue');
 const Progress = () => import('./views/components/Progress.vue');
+const Loading = () => import('./views/components/Loading.vue');
+const Tab = () => import('./views/components/Tab.vue');
 
 
 export default new VueRouter({
@@ -39,6 +41,12 @@ export default new VueRouter({
         { path: '/slider', component: Slider },
         { path: '/select', component: Select },
         { path: '/progress', component: Progress },
-        { path: '*', redirect: '/table'}
-    ]
+        { path: '/loading', component: Loading },
+        { path: '/tab', component: Tab },
+        { path: '*', redirect: '/icon'}
+    ],
+    mode: "history",
+    scrollBehavior (to, from, savedPosition) {
+        return { x: 0, y: 0 }
+    }
 });

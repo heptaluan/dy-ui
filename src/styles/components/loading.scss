@@ -1,0 +1,18 @@
+.dy-loading .dy-model-dialog {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    user-select: none;
+
+    .dy-loading-icon {
+        text-align: center;
+        color: $--color-primary;
+    }
+
+    .dy-loading-text {
+        text-align: center;
+        font-size: $--font-size-large;
+        color: $--color-primary;
+        margin-top: 5px;
+    }
+}

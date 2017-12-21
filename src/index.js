@@ -21,6 +21,8 @@ import { Slider } from "./components/Slider";
 import { Table, TableCol } from "./components/Table";
 import { Select } from "./components/Select";
 import { Progress } from "./components/Progress";
+import { Loading } from "./components/Loading";
+import { Tab, TabList } from "./components/Tab";
 
 
 
@@ -59,10 +61,12 @@ const install = function (Vue) {
     
     Vue.component(Select.name, Select);
     Vue.component(Progress.name, Progress);
-    
+    Vue.component(Tab.name, Tab);
+    Vue.component(TabList.name, TabList);
 
     Vue.use(Notify);
     Vue.use(Message);
+    Vue.use(Loading);
 };
 
 if (typeof window !== "undefined" && window.Vue) {

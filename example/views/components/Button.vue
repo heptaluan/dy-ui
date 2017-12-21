@@ -92,7 +92,10 @@
     <dy-button  isRound type="info">信息按钮</dy-button>
     <dy-button  isRound type="warning">警告按钮</dy-button>
     <dy-button  isRound type="danger">危险按钮</dy-button>
-    
+</div>
+
+<div class="components-content">
+    <h2 class="h2">圆角按钮（带有渐变色）</h2>
     <dy-button isPlanin isRound type="default">默认按钮</dy-button>
     <dy-button isPlanin isRound type="primary">主要按钮</dy-button>
     <dy-button isPlanin isRound type="success">成功按钮</dy-button>
@@ -100,6 +103,7 @@
     <dy-button isPlanin isRound type="warning">警告按钮</dy-button>
     <dy-button isPlanin isRound type="danger">危险按钮</dy-button>
 </div>
+    
 
 <div class="components-code">
     <div class="code-title">示例代码</div>
@@ -143,7 +147,8 @@
     <dy-button disabled type="info">信息按钮</dy-button>
     <dy-button disabled type="warning">警告按钮</dy-button>
     <dy-button disabled type="danger">危险按钮</dy-button>
-    
+</div>
+<div class="components-content">
     <dy-button isPlanin disabled type="default">默认按钮</dy-button>
     <dy-button isPlanin disabled type="primary">主要按钮</dy-button>
     <dy-button isPlanin disabled type="success">成功按钮</dy-button>
@@ -384,10 +389,6 @@
 
     .dy-btn {
         margin-left: 20px;
-    
-        &:first-child {
-            margin-left: 0;
-        }
     }
 
     .dy-round, .dy-btn-disabled {

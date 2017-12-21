@@ -59,25 +59,18 @@
     <code class="html">
     &lt;template&gt;
         
-        &lt;h2 class="h2"&gt;Slider - 滑块（默认）&lt;/h2&gt;
         &lt;dy-slider v-model="sliderVal01"&gt;&lt;/dy-slider&gt;
 
-        &lt;h2 class="h2"&gt;Slider - 滑块（显示tooltip）&lt;/h2&gt;
         &lt;dy-slider v-model="sliderVal02" showTooltip&gt;&lt;/dy-slider&gt;
 
-        &lt;h2 class="h2"&gt;Slider - 滑块（自定义初始值）&lt;/h2&gt;
         &lt;dy-slider v-model="sliderVal03" showTooltip&gt;&lt;/dy-slider&gt;
 
-        &lt;h2 class="h2"&gt;Slider - 滑块（显示输入框）&lt;/h2&gt;
         &lt;dy-slider v-model="sliderVal04" showTooltip showInput&gt;&lt;/dy-slider&gt;
 
-        &lt;h2 class="h2"&gt;Slider - 滑块（输入框限定范围值【100-1000】）&lt;/h2&gt;
         &lt;dy-slider v-model="sliderVal05" showTooltip showInput :min="100" :max="1000"&gt;&lt;/dy-slider&gt;
 
-        &lt;h2 class="h2"&gt;Slider - 滑块（离散值）&lt;/h2&gt;
         &lt;dy-slider v-model="sliderVal06" showTooltip show-input :step="10"&gt;&lt;/dy-slider&gt;
 
-        &lt;h2 class="h2"&gt;Slider - 滑块（离散值【显示间断点】）&lt;/h2&gt;
         &lt;dy-slider v-model="sliderVal07" showTooltip show-input :step="20" show-steps&gt;&lt;/dy-slider&gt;
 
     &lt;/template&gt;
