@@ -17,9 +17,11 @@
         computed: {
             styles() {
                 let style = {};
+                style["display"] = `inline-block`;
 
                 if (this.size) {
                     style["font-size"] = `${this.size}px`;
+                    style["line-height"] = `${this.size}px`;
                 }
 
                 return style;

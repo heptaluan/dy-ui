@@ -21,6 +21,7 @@ const Select = () => import('./views/components/Select.vue');
 const Progress = () => import('./views/components/Progress.vue');
 const Loading = () => import('./views/components/Loading.vue');
 const Tab = () => import('./views/components/Tab.vue');
+const Carousel = () => import('./views/components/Carousel.vue');
 
 
 export default new VueRouter({
@@ -43,6 +44,7 @@ export default new VueRouter({
         { path: '/progress', component: Progress },
         { path: '/loading', component: Loading },
         { path: '/tab', component: Tab },
+        { path: '/carousel', component: Carousel },
         { path: '*', redirect: '/icon'}
     ],
     mode: "history",

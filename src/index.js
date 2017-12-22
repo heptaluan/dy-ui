@@ -23,7 +23,7 @@ import { Select } from "./components/Select";
 import { Progress } from "./components/Progress";
 import { Loading } from "./components/Loading";
 import { Tab, TabList } from "./components/Tab";
-
+import { Carousel, CarouselItem } from "./components/Carousel";
 
 
 const install = function (Vue) {
@@ -63,6 +63,9 @@ const install = function (Vue) {
     Vue.component(Progress.name, Progress);
     Vue.component(Tab.name, Tab);
     Vue.component(TabList.name, TabList);
+
+    Vue.component(Carousel.name, Carousel);
+    Vue.component(CarouselItem.name, CarouselItem);
 
     Vue.use(Notify);
     Vue.use(Message);

@@ -27,9 +27,9 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p>使用的是基于阿里巴巴的矢量图标库</p>
-        <p><code>size</code> -- 指定图标大小</p>
-        <p><code>type</code> -- 指定图标类型</p>
+        <p>直接使用 <code>dy-tab</code> 组件包裹 <code>dy-tab-list</code> 组件即可</p>
+        <p>指定的 <code>label</code> 为导航的文本内容</p>
+        <p>列表的内容部分可以自行定义</p>
     </div>
 </div>
 
@@ -37,7 +37,17 @@
     <code class="html">
     &lt;template&gt;
         
-        &lt;dy-icon size="36" type="&amp;#xe6b2;"&gt;&lt;/dy-icon&gt;
+        &lt;dy-tab&gt;
+            &lt;dy-tab-list label="渲染函数"&gt;
+                &lt;p&gt;Vue 推荐在绝大多数情况下使用 template 来创建你的 HTML。然而在一些场景中，你真的需要 JavaScript 的完全编程的能力，这就是 render 函数，它比 template 更接近编译器。&lt;/p&gt;
+            &lt;/dy-tab-list&gt;
+            &lt;dy-tab-list label="虚拟 DOM"&gt;
+                &lt;p&gt;createElement 到底会返回什么呢？其实不是一个实际的 DOM 元素。它更准确的名字可能是 createNodeDescription，因为它所包含的信息会告诉 Vue 页面上需要渲染什么样的节点，及其子节点。&lt;/p&gt;
+            &lt;/dy-tab-list&gt;
+            &lt;dy-tab-list label="深入 data 对象"&gt;
+                &lt;p&gt;有一件事要注意：正如在模板语法中，v-bind:class 和 v-bind:style ，会被特别对待一样，在 VNode 数据对象中，下列属性名是级别最高的字段。该对象也允许你绑定普通的 HTML 特性，就像 DOM 属性一样，比如 innerHTML (这会取代 v-html 指令)。&lt;/p&gt;
+            &lt;/dy-tab-list&gt;
+        &lt;/dy-tab&gt;
 
     &lt;/template&gt;
     </code>
@@ -99,6 +109,10 @@
         font-size: 14px;
         text-indent: 10px;
         padding: 10px 0;
+
+        code {
+            color: #9CDCFE;
+        }
 
         p {
             margin: 5px;

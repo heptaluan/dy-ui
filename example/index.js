@@ -2,10 +2,11 @@ import Vue from "vue";
 import router from "./router";
 import App from "./App.vue";
 
+// 引入组件和组件样式文件
 import dyui from "../src/index";
 import "../src/styles/index.scss";
 
-// 组件页面的样式入口
+// 文档样式文件
 import "./styles/index.scss";
 
 // highlight.js 在使用了 vue-route 的情况下，在 route 改变时，页面将会重新渲染并且会移除事件，会把 highlight 的事件移除
