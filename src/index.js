@@ -24,6 +24,7 @@ import { Progress } from "./components/Progress";
 import { Loading } from "./components/Loading";
 import { Tab, TabList } from "./components/Tab";
 import { Carousel, CarouselItem } from "./components/Carousel";
+import { DropDown, DropDownItem } from "./components/DropDown";
 
 
 const install = function (Vue) {
@@ -67,9 +68,13 @@ const install = function (Vue) {
     Vue.component(Carousel.name, Carousel);
     Vue.component(CarouselItem.name, CarouselItem);
 
+    Vue.component(DropDown.name, DropDown);
+    Vue.component(DropDownItem.name, DropDownItem);
+
     Vue.use(Notify);
     Vue.use(Message);
     Vue.use(Loading);
+    Vue.use(DropDown);
 };
 
 if (typeof window !== "undefined" && window.Vue) {

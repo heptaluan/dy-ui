@@ -1,7 +1,7 @@
 <template>
 <div class="components-box">
 
-        <div class="components-title">Select 下拉菜单</div>
+        <div class="components-title">Select 选择框</div>
 
         <div class="components-wrapper">
             <ul>
@@ -9,7 +9,7 @@
 
 
 <div class="components-content">
-    <h2 class="h2">Select 下拉菜单（默认）</h2>
+    <h2 class="h2">Select 选择框（默认）</h2>
     <dy-select :options="options01"></dy-select>
 </div>
 
@@ -58,7 +58,7 @@
 
 
 <div class="components-content">
-    <h2 class="h2">Select 下拉菜单（获取选中值）</h2>
+    <h2 class="h2">Select 选择框（获取选中值）</h2>
     <dy-select :options="options01" v-model="selectVal01"></dy-select>
     <div class="subBox dy-select-subBox">
         当前选择的是：{{ selectVal01 }}
@@ -105,7 +105,7 @@
 
 
 <div class="components-content">
-    <h2 class="h2">Select 下拉菜单（多选）</h2>
+    <h2 class="h2">Select 选择框（多选）</h2>
     <dy-select :options="options01" :multiple="true"></dy-select>
 </div>
 
@@ -148,7 +148,7 @@
 
 
 <div class="components-content">
-    <h2 class="h2">Select 下拉菜单（设定宽高）</h2>
+    <h2 class="h2">Select 选择框（设定宽高）</h2>
     <dy-select :options="options02" :maxHeight="300" :width="400" :multiple="true" v-model="selectVal02"></dy-select>
     <div class="subBox dy-select-subBox">
         当前选择的是：{{ selectVal02 }}
