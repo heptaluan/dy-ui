@@ -31,7 +31,7 @@
 						<li><router-link to="/select">Select 选择框</router-link></li>
 						<li><router-link to="/switch">Switch 开关</router-link></li>
 						<li><router-link to="/slider">Slider 滑块</router-link></li>
-						<!-- <li><router-link to="/dropDown">DropDown 下拉菜单</router-link></li> -->
+						<li><router-link to="/dropDown">DropDown 下拉菜单</router-link></li>
 
 						<li><router-link to="/table">Table 表格</router-link></li>
 						<li><router-link to="/tab">Tab 选项卡</router-link></li>
