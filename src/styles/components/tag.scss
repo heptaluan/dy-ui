@@ -1,0 +1,46 @@
+.dy-tag {
+    background-color: $--primary-bg;
+    display: inline-block;
+    padding: 0 12px;
+    height: 30px;
+    line-height: 30px;
+    font-size: $--font-size-small;
+    color: $--color-primary;
+    border-radius: $--border-radius-default;
+    box-sizing: border-box;
+    border: 1px solid $--default-normal;
+    white-space: nowrap;
+
+    &.dy-tag-default {
+        border: 1px solid $--default-normal;
+        background-color: $--primary-bg;
+    }
+
+    &.dy-tag-success {
+        color: $--success-color;
+        border: 1px solid $--success-border !important;
+        background-color: $--success-bg !important;
+    }
+
+    &.dy-tag-info {
+        color: $--info-color;
+        border: 1px solid $--info-border !important;
+        background-color: $--info-bg !important;
+    }
+
+    &.dy-tag-warning {
+        color: $--warning-color;
+        border: 1px solid $--warning-border !important;
+        background-color: $--warning-bg !important;
+    }
+
+    &.dy-tag-danger {
+        color: $--danger-color;
+        border: 1px solid $--danger-border !important;
+        background-color: $--danger-bg !important;
+    }
+
+    &.dy-tag-round {
+        border-radius: 999px;
+    }
+}

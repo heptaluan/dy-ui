@@ -1,7 +1,8 @@
 <template>
     <transition :name="transition">
         <ul v-if="visible"
-            :class="computedClass"
+            class="dy-dropdown-box"
+            :class="{'dy-dropdown-active': this.visible}"
             @mouseenter="mouseenterHandle"
             @mouseleave="mouseleaveHandle"
             >
@@ -16,29 +17,19 @@
     import { on, off } from "../../utils/dom";
 
     export default {
-        name: 'dy-dropdown',
+        name: "dy-dropdown",
         mixins: [ Popup ],
         props: {
-            customClass: {
-                type: String
-            },
             trigger: {
                 type: String,
-                default: 'focus',
+                default: "focus",
                 validator(value) {
-                    return ['focus', 'click'].includes(value);
+                    return ["focus", "click"].includes(value);
                 }
             },
             fix: {
                 type: Number,
                 default: 0
-            },
-            placement: {
-                type: String,
-                default: 'bottom',
-                validator(value) {
-                    return ['top', 'bottom'].includes(value);
-                }
             },
             delay: {
                 type: Number,
@@ -46,36 +37,14 @@
             },
             transition: {
                 type: String,
-                default: 'fade'
-            }
-        },
-        computed: {
-            computedClass() {
-                const classes = [];
-
-                classes.push('am-dropdown-content');
-
-                if (this.visible) {
-                    classes.push('am-active');
-                }
-
-                if (this.placement === 'top') {
-                    classes.push('am-dropdown-up ');
-                }
-
-                if (this.customClass !== undefined) {
-                    classes.push(this.customClass);
-                }
-
-                return classes.join(' ');
+                default: "slide-down"
             }
         },
         methods: {
             clickHandle(e) {
                 if (this.visible) {
                     this.hide();
-                }
-                else {
+                } else {
                     this.show();
                 }
 
@@ -94,68 +63,64 @@
                 this.timer = setTimeout(this.hide, this.delay);
             },
             mouseleaveHandle() {
-                if (this.trigger !== 'click') {
+                if (this.trigger !== "click") {
                     this.hide();
                 }
             },
             mouseenterHandle() {
-                if (this.trigger !== 'click') {
+                if (this.trigger !== "click") {
                     if (this.timer !== null) {
                         clearTimeout(this.timer);
                     }
                 }
             },
             popupPosition() {
-                // const $dropdown = this.$el;
-                // const $reference = this.$refs['reference'];
-                // const { top, left, height } = $reference.getBoundingClientRect();
-                // const { height: selfHeight } = $dropdown.getBoundingClientRect();
-                // const ret = { zIndex: this.getZIndex() };
+                const $dropdown = this.$el;
+                const $reference = this.$refs["reference"];
+                const { top, left, height } = $reference.getBoundingClientRect();
+                const { height: selfHeight } = $dropdown.getBoundingClientRect();
+                const { top: offsetTop, left: offsetLeft } = this.getPageOffset();
+                const ret = { zIndex: this.getZIndex() };
 
-                // ret['left'] = this.pageOffset.left + left + 'px';
-                // if (this.placement === 'top') {
-                //     ret['top'] = this.pageOffset.top + top - selfHeight - 9 - this.fix + 'px';
-                // }
-                // else {
-                //     ret['top'] = this.pageOffset.top + top + height + this.fix + 'px';
-                // }
+                ret["left"] = `${offsetLeft + left}px`;
+                ret["top"] = `${offsetTop + top + height + this.fix}px`
 
-                // return ret;
+                return ret;
             }
         },
         beforeDestroy() {
-            
-            // document.body.removeChild(this.$el);
-            // this.$nextTick(() => {
-                // const $reference = this.$vnode.context.$refs[this.target] // 获取到目标的引用
-            // })
+            document.body.removeChild(this.$el);
 
-            // if (this.trigger === 'click') {
-            //     off($reference, 'click', this.clickHandle);
-            //     off(document.body, 'click', this.globalClickHandle);
-            // } 
-            // else {
-            //     off($reference, 'mouseenter', this.show);
-            //     off($reference, 'mouseleave', this.delayHide);
-            // }
+            let $reference;
+            return new Promise( (resolv, reject) => {
+                resolv(this)
+            }).then( (element) => {
+                $reference = element.$refs["reference"]
+                if (this.trigger === "click") {
+                    $reference.removeEventListener("click", this.clickHandle);
+                    document.body.removeEventListener("click", this.globalClickHandle);
+                } else {
+                    $reference.removeEventListener("mouseenter", this.show);
+                    $reference.removeEventListener("mouseleave", this.delayHide);
+                }
+            })
         },
         mounted() {
+            document.body.appendChild(this.$el);
 
-
-            // console.log(this.$refs.reference[binding.arg])
-
-
-            // document.body.appendChild(this.$el);
-            // const $reference = this.$refs['reference'];
-
-            // if (this.trigger === 'click') {
-            //     on($reference, 'click', this.clickHandle);
-            //     on(document.body, 'click', this.globalClickHandle);
-            // }
-            // else {
-            //     on($reference, 'mouseenter', this.show);
-            //     on($reference, 'mouseleave', this.delayHide);
-            // }
+            let $reference;
+            return new Promise( (resolv, reject) => {
+                resolv(this)
+            }).then( (element) => {
+                $reference = element.$refs["reference"]
+                if (this.trigger === "click") {
+                    $reference.addEventListener("click", this.clickHandle);
+                    document.body.addEventListener("click", this.globalClickHandle);
+                } else {
+                    $reference.addEventListener("mouseenter", this.show);
+                    $reference.addEventListener("mouseleave", this.delayHide);
+                }
+            })
         }
     };
 </script>

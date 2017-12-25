@@ -78,9 +78,12 @@
 </script>
 
 <style lang="scss">
-.iconfont {
-    margin-left: 25px;
+.components-content {
+    .iconfont {
+        margin-left: 25px;
+    }
 }
+
 </style>
 
 

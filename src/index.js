@@ -25,6 +25,8 @@ import { Loading } from "./components/Loading";
 import { Tab, TabList } from "./components/Tab";
 import { Carousel, CarouselItem } from "./components/Carousel";
 import { DropDown, DropDownItem } from "./components/DropDown";
+import { Tag } from "./components/Tag";
+import { Pagination } from "./components/Pagination";
 
 
 const install = function (Vue) {
@@ -67,9 +69,11 @@ const install = function (Vue) {
 
     Vue.component(Carousel.name, Carousel);
     Vue.component(CarouselItem.name, CarouselItem);
-
+    
     Vue.component(DropDown.name, DropDown);
     Vue.component(DropDownItem.name, DropDownItem);
+    Vue.component(Tag.name, Tag);
+    Vue.component(Pagination.name, Pagination);
 
     Vue.use(Notify);
     Vue.use(Message);

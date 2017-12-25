@@ -1,16 +1,21 @@
 <template>
-    <li :class="computedClass" @click="clickHandle">
+    <li 
+        :class="{
+            'dy-active': this.active,
+            'dy-header': this.header,
+            'dy-disabled': this.disabled,
+            'dy-divider': this.divider
+        }" 
+        @click="clickHandle"
+    >
         <slot v-if="!divider"></slot>
     </li>
 </template>
 
 <script>
     export default {
-        name: 'dy-dropdown-item',
+        name: "dy-dropdown-item",
         props: {
-            customClass: {
-                type: String
-            },
             active: {
                 type: Boolean,
                 default: false
@@ -34,35 +39,9 @@
         methods: {
             clickHandle() {
                 if (!this.disabled && !this.active) {
-                    this.$emit('click', this.value);
+                    this.$emit("click", this.value);
+                    this.$parent.hide();
                 }
-            }
-        },
-        computed: {
-            computedClass() {
-                const classes = [];
-
-                if (this.customClass !== undefined) {
-                    classes.push(this.customClass);
-                }
-
-                if (this.active) {
-                    classes.push('am-active');
-                }
-
-                if (this.header) {
-                    classes.push('am-dropdown-header');
-                }
-
-                if (this.disabled) {
-                    classes.push('am-disabled');
-                }
-
-                if (this.divider) {
-                    classes.push('am-divider');
-                }
-
-                return classes.join(' ');
             }
         }
     };

@@ -146,3 +146,50 @@
 		// ...
 	};
 </script>
+
+<style lang="scss">
+
+.components-content {
+    .tooltip {
+
+        margin-left: 120px;
+
+        button {
+            margin: 10px;
+        }
+
+        .top {
+            text-align: center;
+            width: 430px;
+        }
+
+        .left {
+            float: left;
+            width: 90px;
+        }
+
+        .right {
+            float: left;
+            width: 60px;
+            margin-left: 255px;
+        }
+
+        .bottom {
+            clear: both;
+            text-align: center;
+            width: 430px;
+        }
+
+        .item {
+            margin: 4px;
+        }
+
+        .left .el-tooltip__popper,
+        .right .el-tooltip__popper {
+            padding: 8px 10px;
+        }
+    }
+}
+
+
+</style>
