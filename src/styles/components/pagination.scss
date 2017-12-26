@@ -1,41 +1,40 @@
 .dy-pagination {
     padding-left: 0;
-    margin: 1.5rem 0;
     list-style: none;
-    color: #999;
     text-align: left;
+    font-size: $--font-size-base;
 
     li {
         display: inline-block;
+        user-select: none;
 
         a {
             position: relative;
             display: block;
-            padding: .5em 1em;
+            padding: 8px 15px;
             text-decoration: none;
             line-height: 1.2;
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: $--color-white;
+            border: $--border-base;
             border-radius: 2px;
-            margin-bottom: 5px;
             margin-right: 5px;
         }
 
         &.dy-pagination-active {
             a {
                 z-index: 2;
-                color: #fff;
-                background-color: #0e90d2;
-                border-color: #0e90d2;
+                color: $--color-white;
+                background-color: $--color-primary;
+                border-color: $--color-primary;
                 cursor: default;
             }
         }
 
         &.dy-pagination-disabled {
             a {
-                color: #999;
-                background-color: #fff;
-                border-color: #ddd;
+                color: $--color-text-secondary;
+                background-color: $--color-white;
+                border-color: $--border-color-base;
                 cursor: not-allowed;
                 pointer-events: none;
             }

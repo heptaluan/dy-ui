@@ -93,7 +93,6 @@
 
     .components-code {
         font-size: 14px;
-        margin-bottom: 15px;
 
         .code-title {
             font-size: 14px;

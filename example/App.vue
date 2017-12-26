@@ -24,7 +24,6 @@
 						<li><router-link to="/backtotop">BackToTop 回到顶部</router-link></li>
 						<li><router-link to="/button">Button 按钮</router-link></li>
 						<li><router-link to="/tag">Tag 标签</router-link></li>
-						<!-- <li><router-link to="/pagination">Pagination 分页</router-link></li> -->
 
 						<div class="list-title">Form</div>
 						<li><router-link to="/radio">Radio 单选框</router-link></li>
@@ -34,6 +33,7 @@
 						<li><router-link to="/switch">Switch 开关</router-link></li>
 						<li><router-link to="/slider">Slider 滑块</router-link></li>
 						<li><router-link to="/dropDown">DropDown 下拉菜单</router-link></li>
+						<li><router-link to="/pagination">Pagination 分页</router-link></li>
 
 						<li><router-link to="/table">Table 表格</router-link></li>
 						<li><router-link to="/tab">Tab 选项卡</router-link></li>
@@ -43,9 +43,9 @@
 						<li><router-link to="/notify">Notify 顶部消息通知</router-link></li>
 						<li><router-link to="/message">Message 侧边信息提示</router-link></li>
 						<li><router-link to="/dialog">Dialog 对话框</router-link></li>
+						<li><router-link to="/carousel">Carousel 走马灯</router-link></li>
 						<li><router-link to="/progress">Progress 进度条</router-link></li>
 						<li><router-link to="/tooltip">ToolTip 文字提示</router-link></li>
-						<li><router-link to="/carousel">Carousel 走马灯</router-link></li>
 
 
 					</ul>
