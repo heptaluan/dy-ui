@@ -8,6 +8,28 @@
 
 ----
 
+----
+
+### Use
+
+```js
+npm install dyui --save
+```
+
+然后在入口文件处
+
+```js
+import dyui from "dyui";
+
+Vue.use(dyui);
+```
+
+
+----
+
+----
+
+
 参考：
 
 [amazeui](https://github.com/amazeui/amazeui)
@@ -17,9 +39,6 @@
 [element-ui](https://github.com/ElemeFE/element)
 
 > 没有经过严格测试，可能存在未知 BUG，请勿使用于生产环境
-
-
-----
 
 ----
 
