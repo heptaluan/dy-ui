@@ -58,7 +58,7 @@
 
 <div class="tab-content">
     <h2 class="h2">Carousel 走马灯（参数设置）</h2>
-    <dy-carousel :showCarouselButton="true" :showCarouselControl="false" :height="350" :playTime="2000" :autoPlay="false">
+    <dy-carousel :showCarouselButton="true" :showCarouselControl="false" :height="350" :playTime="2000">
         <dy-carousel-item>1</dy-carousel-item>
         <dy-carousel-item>2</dy-carousel-item>
         <dy-carousel-item>3</dy-carousel-item>
@@ -70,7 +70,7 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p>指定对应参数设置即可</p>
+        <p>如下设置表示：显示左右切换按钮，不显示底部控制按钮组，高度设置为 <code>500</code>，切换间隔时间为 <code>2000</code> 毫秒</p>
     </div>
 </div>
 
@@ -78,7 +78,7 @@
     <code class="html">
     &lt;template&gt;
         
-        &lt;dy-carousel :showCarouselButton="true" :showCarouselControl="false" :height="350" :playTime="2000" :autoPlay="false"&gt;
+        &lt;dy-carousel :showCarouselButton="true" :showCarouselControl="false" :height="350" :playTime="2000"&gt;
             &lt;dy-carousel-item&gt;1&lt;/dy-carousel-item&gt;
             &lt;dy-carousel-item&gt;2&lt;/dy-carousel-item&gt;
             &lt;dy-carousel-item&gt;3&lt;/dy-carousel-item&gt;

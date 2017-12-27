@@ -18,6 +18,19 @@
     <div class="code-tip">
         <p><code>input</code> 的原生属性可以正常使用，比如 <code>placeholder</code>，默认的文本为请输入内容，可以手动指定将其覆盖掉</p>
         <p><code>input</code> 的默认宽度为 <code>100%</code>，高度为 <code>40px</code>（包含边框在内）</p>
+
+        <br>
+        <p>参数设置如下：</p>
+        <p><code>w, h</code>  --  指定 <code>input</code> 框的长宽，需要指定单位，支持 <code>px</code>，<code>%</code>，<code>em/rem</code></p>
+        <p><code>regex</code>  --  正则，用于验证 <code>input</code> 输入框内的内容，一般配合 <code>errorNotice</code> 参数来使用</p>
+        <p><code>errorNotice</code>  --  用于显示使用正则验证时的文本提示内容</p>
+        <p><code>disabled</code>  --  禁用选项</p>
+        <p><code>type</code>  --  指定 <code>input</code> 类型，默认为 <code>input</code>，可选为 <code>textarea</code></p>
+
+        <br>
+        <p>注：关于复合型输入框</p>
+        <p>需要使用 <code>dy-input-group</code> 来包裹 <code>dy-input</code> 使用</p>
+        <p>然后指定一个 <code>span</code> 标签，文本内容可以自行定义，使用 <code>slot="prepend"</code> 和 <code>slot="append"</code> 参数来指定左右位置即可</p>
     </div>
 </div>
 

@@ -46,6 +46,10 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
+        <p>直接使用 <code>dy-slider</code> 组件然后绑定所需参数即可</p>
+
+        <br>
+        <p>参数设置如下：</p>
         <p><code>showTooltip</code> -- 布尔值，是否显示 <code>tooltip</code>，默认为 <code>false</code></p>
         <p><code>showInput</code> -- 布尔值，是否显示配套显示的 <code>input</code>，默认为 <code>false</code></p>
         <p><code>:min</code> -- 设定最小值</p>

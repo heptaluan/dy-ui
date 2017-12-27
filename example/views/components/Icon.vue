@@ -38,8 +38,11 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>使用的是基于阿里巴巴的矢量图标库</p>
-        <p><code>size</code> -- 指定图标大小</p>
-        <p><code>type</code> -- 指定图标类型</p>
+
+        <br>
+        <p>参数设置如下：</p>
+        <p><code>size</code>  --  指定图标大小，默认大小为 <code>14</code></p>
+        <p><code>type</code>  --  指定图标类型</p>
     </div>
 </div>
 

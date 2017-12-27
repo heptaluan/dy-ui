@@ -18,10 +18,12 @@
         <p>直接绑定点击事件，然后调用 <code>this.$loading.open()</code> 方法即可</p>
 
         <br>
+        <p>相关参数设置如下：</p>
         <p><code>this.$loading</code> 指令提供了两个方法，<code>open()</code> 和 <code>close()</code></p>
         <p><code>open()</code> 方法可以接收参数，参数为一个对象</p>
         <p><code>tiemout</code> -- 关闭时间，默认为 <code>3000</code> 毫秒</p>
         <p><code>loadingText</code> -- 加载的提示文字，不填写的情况下默认为 <code>Loading</code></p>
+        <p><code>close()</code> -- 该方法直接调用即可</p>
     </div>
 </div>
 
@@ -120,7 +122,7 @@
                     // 手动关闭
                     setTimeout( () => {
                         this.$loading.close()
-                    }, 2000)
+                    }, 500)
                 }
             }
         };
@@ -159,7 +161,7 @@
                 })
                 setTimeout( () => {
                     this.$loading.close()
-                }, 2000)
+                }, 500)
             }
         }
 	};

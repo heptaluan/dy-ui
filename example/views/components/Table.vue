@@ -22,10 +22,12 @@
     <div class="code-tip">
         <p>使用 <code>dy-table</code> 组件来包裹 <code>dy-table-col</code> 组件使用</p>
         <br>
-        <p><code>:data</code> -- 绑定用来渲染的数据列表数组</p>
-        <p><code>prop</code> -- 绑定用来渲染的数据列表数组当中的 <code>key</code></p>
-        <p><code>label</code> -- 表格表头的内容</p>
+        <p>默认设置参数如下：</p>
+        <p><code>:data</code> -- 绑定用来渲染的数据列表数组，数据类型为 <code>Array</code></p>
+        <p><code>prop</code> -- 与绑定的数据 <code>:data</code> 当中对象的 <code>key</code> 相对应</p>
+        <p><code>label</code> -- 对应生成的表格当中的表头内容</p>
         <br>
+        <p>相关功能接口如下：</p>
         <p><code>:border</code> -- 布尔值，是否显示边框，默认为 <code>false</code></p>
         <p><code>:striped</code> -- 布尔值，是否显示隔行背景色，默认为 <code>false</code></p>
         <p><code>:hover</code> -- 布尔值，是否显示鼠标移入样式，默认为 <code>false</code></p>

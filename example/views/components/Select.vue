@@ -19,8 +19,10 @@
         <p>直接调用 <code>dy-select</code> 组件，然后使用 <code>:options</code> 绑定需要渲染的数据即可</p>
 
         <br>
-        <p><code>v-model</code> -- 如果需要使用双向绑定，指定绑定的值即可</p>
-        <p><code>:multiple</code> -- 是否开启多选模式，默认为单选模式</p>
+        <p>参数设置如下：</p>
+        <p><code>:options</code> -- 绑定需要渲染的数组列表</p>
+        <p><code>v-model</code> -- 双向绑定的值</p>
+        <p><code>:multiple</code> -- 布尔值，指定是否开启多选模式，默认为单选模式</p>
         <p><code>:width</code> -- 设定下拉按钮和下拉框的长度，默认为 <code>200</code></p>
         <p><code>:maxHeight</code> -- 设定下拉框的最大高度，默认为 <code>300</code>，超出最大高度后出现滚动条 </p>
     </div>

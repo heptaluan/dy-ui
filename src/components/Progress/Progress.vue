@@ -34,7 +34,7 @@
                     return [
                         "default",
                         "success",
-                        "waring",
+                        "warning",
                         "danger"
                     ].includes(color);
                 }

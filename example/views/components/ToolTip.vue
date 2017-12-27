@@ -119,12 +119,6 @@
             &lt;/dy-tooltip&gt;
 
     &lt;/template&gt;
-
-    &lt;script&gt;
-        export default {
-            // ...
-        }
-    &lt;/script&gt;
     </code>
 </pre>
 
@@ -140,12 +134,6 @@
 
 </div>
 </template>
-
-<script>
-	export default {
-		// ...
-	};
-</script>
 
 <style lang="scss">
 

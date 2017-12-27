@@ -28,8 +28,11 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>直接使用 <code>dy-tab</code> 组件包裹 <code>dy-tab-list</code> 组件即可</p>
-        <p>指定的 <code>label</code> 为导航的文本内容</p>
-        <p>列表的内容部分可以自行定义</p>
+        <p>指定的 <code>label</code> 为导航的文本内容，<code>dy-tab-list</code> 当中的内容可以自行定义</p>
+
+        <br>
+        <p>相关参数设置如下：</p>
+        <p><code>label</code> -- 对应渲染生成的选项卡标题的文本内容</p>
     </div>
 </div>
 

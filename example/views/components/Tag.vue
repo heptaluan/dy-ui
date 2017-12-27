@@ -22,6 +22,7 @@
         <p>使用 <code>dy-tag</code> 组件包裹标签内容即可</p>
 
         <br>
+        <p>参数设置如下：</p>
         <p><code>type</code> -- 指定标签的主题类型</p>
         <p><code>isRound</code> -- 指定是否为圆角</p>
     </div>
@@ -58,9 +59,6 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>使用 <code>isRound</code> 参数即可</p>
-
-        <br>
-        <p><code>type</code> -- 指定标签的主题类型</p>
     </div>
 </div>
 

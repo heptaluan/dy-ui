@@ -134,12 +134,14 @@
         &lt;dy-button v-dropdown:dropdown03&gt;下拉菜单&lt;/dy-button&gt;
 
         &lt;dy-dropdown ref="dropdown03" trigger="click"&gt;
-            &lt;dy-dropdown-item :header="true"&gt;水果类型&lt;/dy-dropdown-item&gt;
-            &lt;dy-dropdown-item&gt;&lt;a href="javascript:;"&gt;地瓜&lt;/a&gt;&lt;/dy-dropdown-item&gt;
+            &lt;dy-dropdown-item :header="true"&gt;水果&lt;/dy-dropdown-item&gt;
+            &lt;dy-dropdown-item&gt;&lt;a href="javascript:;"&gt;香蕉&lt;/a&gt;&lt;/dy-dropdown-item&gt;
             &lt;dy-dropdown-item&gt;&lt;a href="javascript:;"&gt;西瓜&lt;/a&gt;&lt;/dy-dropdown-item&gt;
-            &lt;dy-dropdown-item&gt;&lt;a href="javascript:;"&gt;冬瓜&lt;/a&gt;&lt;/dy-dropdown-item&gt;
-            &lt;dy-dropdown-item&gt;&lt;a href="javascript:;"&gt;南瓜&lt;/a&gt;&lt;/dy-dropdown-item&gt;
             &lt;dy-dropdown-item&gt;&lt;a href="javascript:;"&gt;草莓&lt;/a&gt;&lt;/dy-dropdown-item&gt;
+            &lt;dy-dropdown-item :header="true"&gt;蔬菜&lt;/dy-dropdown-item&gt;
+            &lt;dy-dropdown-item&gt;&lt;a href="javascript:;"&gt;胡萝卜&lt;/a&gt;&lt;/dy-dropdown-item&gt;
+            &lt;dy-dropdown-item&gt;&lt;a href="javascript:;"&gt;南瓜&lt;/a&gt;&lt;/dy-dropdown-item&gt;
+            &lt;dy-dropdown-item&gt;&lt;a href="javascript:;"&gt;冬瓜&lt;/a&gt;&lt;/dy-dropdown-item&gt;
         &lt;/dy-dropdown&gt;
 
     &lt;/template&gt;

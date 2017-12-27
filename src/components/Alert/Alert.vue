@@ -1,6 +1,6 @@
 <template>
-    <model v-bind="$props" ref="model">
-        <model-header :isShow.sync="syncSlot" :closeBtn="true">
+    <model v-bind="$props" ref="model" :close="close">
+        <model-header :isShow.sync="syncSlot" :closeBtn="this.close">
             <div class="dy-alert-header">
                 {{ titleText }}
             </div>
@@ -33,6 +33,10 @@
             }
         },
         props: {
+            close: {
+                type: Boolean,
+                default: false
+            },
             titleText: {
                 type: String,
             },

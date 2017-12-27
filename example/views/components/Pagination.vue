@@ -17,12 +17,12 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
-        <p>直接使用 <code>dy-pagination</code> 组件，并且指定需要展示的数据总条目 <code>total</code> 参数（为必填项）</p>
+        <p>直接使用 <code>dy-pagination</code> 组件，并且指定需要展示的数据总条目 <code>total</code> 参数（该参数为必填项）</p>
         
         <br>
         <p>相关参数设置如下：</p>
         <p><code>:total</code>  --  需要分页的总条目，该项为必填项</p>
-        <p><code>:value</code>  --  当前展示第几页，默认为第一页</p>
+        <p><code>:value</code>  --  当前展示第几页，默认为 <code>1</code></p>
         <p><code>:pageSize</code>  --  每页展示多少条目，默认为 <code>10</code></p>
         <p><code>:fixedShowPageNums</code>  --  分页按钮显示的总个数，默认为 <code>7</code></p>
         <p><code>:firstBtnText</code>  --  首页文本显示内容，默认为首页</p>

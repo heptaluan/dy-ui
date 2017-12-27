@@ -1,3 +1,4 @@
+import "./styles/index.scss";
 
 import { Button } from "./components/Button";
 import { Icon } from "./components/Icon";
@@ -11,7 +12,6 @@ import { Notify } from "./components/Notify";
 import { Message } from "./components/Message";
 
 import { Close } from "./components/Close";
-import { Code } from "./components/Code";
 
 import { Model, ModelHeader, ModelBody, ModelFooter } from "./components/Model";
 import { Alert } from "./components/Alert";
@@ -47,7 +47,6 @@ const install = function (Vue) {
     Vue.component(BackToTop.name, BackToTop);
 
     Vue.component(Close.name, Close);
-    Vue.component(Code.name, Code);
 
     Vue.component(Model.name, Model);
     Vue.component(ModelHeader.name, ModelHeader);
@@ -86,5 +85,41 @@ if (typeof window !== "undefined" && window.Vue) {
 }
 
 export default {
-    install
+    install,
+    Button,
+    Icon,
+    Input,
+    InputGroup,
+    Radio,
+    RadioGroup,
+    RadioButton,
+    Checkbox,
+    CheckboxGroup,
+    Switch,
+    BackToTop,
+    ToolTip,
+    Notify,
+    Message,
+    Close,
+    Model,
+    ModelHeader,
+    ModelBody,
+    ModelFooter,
+    Alert,
+    Confirm,
+    Prompt,
+    Slider,
+    Table,
+    TableCol,
+    Select,
+    Progress,
+    Loading,
+    Tab,
+    TabList,
+    Carousel,
+    CarouselItem,
+    DropDown,
+    DropDownItem,
+    Tag,
+    Pagination
 };

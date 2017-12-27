@@ -26,6 +26,14 @@
     <div class="code-tip">
         <p>需要使用 <code>dy-checkbox-group</code> 组件来包裹 <code>dy-checkbox</code> 组件使用</p>
         <p>指定 <code>v-model</code> 绑定当前选中的数据，<code>label</code> 为各个选项的名称</p>
+
+        <br>
+        <p>参数设置如下：</p>
+        <p><code>v-model</code>  --  用于双向绑定展示的值</p>
+        <p><code>label</code>  --  选项内容</p>
+        <p><code>disabled</code>  --  禁用选项</p>
+        <p><code>:min</code>  --  最少选择几项</p>
+        <p><code>:max</code>  --  最多选择几项</p>
     </div>
 </div>
 

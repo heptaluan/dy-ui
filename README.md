@@ -4,8 +4,6 @@
 
 基于 `vue-cli` + `webpack` + `sass`
 
-开发进行中
-
 预览地址：[中文文档地址](https://hanekaoru.github.io)
 
 ----
@@ -54,30 +52,4 @@
     │    └── ...
     ├── index.js          组件入口
     └── ...
-```
-
-----
-
-
-### Use
-
-```js
-npm install
-```
-
-运行
-
-```js
-npm run dev
-```
-
-访问 `localhost:8080`
-
-组件使用只需要在入口文件处引入组件和对应样式文件即可
-
-```js
-import dyui from "../src/index";
-import "../src/styles/index.scss";
-
-Vue.use(dyui);
 ```

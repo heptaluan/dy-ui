@@ -26,6 +26,13 @@
     <div class="code-tip">
         <p>需要使用 <code>dy-radio-group</code> 来包裹 <code>dy-radio</code> 使用</p>
         <p>然后指定 <code>dy-radio</code> 的 <code>label</code> 属性来指定各个选项的名称，使用 <code>v-model</code> 来绑定选中的数据</p>
+
+        <br>
+        <p>参数设置如下：</p>
+        <p><code>v-model</code>  --  用于双向绑定展示的值</p>
+        <p><code>label</code>  --  单选框的选项内容</p>
+        <p><code>disabled</code>  --  禁用选项</p>
+        <p><code>dy-radio-button</code>  --  如果需要使用单选按钮组，只需要将 <code>dy-radio</code> 组件替换为 <code>dy-radio-button</code> 组件即可</p>
     </div>
 </div>
 

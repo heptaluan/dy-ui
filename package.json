@@ -1,9 +1,20 @@
 {
-  "name": "app",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "name": "dyui",
+  "version": "0.2.2",
+  "description": "A UI components Library with Vue.js",
+  "homepage": "https://hanekaoru.github.io",
   "author": "hanekaoru <vd2o@foxmail.com>",
-  "private": true,
+  "license": "MIT",
+  "main": "dist/js/main.js",
+  "style": "dist/style/dyui.css",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanekaoru/dy-ui"
+  },
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",

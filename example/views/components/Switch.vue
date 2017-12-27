@@ -21,6 +21,12 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>使用 <code>v-model</code> 所绑定的值来决定初始值</p>
+
+        <br>
+        <p>参数设置如下：</p>
+        <p><code>inActiveText</code>  --  左侧文本内容</p>
+        <p><code>activeText</code>  --  右侧文本内容</p>
+        <p><code>disabled</code>  --  禁用选项</p>
     </div>
 </div>
 

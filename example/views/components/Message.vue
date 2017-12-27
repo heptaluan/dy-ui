@@ -20,13 +20,15 @@
     <div class="code-title">示例代码</div>
     <div class="code-tip">
         <p>绑定 <code>click</code> 方法后调用指令 <code>$message({})</code> 方法即可</p>
+
         <br>
+        <p>相关参数设置如下：</p>
         <p><code>title</code> -- 标题文本</p>
         <p><code>message</code> -- 内容文本</p>
         <p><code>close</code> -- 布尔值，是否出现关闭按钮，默认为 <code>false</code></p>
         <p><code>onClose</code> -- 侧边提示信息关闭后的回调事件</p>
         <p><code>delay</code> -- 自动关闭时间，默认为 <code>2000</code> 毫秒</p>
-        <p><code>type</code> -- 弹窗的主题，分为 <code>default</code>，<code>success</code>，<code>waring</code>，<code>danger</code>，默认为 <code>default</code></p>
+        <p><code>type</code> -- 弹窗的主题，分为 <code>default</code>，<code>success</code>，<code>warning</code>，<code>danger</code>，默认为 <code>default</code></p>
         <p><code>placement</code> -- 弹窗出现的方位，分为 <code>left-top</code>，<code>left-bottom</code>，<code>right-top</code>，<code>right-bottom</code>，默认为 <code>right-top</code></p>
     </div>
 </div>
@@ -67,7 +69,7 @@
                     this.$message({
                         title: "标题",
                         message: "侧边栏信息提示内容主体",
-                        type: "waring",
+                        type: "warning",
                         placement: "right-bottom",
                         delay: 2000,
                         close: true
@@ -123,7 +125,7 @@
 				this.$message({
                     title: "标题",
                     message: "侧边栏信息提示内容主体",
-                    type: "waring",
+                    type: "warning",
 					placement: "right-bottom",
 					delay: 2000,
 					close: true
