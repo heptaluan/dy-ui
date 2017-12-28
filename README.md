@@ -39,13 +39,11 @@ import App from "./App.vue";
 import dyui from "../src/index";
 Vue.use(dyui);
 
-Vue.config.productionTip = false
-
 new Vue({
-	el: "#app",
-	router,
-	template: "<App/>",
-	components: { App }
+    el: "#app",
+    router,
+    template: "<App/>",
+    components: { App }
 })
 
 ```
