@@ -2,6 +2,8 @@
 
 A UI components Library with Vue.js
 
+> there may be bugs, don't use it in production environment
+
 ## GitHub
 
 [https://github.com/hanekaoru/dy-ui](https://github.com/hanekaoru/dy-ui)
@@ -57,6 +59,3 @@ Thanks to
 [iview](https://github.com/iview/iview)
 
 [element-ui](https://github.com/ElemeFE/element)
-
-> there may be bugs, don't use it in production environment
-
