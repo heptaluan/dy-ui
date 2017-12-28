@@ -1,36 +1,56 @@
-### dy-ui
+## dy-ui
 
-一个使用 `vue` 构建的 `ui` 组件库
+A UI components Library with Vue.js
 
-基于 `vue-cli` + `webpack` + `sass`
+## GitHub
 
-预览地址：[中文文档地址](https://hanekaoru.github.io)
+[https://github.com/hanekaoru/dy-ui](https://github.com/hanekaoru/dy-ui)
 
-----
+## Demo
 
-----
+[dy-ui](https://hanekaoru.github.io)
 
-### Use
+## NPM
+
+[![npm](https://img.shields.io/npm/v/i-rubik.svg)](https://www.npmjs.com/package/dyui)
+
+## Support
+
+Support Vue.js 2.0+
+
+Not support Vue.js 1.x
+
+## Install
 
 ```js
 npm install dyui --save
 ```
 
-然后在入口文件处
+## Usage
 
 ```js
-import dyui from "dyui";
+import Vue from "vue";
+import router from "./router";
+import App from "./App.vue";
 
+// import and use
+import dyui from "../src/index";
 Vue.use(dyui);
+
+Vue.config.productionTip = false
+
+new Vue({
+	el: "#app",
+	router,
+	template: "<App/>",
+	components: { App }
+})
+
 ```
 
+## Releated Projects
 
-----
-
-----
-
-
-参考：
+Thanks to
 
 [amazeui](https://github.com/amazeui/amazeui)
 
@@ -38,37 +58,5 @@ Vue.use(dyui);
 
 [element-ui](https://github.com/ElemeFE/element)
 
-> 没有经过严格测试，可能存在未知 BUG，请勿使用于生产环境
+> there may be bugs, don't use it in production environment
 
-----
-
-目录结构为：
-
-```js
-├── build                 webpack 运行脚本
-├── config                目录配置
-├── example               预览地址，文档所在目录
-│    ├── styles           文档 sass 文件
-│    │   └── ...   
-│    ├── views            文档中的各个组件的 API 介绍页面
-│    │   ├── components
-│    │   └── ...
-│    ├── App.vue          文档主入口，路由根目录
-│    ├── index.html       挂载页面
-│    ├── index.js         文档主入口
-│    └── router.js        路由配置文件
-│
-└── src              
-    ├── components        组件所在目录
-    │    ├── Button
-    │    └── ...
-    ├── mixins            mixins
-    ├── utils             工具
-    ├── styles            
-    │    ├── components   组件对应样式表
-    │    ├── iconfont     字体图标（基于阿里图标库）
-    │    ├── mixins       sass 的 mixins 集合
-    │    └── ...
-    ├── index.js          组件入口
-    └── ...
-```

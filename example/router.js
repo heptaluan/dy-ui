@@ -25,10 +25,12 @@ const Carousel = () => import('./views/components/Carousel.vue');
 const DropDown = () => import('./views/components/DropDown.vue');
 const Tag = () => import('./views/components/Tag.vue');
 const Pagination = () => import('./views/components/Pagination.vue');
+const Start = () => import('./views/components/Start.vue');
 
 
 export default new VueRouter({
     routes: [
+        { path: '/start', component: Start },
         { path: '/table', component: Table },
         { path: '/icon', component: Icon },
         { path: '/close', component: Close },
@@ -51,7 +53,7 @@ export default new VueRouter({
         { path: '/dropDown', component: DropDown },
         { path: '/tag', component: Tag },
         { path: '/pagination', component: Pagination },
-        { path: '*', redirect: '/icon'}
+        { path: '*', redirect: '/start'}
     ],
     mode: "history",
     scrollBehavior (to, from, savedPosition) {

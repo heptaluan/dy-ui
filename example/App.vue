@@ -7,7 +7,10 @@
 
 		<header>
 			<div class="header">
-				dy-ui
+				<span>dyui</span>
+				<span class="subHeader">
+					<a target="_blank" href="https://github.com/hanekaoru/dy-ui">源码点我</a>
+				</span>
 			</div>
 		</header>
 		
@@ -19,6 +22,7 @@
 					<ul>
 
 						<div class="list-title">Basic</div>
+						<li><router-link to="/start">安装</router-link></li>
 						<li><router-link to="/icon">Icon 图标</router-link></li>
 						<li><router-link to="/close">Close 关闭按钮</router-link></li>
 						<li><router-link to="/backtotop">BackToTop 回到顶部</router-link></li>
@@ -72,5 +76,16 @@
 
 .fade-enter, .fade-leave-to  {
 	opacity: 0
+}
+
+.header {
+	.subHeader {
+		font-size: 14px;
+		margin-left: 25px;
+		
+		a {
+			color: #409EFF;
+		}
+	}
 }
 </style>
