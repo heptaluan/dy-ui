@@ -12,7 +12,7 @@ A UI components Library with Vue.js
 
 ## NPM
 
-[![npm](https://img.shields.io/npm/v/i-rubik.svg)](https://www.npmjs.com/package/dyui)
+[![npm](https://img.shields.io/badge/npm-v0.2.5-blue.svg)](https://www.npmjs.com/package/dyui)
 
 ## Support
 
