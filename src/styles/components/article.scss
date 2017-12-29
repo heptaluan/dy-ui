@@ -1,0 +1,47 @@
+.dy-article {
+
+    .dy-article-header {
+
+        .dy-article-title {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .dy-article-sub-title {
+            margin-bottom: 15px;
+            font-size: 12px;
+            color: #999;
+
+            .dy-article-time {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .dy-article-body {
+
+        .dy-article-lead {
+            padding: 10px;
+            color: #666;
+            background-color: #f9f9f9;
+            border: 1px solid #dedede;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        img {
+            margin: 15px 0;
+            max-width: 100%;
+            padding: 0 15px;
+        }
+    }
+}

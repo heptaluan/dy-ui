@@ -8,8 +8,11 @@
 		<header>
 			<div class="header">
 				<span>dyui</span>
+				<sub>A UI components Library with Vue.js</sub>
 				<span class="subHeader">
-					<a target="_blank" href="https://github.com/hanekaoru/dy-ui">源码点我</a>
+					<a target="_blank" href="https://github.com/hanekaoru/dy-ui">
+						<dy-icon size="26" type="&#xe719;"></dy-icon>
+					</a>
 				</span>
 			</div>
 		</header>
@@ -50,6 +53,8 @@
 						<li><router-link to="/carousel">Carousel 走马灯</router-link></li>
 						<li><router-link to="/progress">Progress 进度条</router-link></li>
 						<li><router-link to="/tooltip">ToolTip 文字提示</router-link></li>
+						<li><router-link to="/nav">Nav 导航</router-link></li>
+						<li><router-link to="/article">Article 文章</router-link></li>
 
 
 					</ul>
@@ -79,12 +84,24 @@
 }
 
 .header {
+	sub {
+		user-select: none;
+		font-size: 12px;
+		color: #909399;
+	}
+
 	.subHeader {
-		font-size: 14px;
-		margin-left: 25px;
+		float: right;
+		padding: 0 15px;
 		
 		a {
-			color: #409EFF;
+			color: #666;
+		}
+		
+		&:hover {
+			a {
+				color: #409EFF;
+			}
 		}
 	}
 }

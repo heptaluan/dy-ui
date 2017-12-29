@@ -26,6 +26,8 @@ const DropDown = () => import('./views/components/DropDown.vue');
 const Tag = () => import('./views/components/Tag.vue');
 const Pagination = () => import('./views/components/Pagination.vue');
 const Start = () => import('./views/components/Start.vue');
+const Nav = () => import('./views/components/Nav.vue');
+const Article = () => import('./views/components/Article.vue');
 
 
 export default new VueRouter({
@@ -53,6 +55,8 @@ export default new VueRouter({
         { path: '/dropDown', component: DropDown },
         { path: '/tag', component: Tag },
         { path: '/pagination', component: Pagination },
+        { path: '/nav', component: Nav },
+        { path: '/article', component: Article },
         { path: '*', redirect: '/start'}
     ],
     mode: "history",

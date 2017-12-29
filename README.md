@@ -14,7 +14,7 @@ A UI components Library with Vue.js
 
 ## NPM
 
-[![npm](https://img.shields.io/badge/npm-v0.2.5-blue.svg)](https://www.npmjs.com/package/dyui)
+[![npm](https://img.shields.io/badge/npm-v0.2.7-blue.svg)](https://www.npmjs.com/package/dyui)
 
 ## Support
 
@@ -36,7 +36,7 @@ import router from "./router";
 import App from "./App.vue";
 
 // import and use
-import dyui from "../src/index";
+import dyui from "dyui";
 Vue.use(dyui);
 
 new Vue({

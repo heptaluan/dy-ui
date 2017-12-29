@@ -27,6 +27,10 @@ import { Carousel, CarouselItem } from "./components/Carousel";
 import { DropDown, DropDownItem } from "./components/DropDown";
 import { Tag } from "./components/Tag";
 import { Pagination } from "./components/Pagination";
+import { Nav, NavItem } from "./components/Nav";
+
+import { Article, ArticleHeader, ArticleBody, ArticleLead } from "./components/Article";
+
 
 
 const install = function (Vue) {
@@ -73,7 +77,14 @@ const install = function (Vue) {
     Vue.component(DropDownItem.name, DropDownItem);
     Vue.component(Tag.name, Tag);
     Vue.component(Pagination.name, Pagination);
+    Vue.component(Nav.name, Nav);
+    Vue.component(NavItem.name, NavItem);
 
+    Vue.component(Article.name, Article);
+    Vue.component(ArticleHeader.name, ArticleHeader);
+    Vue.component(ArticleBody.name, ArticleBody);
+    Vue.component(ArticleLead.name, ArticleLead);
+    
     Vue.use(Notify);
     Vue.use(Message);
     Vue.use(Loading);
@@ -121,5 +132,11 @@ export default {
     DropDown,
     DropDownItem,
     Tag,
-    Pagination
+    Pagination,
+    Nav,
+    NavItem,
+    Article, 
+    ArticleHeader, 
+    ArticleBody, 
+    ArticleLead
 };
