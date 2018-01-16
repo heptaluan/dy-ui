@@ -7,7 +7,6 @@
             <ul>
                 <li>
 
-
 <div class="components-content">
     <h2 class="h2">输入框（默认）</h2>
     <dy-input></dy-input>
@@ -146,7 +145,6 @@
 </pre>
 
                 </li>
-
                 <li>
 
 
@@ -174,7 +172,6 @@
 
 
                 </li>
-
                 <li>
 
 
@@ -270,13 +267,66 @@
 
 
                 </li>
+                <li>
+
+
+<div class="components-content">
+    <h2 class="h2">Input-Number</h2>
+    <div style="width:120px;">
+        <dy-input-number
+            :max="100"
+            :min="0"
+            :step="2"
+            v-model="inputNumber"
+        ></dy-input-number>
+    </div>
+</div>
+
+<div class="components-code">
+    <div class="code-title">示例代码</div>
+    <div class="code-tip">
+        <p>默认长度为 <code>100%</code>，所以需要在外层包裹一层容器来限定大小</p>
+        <p>输入框输入内容没有做限定，所以简易配合 <code>:max</code> 和 <code>:min</code> 参数进行使用</p>
+        <p>小键盘中的上下键位对应着递增和减少</p>
+        <p>需要注意：参数类型均为 <code>Number</code></p>
+
+        <br>
+        <p>参数设置如下：</p>
+        <p><code>:max</code>  --  输入限定的最大值（不添加该参数则无此限定）</p>
+        <p><code>:min</code>  --  输入限定的最小值（不添加该参数则无此限定）</p>
+        <p><code>:step</code>  --  步数，默认为 <code>1</code></p>
+    </div>
+</div>
+
+<pre v-highlightjs>
+    <code class="html">
+    &lt;template&gt;
+
+        &lt;dy-input-number
+            :max="100"
+            :min="0"
+            :step="2"
+            v-model="inputNumber"
+        &gt;&lt;/dy-input-number&gt;
+
+    &lt;/template&gt;
+    &lt;script&gt;
+        export default {
+            data() {
+                return {
+                    inputNumber: 1
+                }
+            }
+        }
+    &lt;/script&gt;
+    </code>
+</pre>
+
+
+                </li>
             </ul>
         </div>
         
-
-
-
-
 
 </div>
 </template>
@@ -286,7 +336,8 @@
 		data() {
 			return {
                 telMsg: "",
-                emailMsg: ""
+                emailMsg: "",
+                inputNumber: 1
 			}
 		}
 	};

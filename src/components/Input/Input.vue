@@ -18,6 +18,7 @@
             :form="form"
             :value="curValue"
             @input="inputHandle"
+            @change="changeHandle"
             @focus="focusHandle"
             @blur="blurHandle"
             ref="input"
@@ -37,6 +38,7 @@
             :autocomplete="autocomplete"
             :form="form"
             :value="curValue"
+            @change="changeHandle"
             @input="inputHandle"
             @focus="focusHandle"
             @blur="blurHandle"
@@ -182,6 +184,9 @@
                 const value = e.target.value;
                 this.$emit("input", value);
                 this.curValue = value;
+            },
+            changeHandle(e) {
+                this.$emit("change", e);
             },
             focusHandle(e) {
                 this.$emit("focus", e)

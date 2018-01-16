@@ -2,7 +2,7 @@ import "./styles/index.scss";
 
 import { Button } from "./components/Button";
 import { Icon } from "./components/Icon";
-import { Input, InputGroup } from "./components/Input";
+import { Input, InputGroup, InputNumber } from "./components/Input";
 import { Radio, RadioGroup, RadioButton } from "./components/Radio";
 import { Checkbox, CheckboxGroup } from "./components/Checkbox";
 import { Switch } from "./components/Switch";
@@ -39,6 +39,7 @@ const install = function (Vue) {
 
     Vue.component(Input.name, Input);
     Vue.component(InputGroup.name, InputGroup);
+    Vue.component(InputNumber.name, InputNumber);
     
     Vue.component(Radio.name, Radio);
     Vue.component(RadioGroup.name, RadioGroup);

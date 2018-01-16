@@ -48,3 +48,59 @@
         }
     }
 }
+
+
+// 竖直方向
+.dy-tab-vertical {
+    overflow: hidden;
+    height: 100%;
+    background-color: #F4F6F8;
+
+    .dy-tab-nav {
+        width: 20%;
+        overflow: hidden;
+        float: left;
+        padding-left: 10px;
+        background-color: #F7F9FA;
+        height: 100%;
+
+        li {
+            float: left;
+            width: 100%;
+            font-size: 14px;
+            text-align: center;
+            padding: 5px 0;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border: 1px solid transparent;
+
+            &.dy-tab-active {
+                color: $--color-primary;
+                border: 1px solid #d7dde4;
+                border-right: 1px solid #F7F9FA;
+                position: relative;
+                z-index: 2;
+                border-radius: 4px 0 0 4px;
+            }
+        }
+    }
+
+    .dy-tab-lists {
+        float: left;
+        width: 80%;
+        padding: 10px;
+        height: 100%;
+        border: 1px solid #d7dde4;
+        margin-left: -1px;
+
+        .dy-tab-list {
+            display: none;
+
+            &.dy-list-active {
+                display: block;
+                height: 100%;
+            }
+        }
+        
+    }
+}

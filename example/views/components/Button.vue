@@ -397,4 +397,11 @@
 }
 </style>
 
+<style lang="scss" scoped>
+.components-content .iconfont, .dy-close {
+    margin-left: 0;
+}
+</style>
+
+
 

@@ -59,8 +59,8 @@ export default new VueRouter({
         { path: '/article', component: Article },
         { path: '*', redirect: '/start'}
     ],
-    mode: "history",
-    scrollBehavior (to, from, savedPosition) {
-        return { x: 0, y: 0 }
-    }
+    // mode: "history",
+    // scrollBehavior (to, from, savedPosition) {
+    //     return { x: 0, y: 0 }
+    // }
 });

@@ -11,7 +11,7 @@
     <h2 class="h2">Article 文章</h2>
     
     <dy-article>
-        <dy-article-header title="中国港机" meta="作者：镝次元" time="2017年12月15日"></dy-article-header>
+        <dy-article-header title="中国港机" meta="作者：镝次元" time="发表时间：2017年12月15日"></dy-article-header>
         <dy-article-body>
             <dy-article-lead>
                 1月3日，亚洲最大绞吸挖泥船“天鲲号”下水,长140米,宽27.8米,最大挖掘深度35米，总装机功率25843千瓦，标准疏浚能力每小时6000立方米。中国港口机械设备（下简称中国港机）的各项主要指标已属世界领先水平。
@@ -33,6 +33,13 @@
 <div class="components-code">
     <div class="code-title">示例代码</div>
     <div class="code-tip">
+        <p>共有四个组件可供选择：</p>
+        <p><code>dy-article</code> 组件 -- 最外层的容器</p>
+        <p><code>dy-article-header</code> 组件 -- 标题部分</p>
+        <p><code>dy-article-body</code> 组件 -- 内容部分</p>
+        <p><code>dy-article-lead</code> 组件 -- 摘要部分（可选）</p>
+
+        <br>
         <p>使用 <code>dy-article</code> 组件包裹 <code>dy-article-header</code>，<code>dy-article-body</code> 组件使用即可</p>
         <p><code>dy-article-header</code> 组件当中的 <code>title</code> 参数为必填项，<code>meta</code> 参数和 <code>time</code> 参数为选填项</p>
         <p><code>dy-article-header</code> 组件当中包含一个可选组件 <code>dy-article-lead</code>，表示摘要</p>
@@ -50,7 +57,7 @@
     &lt;template&gt;
         
         &lt;dy-article&gt;
-            &lt;dy-article-header title="中国港机" meta="作者：镝次元" time="2017年12月15日"&gt;&lt;/dy-article-header&gt;
+            &lt;dy-article-header title="中国港机" meta="作者：镝次元" time="发表时间：2017年12月15日"&gt;&lt;/dy-article-header&gt;
             &lt;dy-article-body&gt;
                 &lt;dy-article-lead&gt;
                     1月3日，亚洲最大绞吸挖泥船“天鲲号”下水,长140米 ... ...

@@ -35,11 +35,11 @@
 
     <div class="components-content">
         <h2 class="h2">Slider - 滑块（离散值）</h2>
-        <dy-slider v-model="sliderVal06" showTooltip show-input :step="10"></dy-slider>
+        <dy-slider v-model="sliderVal06" showTooltip showInput :step="10"></dy-slider>
     </div>
     <div class="components-content">
         <h2 class="h2">Slider - 滑块（离散值【显示间断点】）</h2>
-        <dy-slider v-model="sliderVal07" showTooltip show-input :step="20" show-steps></dy-slider>
+        <dy-slider v-model="sliderVal07" showTooltip showInput :step="20" show-steps></dy-slider>
     </div>
 </div>
 

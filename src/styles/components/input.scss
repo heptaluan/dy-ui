@@ -133,3 +133,87 @@
     }
 }
 
+
+// input-number
+.input-number {
+    position: relative;
+    display: inline-block;
+
+    .number-button {
+        width: 25px;
+        border-left: $--border-base;
+        border-radius: 0 4px 4px 0;
+        background: $--color-white;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        opacity: 1;
+        transition: opacity .2s ease-in-out;
+        z-index: 1;
+        box-sizing: border-box;
+
+        .input-number-btn {
+            display: block;
+            width: 100%;
+            height: 19px;
+            line-height: 19px;
+            text-align: center;
+            overflow: hidden;
+            color: #333;
+            position: relative;
+
+            &:hover {
+                color: $--color-primary;
+            }
+
+            &.upDisabled {
+                color: $--border-color-base;
+                cursor: not-allowed;
+            }
+
+            &.downDisabled {
+                color: $--border-color-base;
+                cursor: not-allowed;
+            }
+        }
+
+        .down-number {
+            border-top: $--border-base;
+            line-height: 16px;
+        }
+    }
+
+    &:hover {
+        .input-number-wrapper .dy-input {
+            border: 1px solid $--color-primary;
+            transition: $--all-transition;
+        }
+    }
+
+    .input-number-wrapper input {
+        width: 100%;
+        height: 40px;
+        position: relative;
+        display: inline-block;
+        padding: 0 10px;
+        box-sizing: border-box;
+        outline: none;
+        transition: $--all-transition;
+        border: $--border-base;
+        border-radius: $--border-radius-default;
+
+        &:focus,
+        &:hover {
+            border-color: $--color-primary;
+        }
+
+        &.dy-input-disabled {
+            opacity: .8;
+            pointer-events: none;
+            user-select: none;
+            background-color: $--input-group-bg;
+        }
+    }
+    
+
+}

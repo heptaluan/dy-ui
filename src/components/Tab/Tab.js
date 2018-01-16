@@ -7,6 +7,17 @@ export default {
             listActiveIndex: 0
         }
     },
+    props: {
+        vertical: {
+            type: Boolean,
+            default: false
+        }
+    },
+    computed: {
+        computedClass() {
+            return this.vertical ? "dy-tab-vertical" : "dy-tab"
+        },
+    },
     methods: {
         navClickHandle(index, list) {
             // list 为当前对应 index 的 TablList 组件
@@ -38,11 +49,12 @@ export default {
         }
     },
     render(h) {
-        const { $slots, lists, navActiveIndex } = this;
+        const { computedClass, $slots, lists, navActiveIndex } = this;
 
         return (
-            <div class="dy-tab">
+            <div class={ computedClass }>
                 <ul class="dy-tab-nav">
+                    <div class="tab-active-bar"></div>
                     {
                         // 渲染导航栏，显示文本从 list 组件的 label 属性中拿
                         lists.map( (list, index) => {
