@@ -28,6 +28,7 @@ import { DropDown, DropDownItem } from "./components/DropDown";
 import { Tag } from "./components/Tag";
 import { Pagination } from "./components/Pagination";
 import { Nav, NavItem } from "./components/Nav";
+import { Collapse, CollapseItem } from "./components/Collapse";
 
 import { Article, ArticleHeader, ArticleBody, ArticleLead } from "./components/Article";
 
@@ -85,6 +86,10 @@ const install = function (Vue) {
     Vue.component(ArticleHeader.name, ArticleHeader);
     Vue.component(ArticleBody.name, ArticleBody);
     Vue.component(ArticleLead.name, ArticleLead);
+
+    Vue.component(Collapse.name, Collapse);
+    Vue.component(CollapseItem.name, CollapseItem);
+    
     
     Vue.use(Notify);
     Vue.use(Message);

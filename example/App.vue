@@ -52,6 +52,7 @@
 						<li><router-link to="/carousel">Carousel 走马灯</router-link></li>
 						<li><router-link to="/progress">Progress 进度条</router-link></li>
 						<li><router-link to="/tooltip">ToolTip 文字提示</router-link></li>
+						<li><router-link to="/collapse">Collapse 折叠菜单</router-link></li>
 						<li><router-link to="/nav">Nav 导航</router-link></li>
 						<li><router-link to="/article">Article 文章</router-link></li>
 

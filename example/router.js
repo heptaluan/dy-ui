@@ -28,6 +28,7 @@ const Pagination = () => import('./views/components/Pagination.vue');
 const Start = () => import('./views/components/Start.vue');
 const Nav = () => import('./views/components/Nav.vue');
 const Article = () => import('./views/components/Article.vue');
+const Collapse = () => import('./views/components/Collapse.vue');
 
 
 export default new VueRouter({
@@ -57,6 +58,7 @@ export default new VueRouter({
         { path: '/pagination', component: Pagination },
         { path: '/nav', component: Nav },
         { path: '/article', component: Article },
+        { path: '/collapse', component: Collapse },
         { path: '*', redirect: '/start'}
     ],
     // mode: "history",
