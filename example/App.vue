@@ -42,7 +42,7 @@
 						<li><router-link to="/pagination">Pagination 分页</router-link></li>
 
 						<li><router-link to="/table">Table 表格</router-link></li>
-						<!-- <li><router-link to="/tab">Tab 选项卡</router-link></li> -->
+						<li><router-link to="/tab">Tab 选项卡</router-link></li>
 						<li><router-link to="/loading">Loading 加载中</router-link></li>
 
 						<div class="list-title">View</div>
