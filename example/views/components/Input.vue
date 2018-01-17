@@ -83,7 +83,7 @@
                 <li>
 
 
-<div class="components-content" style="height:100px;">
+<div class="components-content" style="height:90px;margin-bottom:0;">
     <h2 class="h2">输入框（验证规则）</h2>
     <dy-input
         placeholder="请输入手机号码"
@@ -93,7 +93,7 @@
     ></dy-input>
 </div>
 
-<div class="components-content" style="height:60px;">
+<div class="components-content" style="height:50px;margin-top:10px;margin-bottom:15px;">
     <dy-input
         placeholder="请输入邮箱地址"
         v-model="emailMsg"

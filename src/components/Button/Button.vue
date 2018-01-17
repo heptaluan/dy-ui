@@ -69,6 +69,10 @@
             isPlanin: {
                 type: Boolean,
                 default: false
+            },
+            text: {
+                type: Boolean,
+                default: false
             }
         },
         methods: {
@@ -115,6 +119,10 @@
 
                 if (this.isPlanin) {
                     computedClass.push("dy-isPlanin")
+                }
+
+                if (this.text) {
+                    computedClass.push("dy-btn-text")
                 }
 
                 return computedClass.join(" ");

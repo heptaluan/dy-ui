@@ -63,7 +63,7 @@
             },
             h: {
                 type: String,
-                default: "40px"
+                default: "30px"
             },
             type: {
                 type: String,

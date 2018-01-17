@@ -1,6 +1,6 @@
 <template>
 	<div class="dy-slider">
-		<dy-input 
+		<dy-input-number
 			v-model="inputValue" 
 			v-if="showInput" 
 			class="dy-slider-input" 
@@ -10,7 +10,7 @@
 			:min="min" 
 			:max="max"
 		>
-		</dy-input>
+		</dy-input-number>
 		<div class="dy-slider-box" :class="{ 'show-input': showInput }" @click="onSliderClick" ref="slider">
 			<div class="dy-slider-bar" :style="barStyle"></div>
 			<slider-button v-model="inputValue" ref="button">

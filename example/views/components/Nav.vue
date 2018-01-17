@@ -128,7 +128,7 @@
     .components-title {
         font-size: 22px;
         margin: 24px 0;
-        color: #409EFF;
+        color: #129CFF;
         padding: 0 25px 24px;
         border-bottom: 1px solid #d7dde4;
     }

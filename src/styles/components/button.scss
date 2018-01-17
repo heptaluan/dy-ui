@@ -100,3 +100,12 @@
         cursor: not-allowed;
     }
 }
+
+.dy-btn-text {
+    padding: 0;
+    border: none;
+
+    &:hover {
+        background: $--color-white;
+    }
+}

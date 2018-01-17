@@ -94,7 +94,7 @@
 		
 		&:hover {
 			a {
-				color: #409EFF;
+				color: #129CFF;
 			}
 		}
 	}

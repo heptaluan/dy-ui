@@ -54,7 +54,7 @@
                 default: 1
             },
             value: {
-                type: Number,
+                type: [Number, String],
                 default: 1
             },
             autofocus: {

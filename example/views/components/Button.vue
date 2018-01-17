@@ -135,7 +135,35 @@
 </pre>
 
                 </li>
+                <li>
 
+                    
+
+
+<div class="components-content">
+    <h2 class="h2">文字按钮</h2>
+    <dy-button text>文字按钮</dy-button>
+</div>
+
+<div class="components-code">
+    <div class="code-title">示例代码</div>
+    <div class="code-tip">
+        指定 <code>text</code> 参数即可
+    </div>
+</div>
+
+<pre v-highlightjs>
+    <code class="html">
+    &lt;template&gt;
+
+        &lt;dy-button text&gt;文字按钮&lt;/dy-button&gt;
+
+    &lt;/template&gt;
+    </code>
+</pre>
+
+
+                </li>
                 <li>
 
 
