@@ -8,7 +8,7 @@ A UI components Library with Vue.js
 
 [https://github.com/hanekaoru/dy-ui](https://github.com/hanekaoru/dy-ui)
 
-## Doc
+## Doc & Demo
 
 [https://hanekaoru.github.io](https://hanekaoru.github.io)
 
