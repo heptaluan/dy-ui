@@ -4,6 +4,8 @@ A UI components Library with Vue.js
 
 > there may be bugs, don't use it in production environment
 
+> theme by element, thanks to [element](https://github.com/ElemeFE/element)
+
 ## GitHub
 
 [https://github.com/hanekaoru/dy-ui](https://github.com/hanekaoru/dy-ui)
