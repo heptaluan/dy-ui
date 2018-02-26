@@ -16,7 +16,7 @@ A UI components Library with Vue.js
 
 ## NPM
 
-[![npm](https://img.shields.io/badge/npm-v0.2.8-blue.svg)](https://www.npmjs.com/package/dyui)
+[![npm](https://img.shields.io/badge/npm-v0.2.9-blue.svg)](https://www.npmjs.com/package/dyui)
 
 ## Support
 
