@@ -45,7 +45,7 @@
         <p>参数设置如下：</p>
         <p><code>size</code> -- 指定图标大小，默认大小为 <code>14</code></p>
         <p><code>type</code> -- 指定图标类型</p>
-        <p><code>class</code> -- 指定对应图标的 <code>class</code></p>
+        <p><code>class</code> -- 指定对应图标的 <code>class</code>，如果使用这个，需要额外载入一个 <code>iconfont.css</code> 文件</p>
     </div>
 </div>
 
@@ -63,7 +63,6 @@
     &lt;/template&gt;
     </code>
 </pre>
-
 
                 </li>
                 <li>

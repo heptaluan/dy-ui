@@ -41,8 +41,10 @@
     import App from './App.vue'
 
     // 需要注意的是
-    // 如果 iconfont 使用的是 class 类型（不使用 type 类型的话），则需要在入口处手动的引入对应的 iconfont css 文件，像下面这样
+    // 如果 iconfont（字体图标） 是使用 class 来指定对应图标，则需要在入口处手动的引入对应的 iconfont css 文件，像下面这样
     // import "../src/styles/iconfont/iconfont.css"
+
+    // ==> 如果是使用 type 来指定对应图标的话，则不需要多载入一个 css 文件
 
     import dyui from 'dyui'
     Vue.use(dyui)
@@ -63,7 +65,7 @@
         </div>
         
 <!-- 测试用 div -->
-<div style="height:500px;"></div>
+<div style="height:800px;"></div>
 
 </div>
 </template>

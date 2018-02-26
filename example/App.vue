@@ -31,6 +31,8 @@
 						<li><router-link to="/button">Button 按钮</router-link></li>
 						<li><router-link to="/tag">Tag 标签</router-link></li>
 
+						<li><router-link to="/badge">Badge 徽章</router-link></li>
+
 						<div class="list-title">Form</div>
 						<li><router-link to="/radio">Radio 单选框</router-link></li>
 						<li><router-link to="/checkbox">Checkbox 多选框</router-link></li>

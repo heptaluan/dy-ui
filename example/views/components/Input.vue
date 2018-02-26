@@ -77,13 +77,10 @@
     </code>
 </pre>
 
-                    
                 </li>
-
                 <li>
 
-
-<div class="components-content" style="height:90px;margin-bottom:0;">
+<div class="components-content" style="height:100px;margin-bottom:0;">
     <h2 class="h2">输入框（验证规则）</h2>
     <dy-input
         placeholder="请输入手机号码"
@@ -272,7 +269,7 @@
 
 <div class="components-content">
     <h2 class="h2">Input-Number</h2>
-    <div style="width:120px;">
+    <div style="width:100px;">
         <dy-input-number
             :max="100"
             :min="0"

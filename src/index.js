@@ -32,8 +32,7 @@ import { Collapse, CollapseItem } from "./components/Collapse";
 
 import { Article, ArticleHeader, ArticleBody, ArticleLead } from "./components/Article";
 import { SideBar } from "./components/SideBar";
-
-
+import { Badge } from "./components/Badge";
 
 const install = function (Vue) {
     Vue.component(Button.name, Button);
@@ -92,7 +91,7 @@ const install = function (Vue) {
     Vue.component(CollapseItem.name, CollapseItem);
 
     Vue.component(SideBar.name, SideBar);
-    
+    Vue.component(Badge.name, Badge);
     
     Vue.use(Notify);
     Vue.use(Message);
@@ -148,5 +147,6 @@ export default {
     ArticleHeader, 
     ArticleBody, 
     ArticleLead,
-    SideBar
+    SideBar,
+    Badge
 };

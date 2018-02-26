@@ -30,6 +30,7 @@ const Nav = () => import('./views/components/Nav.vue');
 const Article = () => import('./views/components/Article.vue');
 const Collapse = () => import('./views/components/Collapse.vue');
 const SideBar = () => import('./views/components/SideBar.vue');
+const Badge = () => import('./views/components/Badge.vue');
 
 
 export default new VueRouter({
@@ -61,6 +62,7 @@ export default new VueRouter({
         { path: '/article', component: Article },
         { path: '/collapse', component: Collapse },
         { path: '/sidebar', component: SideBar },
+        { path: '/badge', component: Badge },
         { path: '*', redirect: '/start'}
     ],
     // mode: "history",

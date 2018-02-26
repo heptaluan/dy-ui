@@ -9,9 +9,18 @@
 
 <div class="components-content">
     <h2 class="h2">SideBar 侧边栏</h2>
-    <dy-button @click="showHandle">侧边栏</dy-button>
-    <dy-sidebar :is-show.sync="showSidebar" :width="280">
-      <p>这里是侧边栏弹出层的内容部分</p>
+    <dy-button @click="showHandle01">左侧侧边栏</dy-button>
+    <dy-sidebar :is-show.sync="showSidebar01" :width="280">
+      <div class="side-box">
+        <p>这里是侧边栏弹出层的自定义内容部分</p>
+      </div>
+    </dy-sidebar>
+
+    <dy-button @click="showHandle02" style="margin-left:40px;">右侧侧边栏</dy-button>
+    <dy-sidebar placement="right" :is-show.sync="showSidebar02" :width="280">
+      <div class="side-box">
+        <p>这里是侧边栏弹出层的自定义内容部分</p>
+      </div>
     </dy-sidebar>
 </div>
 
@@ -25,6 +34,7 @@
         <p>参数设置如下：</p>
         <p><code>:is-show.sync</code> -- 布尔值，用于显示侧边栏的状态</p>
         <p><code>:width</code> -- 数值或者字符串，用于设置侧边栏的宽度，默认为 <code>250</code></p>
+        <p><code>placement</code> -- 用于指定侧边栏弹出方向</p>
     </div>
 </div>
 
@@ -32,9 +42,18 @@
     <code class="html">
     &lt;template&gt;
         
-      &lt;dy-button @click="showHandle"&gt;侧边栏&lt;/dy-button&gt;
-      &lt;dy-sidebar :is-show.sync="showSidebar" :width="280"&gt;
-        &lt;p&gt;这里是侧边栏弹出层的内容部分&lt;/p&gt;
+      &lt;dy-button @click="showHandle01"&gt;左侧侧边栏&lt;/dy-button&gt;
+      &lt;dy-sidebar :is-show.sync="showSidebar01" :width="280"&gt;
+        &lt;div class="side-box"&gt;
+          &lt;p&gt;这里是侧边栏弹出层的自定义内容部分&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/dy-sidebar&gt;
+
+      &lt;dy-button @click="showHandle02" style="margin-left:40px;"&gt;右侧侧边栏&lt;/dy-button&gt;
+      &lt;dy-sidebar placement="right" :is-show.sync="showSidebar02" :width="280"&gt;
+        &lt;div class="side-box"&gt;
+          &lt;p&gt;这里是侧边栏弹出层的自定义内容部分&lt;/p&gt;
+        &lt;/div&gt;
       &lt;/dy-sidebar&gt;
 
     &lt;/template&gt;
@@ -42,13 +61,17 @@
       export default {
         data () {
           return {
-            showSidebar: false
+            showSidebar01: false,
+            showSidebar02: false
           }
         },
         methods: {
-          showHandle () {
-            this.showSidebar = true
-          }
+          showHandle01 () {
+            this.showSidebar01 = true
+          },
+          showHandle02 () {
+            this.showSidebar02 = true
+          },
         }
       }
     &lt;/script&gt;
@@ -73,13 +96,17 @@
 	export default {
     data() {
       return {
-        showSidebar: false
+        showSidebar01: false,
+        showSidebar02: false
       }
     },
 		methods: {
-      showHandle () {
-        this.showSidebar = true
-      }
+      showHandle01 () {
+        this.showSidebar01 = true
+      },
+      showHandle02 () {
+        this.showSidebar02 = true
+      },
     }
 	};
 </script>
@@ -91,6 +118,11 @@
     }
 }
 
+.side-box {
+  padding: 10px;
+  font-size: 12px;
+  color: #9CDCFE;
+}
 </style>
 
 
