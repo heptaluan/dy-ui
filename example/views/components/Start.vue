@@ -35,10 +35,14 @@
     </div>
 </div>
 
-<pre v-highlightjs>
+<pre v-highlightjs class="start">
     <code class="js">
     import Vue from 'vue'
     import App from './App.vue'
+
+    // 需要注意的是
+    // 如果 iconfont 使用的是 class 类型（不使用 type 类型的话），则需要在入口处手动的引入对应的 iconfont css 文件，像下面这样
+    // import "../src/styles/iconfont/iconfont.css"
 
     import dyui from 'dyui'
     Vue.use(dyui)
@@ -54,7 +58,6 @@
     <div class="code-title">这样便完成了安装，可以在项目当中使用 <code>dyui</code> 了</div>
 </div>
 
-
                 </li>
             </ul>
         </div>
@@ -62,9 +65,16 @@
 <!-- 测试用 div -->
 <div style="height:500px;"></div>
 
-
-
-
 </div>
 </template>
 
+<style lang="scss">
+.start .hljs-comment {
+    font-style: normal;
+    font-size: 12px;
+}
+
+.components-code code {
+    color: #129CFF;
+}
+</style>

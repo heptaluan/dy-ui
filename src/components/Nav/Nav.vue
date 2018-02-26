@@ -1,5 +1,5 @@
 <template>
-    <ul class="dy-nav">
+    <ul class="dy-nav" :navActiveIndex="navActiveIndex">
         <slot></slot>
     </ul>
 </template>
@@ -8,6 +8,11 @@
     
     export default {
         name: "dy-nav",
-        props: {}
+        props: {
+            navActiveIndex: {
+                type: [Number, String],
+                default: 0
+            }
+        }
     }
 </script>

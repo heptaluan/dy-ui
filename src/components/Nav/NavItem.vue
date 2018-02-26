@@ -1,7 +1,7 @@
 <template>
     <li
         class="dy-nav-item"
-        :class="{ 'dy-nav-active': active}"
+        :class="{ 'dy-nav-active': this.$parent.navActiveIndex === this.index}"
     >
         <router-link v-if="link && router" :to="link">
             <slot></slot>
@@ -18,10 +18,6 @@
     export default {
         name: "dy-nav-item",
         props: {
-            active: {
-                type: Boolean,
-                default: false
-            },
             router: {
                 type: Boolean,
                 default: true
@@ -30,6 +26,9 @@
                 validator(val) {
                     return (typeof val === "string") || (toString.call(val) === "[object, object]" && val.path)
                 }
+            },
+            index: {
+                type: [String, Number]
             }
         },
         computed: {
