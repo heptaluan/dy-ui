@@ -5,6 +5,7 @@ import App from "./App.vue";
 // 引入组件和组件样式文件
 import dyui from "../src/index";
 import "../src/styles/index.scss";
+import "../src/styles/iconfont/iconfont.css";
 
 // 文档样式文件
 import "./styles/index.scss";
