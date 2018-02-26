@@ -31,6 +31,7 @@ import { Nav, NavItem } from "./components/Nav";
 import { Collapse, CollapseItem } from "./components/Collapse";
 
 import { Article, ArticleHeader, ArticleBody, ArticleLead } from "./components/Article";
+import { SideBar } from "./components/SideBar";
 
 
 
@@ -89,6 +90,8 @@ const install = function (Vue) {
 
     Vue.component(Collapse.name, Collapse);
     Vue.component(CollapseItem.name, CollapseItem);
+
+    Vue.component(SideBar.name, SideBar);
     
     
     Vue.use(Notify);
@@ -144,5 +147,6 @@ export default {
     Article, 
     ArticleHeader, 
     ArticleBody, 
-    ArticleLead
+    ArticleLead,
+    SideBar
 };

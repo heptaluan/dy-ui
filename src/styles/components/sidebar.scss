@@ -1,0 +1,24 @@
+.dy-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1091;
+  width: 270px;
+  max-width: 100%;
+  background: #999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: transform .3s ease-in-out;
+  transform: translateX(-100%);
+
+  &.dy-sidebar-active {
+    transform: translateX(0);
+  }
+}
+
+.dy-sidebar-right {
+  left: auto;
+  right: 0;
+  transform: translateX(100%);
+}

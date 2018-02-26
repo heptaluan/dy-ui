@@ -173,3 +173,46 @@
 .collapse-transition {
     transition: 0.3s height ease-in-out, 0.3s padding-top ease-in-out, 0.3s padding-bottom ease-in-out;
 }
+
+
+/**
+ * sidebar-left
+ */
+ .sidebar-left-enter-active {
+    animation: sidebarLeft .3s;
+}
+
+.sidebar-left-leave-active {
+    animation: sidebarLeft .3s reverse;
+}
+
+@keyframes sidebarLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/**
+ * sidebar-right
+ */
+.sidebar-right-enter-active {
+    animation: sidebarRight .3s;
+}
+
+.sidebar-right-leave-active {
+    animation: sidebarRight .3s reverse;
+}
+
+@keyframes sidebarRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

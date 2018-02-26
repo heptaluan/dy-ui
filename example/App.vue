@@ -40,6 +40,7 @@
 						<li><router-link to="/slider">Slider 滑块</router-link></li>
 						<li><router-link to="/dropDown">DropDown 下拉菜单</router-link></li>
 						<li><router-link to="/pagination">Pagination 分页</router-link></li>
+						<li><router-link to="/sidebar">SideBar 侧边栏</router-link></li>
 
 						<li><router-link to="/table">Table 表格</router-link></li>
 						<li><router-link to="/tab">Tab 选项卡</router-link></li>

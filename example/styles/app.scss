@@ -21,9 +21,8 @@
 		.wrapper-list {
 			float: left;
 			display: block;
-    		width: 18.66666667%;
+    		width: 15.66666667%;
 			padding: 15px 0;
-
 
             .list-title {
                 height: 48px;
@@ -32,7 +31,6 @@
                 padding-left: 28px;
                 color: #999;
             }
-			
 
 			ul {
 				width: auto;
@@ -41,12 +39,10 @@
     			flex: 0 0 auto;
 
 				li {
-					
 					position: relative;
 					cursor: pointer;
 					z-index: 1;
                     transition: all .2s ease-in-out;
-                    
 
 					a {
 						padding: 14px 24px;
@@ -70,10 +66,10 @@
 		.wrapper-content {
 			float: left;
 			display: block;
-			width: 81.33333333%;
+			width: 84.33333333%;
 			position: relative;
 			padding: 20px 0;
-			
+
 			&::after {
 				content: "";
 				display: block;
