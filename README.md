@@ -8,11 +8,11 @@ A UI components Library with Vue.js
 
 ## GitHub
 
-[https://github.com/hanekaoru/dy-ui](https://github.com/hanekaoru/dy-ui)
+[https://github.com/heptaluan/dy-ui](https://github.com/heptaluan/dy-ui)
 
 ## Doc & Demo
 
-[https://hanekaoru.github.io](https://hanekaoru.github.io)
+[https://heptaluan.github.io/](https://heptaluan.github.io/)
 
 ## NPM
 
