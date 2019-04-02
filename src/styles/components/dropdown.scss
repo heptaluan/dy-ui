@@ -1,85 +1,88 @@
 .dy-dropdown-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 920;
+  min-width: 160px;
+  padding: 15px 0;
+  margin: 9px 0 0;
+  text-align: left;
+  line-height: 1.4;
+  background-color: $--color-white;
+  border: 1px solid $--border-color-base;
+  border-radius: $--border-radius-base;
+  font-size: $--font-size-base;
+
+  &:before {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 920;
-    min-width: 160px;
-    padding: 15px 0;
-    margin: 9px 0 0;
-    text-align: left;
-    line-height: 1.4;
-    background-color: $--color-white;
-    border: 1px solid $--border-color-base;
-    border-radius: $--border-radius-base;
-    font-size: $--font-size-base;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px dashed transparent;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-width: 0 8px 8px;
+    border-bottom-color: $--border-color-base;
+    bottom: 0;
+    left: 10px;
+    top: -8px;
+    pointer-events: none;
+  }
 
-    &:before {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 0;
-        height: 0;
-        border: 8px dashed transparent;
-        z-index: 1;
-        border-bottom-style: solid;
-        border-width: 0 8px 8px;
-        border-bottom-color: $--border-color-base;
-        bottom: 0;
-        left: 10px;
-        top: -8px;
-        pointer-events: none;
-    }
+  &:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px dashed transparent;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-width: 0 8px 8px;
+    border-bottom-color: $--color-white;
+    bottom: -1px;
+    top: -7px;
+    left: 10px;
+    pointer-events: none;
+  }
 
-    &:after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 0;
-        height: 0;
-        border: 8px dashed transparent;
-        z-index: 1;
-        border-bottom-style: solid;
-        border-width: 0 8px 8px;
-        border-bottom-color: $--color-white;
-        bottom: -1px;
-        top: -7px;
-        left: 10px;
-        pointer-events: none;
-    }
+  li {
+    position: relative;
+    cursor: pointer;
+    padding: 5px 15px;
+    display: block;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-transition: background-color .15s;
+    transition: background-color .15s;
 
-    li {
-        position: relative;
-        cursor: pointer;
-        padding: 5px 15px;
-        display: block;
-        word-wrap: normal;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        -webkit-transition: background-color .15s;
-        transition: background-color .15s;
+    &.dy-header {
+      color: $--color-text-placeholder;
 
-        &.dy-header {
-            color: $--color-text-placeholder;
-            &:hover {
-                background-color: $--color-white;
-                cursor: default;
-                a {
-                    color: $--color-text-placeholder;
-                }
-            }
-        }
+      &:hover {
+        background-color: $--color-white;
+        cursor: default;
 
         a {
-            color: $--color-text-regular;
+          color: $--color-text-placeholder;
         }
-
-        &:hover {
-            background-color: $--primary-bg;
-            a {
-                color: $--color-primary;
-            }
-        }
-
+      }
     }
+
+    a {
+      color: $--color-text-regular;
+    }
+
+    &:hover {
+      background-color: $--primary-bg;
+
+      a {
+        color: $--color-primary;
+      }
+    }
+
+  }
 }

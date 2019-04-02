@@ -1,23 +1,23 @@
 @import "../mixins/_model.scss";
 
 .dy-prompt-header {
-    @include dialogHeader();
+  @include dialogHeader();
 }
 
 .dy-prompt-body {
-    @include dialogBody();
+  @include dialogBody();
 }
 
 .dy-prompt-footer {
-    @include dialogFooter();
+  @include dialogFooter();
 }
 
 .dy-prompt-input {
-    position: relative;
-    font-size: 14px;
-    padding: 10px 15px;
-    display: inline-block;
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 80px;
+  position: relative;
+  font-size: 14px;
+  padding: 10px 15px;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 80px;
 }

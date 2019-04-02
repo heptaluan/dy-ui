@@ -1,166 +1,166 @@
 // 下拉按钮
 .dy-selected {
-    position: relative;
-    display: inline-block;
-    width: 200px;
+  position: relative;
+  display: inline-block;
+  width: 200px;
 
-    .dy-select-button {
-        width: 100%;
-        padding-left: 10px;
+  .dy-select-button {
+    width: 100%;
+    padding-left: 10px;
 
-        .dy-button-text {
-            text-align: left;
-            width: 100%;
-            display: block;
-            word-wrap: normal;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .dy-button-icon {
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 6px solid #444;
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
+    .dy-button-text {
+      text-align: left;
+      width: 100%;
+      display: block;
+      word-wrap: normal;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
+
+    .dy-button-icon {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid #444;
+      position: absolute;
+      right: 10px;
+      top: 18px;
+    }
+  }
 }
 
 
 // 下拉框
 .dy-select-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 920;
+  min-width: 160px;
+  padding: 15px 0;
+  margin: 9px 0 0;
+  text-align: left;
+  line-height: 1.4;
+  background-color: $--color-white;
+  border: 1px solid $--border-color-base;
+  border-radius: $--border-radius-base;
+
+  &:before {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 920;
-    min-width: 160px;
-    padding: 15px 0;
-    margin: 9px 0 0;
-    text-align: left;
-    line-height: 1.4;
-    background-color: $--color-white;
-    border: 1px solid $--border-color-base;
-    border-radius: $--border-radius-base;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px dashed transparent;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-width: 0 8px 8px;
+    border-bottom-color: $--border-color-base;
+    bottom: 0;
+    left: 10px;
+    top: -8px;
+    pointer-events: none;
+  }
 
-    &:before {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 0;
-        height: 0;
-        border: 8px dashed transparent;
-        z-index: 1;
-        border-bottom-style: solid;
-        border-width: 0 8px 8px;
-        border-bottom-color: $--border-color-base;
-        bottom: 0;
-        left: 10px;
-        top: -8px;
-        pointer-events: none;
-    }
+  &:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px dashed transparent;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-width: 0 8px 8px;
+    border-bottom-color: $--color-white;
+    bottom: -1px;
+    top: -7px;
+    left: 10px;
+    pointer-events: none;
+  }
 
-    &:after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 0;
-        height: 0;
-        border: 8px dashed transparent;
-        z-index: 1;
-        border-bottom-style: solid;
-        border-width: 0 8px 8px;
-        border-bottom-color: $--color-white;
-        bottom: -1px;
-        top: -7px;
-        left: 10px;
-        pointer-events: none;
-    }
+  .dy-select-wrapper {
+    overflow-y: scroll;
+    box-sizing: border-box;
 
-    .dy-select-wrapper {
-        overflow-y: scroll;
-        box-sizing: border-box;
-        
-        .dy-select-list {
-            font-size: $--font-size-base;
-    
-            li {
-                position: relative;
-                cursor: pointer;
-                padding: 5px 10px;
-                transition: background-color .15s;
-    
-                .dy-select-text {
-                    display: block;
-                    word-wrap: normal;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    margin-right: 30px;
-                    color: $--color-text-regular;
-                }
-    
-                &.dy-checked {
-                    .dy-select-icon {
-                        opacity: 1;
-    
-                        &:after {
-                            border-color: $--color-primary;
-                            opacity: 1;
-                        }
-                    }
-    
-                    &:hover {
-                        .dy-select-icon {
-                            opacity: 1;
-                        }
-                    }
-                }
-    
-                &:hover {
-                    background-color: $--input-group-bg;
-    
-                    .dy-select-icon {
-                        opacity: .6;
-                        transition: $--all-transition;
-                    }
-    
-                }
-    
-                .dy-select-icon {
-                    position: absolute;
-                    right: 8px;
-                    top: 5px;
-                    opacity: 0;
-                    width: 14px;
-                    height: 14px;
-                    cursor: pointer;
-                    display: inline-block;
-                    vertical-align: middle;
-                
-                    &::after {
-                        border: 3px solid $--border-color-base;
-                        border-color: #999;
-                        -webkit-box-sizing: content-box;
-                        box-sizing: content-box;
-                        content: "";
-                        border-left: 0;
-                        border-top: 0;
-                        position: absolute;
-                        width: 4px;
-                        height: 9px;
-                        left: 4px;
-                        top: 1px;
-                        transform: rotate(45deg);
-                    }
-                }
-            }
+    .dy-select-list {
+      font-size: $--font-size-base;
+
+      li {
+        position: relative;
+        cursor: pointer;
+        padding: 5px 10px;
+        transition: background-color .15s;
+
+        .dy-select-text {
+          display: block;
+          word-wrap: normal;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          margin-right: 30px;
+          color: $--color-text-regular;
         }
-    }
 
-    
+        &.dy-checked {
+          .dy-select-icon {
+            opacity: 1;
+
+            &:after {
+              border-color: $--color-primary;
+              opacity: 1;
+            }
+          }
+
+          &:hover {
+            .dy-select-icon {
+              opacity: 1;
+            }
+          }
+        }
+
+        &:hover {
+          background-color: $--input-group-bg;
+
+          .dy-select-icon {
+            opacity: .6;
+            transition: $--all-transition;
+          }
+
+        }
+
+        .dy-select-icon {
+          position: absolute;
+          right: 8px;
+          top: 5px;
+          opacity: 0;
+          width: 14px;
+          height: 14px;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: middle;
+
+          &::after {
+            border: 3px solid $--border-color-base;
+            border-color: #999;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            content: "";
+            border-left: 0;
+            border-top: 0;
+            position: absolute;
+            width: 4px;
+            height: 9px;
+            left: 4px;
+            top: 1px;
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+
 }

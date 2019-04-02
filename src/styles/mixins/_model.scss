@@ -1,18 +1,18 @@
 // dialog public scss
 @mixin dialogHeader() {
-    position: relative;
-    padding: 15px;
-    padding-bottom: 10px;
+  position: relative;
+  padding: 15px;
+  padding-bottom: 10px;
 }
 
 @mixin dialogBody() {
-    position: relative;
-    padding: 10px 15px;
-    color: #606266;
-    font-size: 14px;
+  position: relative;
+  padding: 10px 15px;
+  color: #606266;
+  font-size: 14px;
 }
 
 @mixin dialogFooter() {
-    padding: 5px 15px 0;
-    text-align: right;
+  padding: 5px 15px 0;
+  text-align: right;
 }

@@ -1,27 +1,24 @@
 <template>
-	<div>
+  <div>
+    <back-to-top>
+      <dy-icon size="14" type="&#xe62d;"></dy-icon>
+    </back-to-top>
 
-		<back-to-top>
-			<dy-icon size="14" type="&#xe62d;"></dy-icon>
-		</back-to-top>
+    <header>
+      <div class="header">
+        <span>dyui</span>
+        <span class="subHeader">
+          <a target="_blank" href="https://github.com/hanekaoru/dy-ui">
+            <dy-icon size="26" type="&#xe719;"></dy-icon>
+          </a>
+        </span>
+      </div>
+    </header>
 
-		<header>
-			<div class="header">
-				<span>dyui</span>
-				<span class="subHeader">
-					<a target="_blank" href="https://github.com/hanekaoru/dy-ui">
-						<dy-icon size="26" type="&#xe719;"></dy-icon>
-					</a>
-				</span>
-			</div>
-		</header>
-		
-		<div class="wrapper">
-			
-			<div class="wrapper-container">
-
-				<div class="wrapper-list">
-					<ul>
+    <div class="wrapper">
+      <div class="wrapper-container">
+        <div class="wrapper-list">
+          <ul>
 
 						<div class="list-title">Basic</div>
 						<li><router-link to="/start">安装</router-link></li>
@@ -58,48 +55,47 @@
 						<li><router-link to="/collapse">Collapse 折叠菜单</router-link></li>
 						<li><router-link to="/nav">Nav 导航</router-link></li>
 						<li><router-link to="/article">Article 文章</router-link></li>
-
-
+						
 					</ul>
-					
-				</div>
+        </div>
 
-				<div class="wrapper-content">
-					<article>
-						<transition name="fade">
-							<router-view></router-view>
-						</transition>
-					</article>
-				</div>
-
-			</div>
-		</div>
-	</div>
+        <div class="wrapper-content">
+          <article>
+            <transition name="fade">
+              <router-view></router-view>
+            </transition>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss">
-.fade-enter-active, .fade-leave-active {
-	transition: opacity .3s
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
 }
 
-.fade-enter, .fade-leave-to  {
-	opacity: 0
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 
 .header {
-	.subHeader {
-		float: right;
-		padding: 0 15px;
-		
-		a {
-			color: #666;
-		}
-		
-		&:hover {
-			a {
-				color: #129CFF;
-			}
-		}
-	}
+  .subHeader {
+    float: right;
+    padding: 0 15px;
+
+    a {
+      color: #666;
+    }
+
+    &:hover {
+      a {
+        color: #129cff;
+      }
+    }
+  }
 }
 </style>

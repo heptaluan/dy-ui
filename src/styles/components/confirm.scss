@@ -1,13 +1,13 @@
 @import "../mixins/_model.scss";
 
 .dy-confirm-header {
-    @include dialogHeader();
+  @include dialogHeader();
 }
 
 .dy-confirm-body {
-    @include dialogBody();
+  @include dialogBody();
 }
 
 .dy-confirm-footer {
-    @include dialogFooter();
+  @include dialogFooter();
 }

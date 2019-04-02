@@ -21,7 +21,7 @@ class VNode {
 	isArray(o) {
 		return Object.prototype.toString.call(o) === "[object Array]"
 	}
-	
+
 	resolve(h) {
 		var children = this.children.map(child => {
 			if (child instanceof VNode) {

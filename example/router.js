@@ -34,39 +34,39 @@ const Badge = () => import('./views/components/Badge.vue');
 
 
 export default new VueRouter({
-    routes: [
-        { path: '/start', component: Start },
-        { path: '/table', component: Table },
-        { path: '/icon', component: Icon },
-        { path: '/close', component: Close },
-        { path: '/backtotop', component: BackToTop },
-        { path: '/button', component: Button },
-        { path: '/input', component: Input },
-        { path: '/radio', component: Radio },
-        { path: '/checkbox', component: Checkbox },
-        { path: '/switch', component: Switch },
-        { path: '/tooltip', component: ToolTip },
-        { path: '/notify', component: Notify },
-        { path: '/message', component: Message },
-        { path: '/dialog', component: Dialog },
-        { path: '/slider', component: Slider },
-        { path: '/select', component: Select },
-        { path: '/progress', component: Progress },
-        { path: '/loading', component: Loading },
-        { path: '/tab', component: Tab },
-        { path: '/carousel', component: Carousel },
-        { path: '/dropDown', component: DropDown },
-        { path: '/tag', component: Tag },
-        { path: '/pagination', component: Pagination },
-        { path: '/nav', component: Nav },
-        { path: '/article', component: Article },
-        { path: '/collapse', component: Collapse },
-        { path: '/sidebar', component: SideBar },
-        { path: '/badge', component: Badge },
-        { path: '*', redirect: '/start'}
-    ],
-    // mode: "history",
-    // scrollBehavior (to, from, savedPosition) {
-    //     return { x: 0, y: 0 }
-    // }
+  routes: [
+    { path: '/start', component: Start },
+    { path: '/table', component: Table },
+    { path: '/icon', component: Icon },
+    { path: '/close', component: Close },
+    { path: '/backtotop', component: BackToTop },
+    { path: '/button', component: Button },
+    { path: '/input', component: Input },
+    { path: '/radio', component: Radio },
+    { path: '/checkbox', component: Checkbox },
+    { path: '/switch', component: Switch },
+    { path: '/tooltip', component: ToolTip },
+    { path: '/notify', component: Notify },
+    { path: '/message', component: Message },
+    { path: '/dialog', component: Dialog },
+    { path: '/slider', component: Slider },
+    { path: '/select', component: Select },
+    { path: '/progress', component: Progress },
+    { path: '/loading', component: Loading },
+    { path: '/tab', component: Tab },
+    { path: '/carousel', component: Carousel },
+    { path: '/dropDown', component: DropDown },
+    { path: '/tag', component: Tag },
+    { path: '/pagination', component: Pagination },
+    { path: '/nav', component: Nav },
+    { path: '/article', component: Article },
+    { path: '/collapse', component: Collapse },
+    { path: '/sidebar', component: SideBar },
+    { path: '/badge', component: Badge },
+    { path: '*', redirect: '/start' }
+  ],
+  // mode: "history",
+  // scrollBehavior (to, from, savedPosition) {
+  //     return { x: 0, y: 0 }
+  // }
 });

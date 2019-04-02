@@ -1,13 +1,13 @@
 <template>
-    <article class="dy-article">
-        <slot></slot>
-    </article>
+  <article class="dy-article">
+    <slot></slot>
+  </article>
 </template>
 
 <script>
-    export default {
-        name: "dy-article",
-        props: {}
-    };
+export default {
+  name: "dy-article",
+  props: {}
+};
 </script>
 

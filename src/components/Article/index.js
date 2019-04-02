@@ -4,8 +4,8 @@ import ArticleBody from "./ArticleBody.vue";
 import ArticleLead from "./ArticleLead.vue";
 
 export {
-    Article,
-    ArticleHeader,
-    ArticleBody,
-    ArticleLead
+  Article,
+  ArticleHeader,
+  ArticleBody,
+  ArticleLead
 };

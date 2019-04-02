@@ -1,20 +1,19 @@
 .back-to-top {
-    position: fixed;
-    bottom: 5%;
-    right: 50px;
-    z-index: 99;
-    cursor: pointer;
-    padding: 8px 10px;
-    font-size: inherit;
-    box-sizing: border-box;
-    background-color: $--color-white;
-    border: $--border-base;
-    transition: $--all-transition;
+  position: fixed;
+  bottom: 5%;
+  right: 50px;
+  z-index: 99;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: inherit;
+  box-sizing: border-box;
+  background-color: $--color-white;
+  border: $--border-base;
+  transition: $--all-transition;
 
-    &:hover {
-        background: $--color-primary;
-        border-color: $--color-primary;
-        color: $--color-white;
-    }
+  &:hover {
+    background: $--color-primary;
+    border-color: $--color-primary;
+    color: $--color-white;
+  }
 }
-

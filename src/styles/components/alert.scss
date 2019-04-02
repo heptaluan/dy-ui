@@ -1,13 +1,13 @@
 @import "../mixins/_model.scss";
 
 .dy-alert-header {
-    @include dialogHeader();
+  @include dialogHeader();
 }
 
 .dy-alert-body {
-    @include dialogBody();
+  @include dialogBody();
 }
 
 .dy-alert-footer {
-    @include dialogFooter();
+  @include dialogFooter();
 }

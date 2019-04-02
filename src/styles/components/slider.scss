@@ -1,113 +1,108 @@
 .dy-slider {
-    &:after,
-    &:before {
-        display: table;
+
+  &:after,
+  &:before {
+    display: table;
+    content: "";
+  }
+
+  .dy-slider-box {
+    width: 100%;
+    height: 6px;
+    margin: 16px 0;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+    background-color: $--slider-bg;
+
+    &.show-input {
+      margin-right: 160px;
+      width: auto;
+    }
+
+    .dy-slider-bar {
+      height: 6px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      position: absolute;
+      background-color: $--color-primary;
+    }
+
+    .dy-slider-button-box {
+      height: 36px;
+      width: 36px;
+      position: absolute;
+      z-index: 99;
+      top: -15px;
+      transform: translateX(-50%);
+      background-color: transparent;
+      text-align: center;
+      user-select: none;
+
+      &:after {
         content: "";
-    }
-
-    .dy-slider-box {
-        width: 100%;
-        height: 6px;
-        margin: 16px 0;
-        border-radius: 3px;
-        position: relative;
-        cursor: pointer;
+        display: inline-block;
         vertical-align: middle;
-        background-color: $--slider-bg;
+        height: 100%;
+      }
 
-        &.show-input {
-            margin-right: 160px;
-            width: auto;
-        }
-
-        .dy-slider-bar {
-            height: 6px;
-            border-top-left-radius: 3px;
-            border-bottom-left-radius: 3px;
-            position: absolute;
-            background-color: $--color-primary;
-        }
-    
-        .dy-slider-button-box {
-            height: 36px;
-            width: 36px;
-            position: absolute;
-            z-index: 99;
-            top: -15px;
-            transform: translateX(-50%);
-            background-color: transparent;
-            text-align: center;
-            user-select: none;
-    
-            &:after {
-                content: "";
-                display: inline-block;
-                vertical-align: middle;
-                height: 100%;
-            }
-    
-            &.dragging {
-                .dy-slider-box-tooltip {
-                    opacity: 1;
-                }
-            }
-    
-            &.hover {
-                .dy-slider-box-tooltip {
-                    opacity: 1;
-                }
-            }
-            
-            .dy-slider-button {
-                width: 14px;
-                height: 14px;
-                border-radius: 50%;
-                transition: .2s;
-                user-select: none;
-                display: inline-block;
-                vertical-align: middle;
-                border: $--slider-border;
-                background-color: $--color-white;
-    
-                &:hover,
-                &.dragging {
-                    transform: scale(1.2);
-                }
-            }
-        }
-
+      &.dragging {
         .dy-slider-box-tooltip {
-            opacity: 0;
-            position: absolute;
-            top: -35px;
-            left: 0;
-            padding: 10px;
-            background: $--color-primary;
-            color: $--color-white;
-            border-radius: 6px;
-            font-size: 12px;
-            transition: $--all-transition;
+          opacity: 1;
         }
+      }
 
-        .dy-slider-step {
-            position: absolute;
-            height: 6px;
-            width: 6px;
-            border-radius: 100%;
-            background-color: $--color-white;
-            transform: translateX(-50%);
+      &.hover {
+        .dy-slider-box-tooltip {
+          opacity: 1;
         }
+      }
+
+      .dy-slider-button {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        transition: .2s;
+        user-select: none;
+        display: inline-block;
+        vertical-align: middle;
+        border: $--slider-border;
+        background-color: $--color-white;
+
+        &:hover,
+        &.dragging {
+          transform: scale(1.2);
+        }
+      }
     }
 
-    .dy-slider-input {
-        float: right;
-        margin-top: 3px;
-        width: 100px;
+    .dy-slider-box-tooltip {
+      opacity: 0;
+      position: absolute;
+      top: -35px;
+      left: 0;
+      padding: 10px;
+      background: $--color-primary;
+      color: $--color-white;
+      border-radius: 6px;
+      font-size: 12px;
+      transition: $--all-transition;
     }
+
+    .dy-slider-step {
+      position: absolute;
+      height: 6px;
+      width: 6px;
+      border-radius: 100%;
+      background-color: $--color-white;
+      transform: translateX(-50%);
+    }
+  }
+
+  .dy-slider-input {
+    float: right;
+    margin-top: 3px;
+    width: 100px;
+  }
 }
-
-
-
-
-
-

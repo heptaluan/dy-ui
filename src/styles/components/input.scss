@@ -1,6 +1,199 @@
 @import "../mixins/utils.scss";
 
 .dy-input {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  transition: $--all-transition;
+  border: $--border-base;
+  border-radius: $--border-radius-default;
+  font-size: $--font-size-small;
+
+  &:focus,
+  &:hover {
+    border-color: $--color-primary;
+  }
+
+  &.dy-input-disabled {
+    opacity: .8;
+    pointer-events: none;
+    user-select: none;
+    background-color: $--input-group-bg;
+  }
+
+}
+
+.dy-input-error {
+  border-color: $--danger-color;
+
+  &:focus {
+    border-color: $--danger-color;
+  }
+}
+
+.dy-input-error-msg {
+  color: $--danger-color;
+  font-size: $--font-size-small;
+  min-height: 18px;
+  margin-top: 2px;
+}
+
+.dy-textarea {
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  min-height: 80px;
+  overflow: auto;
+  font-family: inherit;
+  transition: $--border-transition-base;
+  border: $--border-base;
+  border-radius: $--border-radius-default;
+
+  &:focus,
+  &:hover {
+    border-color: $--color-primary;
+  }
+}
+
+.dy-input-group {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border-collapse: separate;
+
+  .dy-input-group-box {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .dy-input-group-prepend,
+  .dy-input-group-append {
+    display: table-cell;
+    box-sizing: border-box;
+    padding: 0 15px;
+    font-size: $--font-size-base;
+    text-align: center;
+    width: auto;
+    white-space: nowrap;
+    vertical-align: middle;
+    height: 40px;
+    line-height: 40px;
+    background-color: $--input-group-bg;
+    color: $--color-text-secondary;
+    border: $--border-base;
+    border-radius: $--border-radius-default;
+    user-select: none;
+  }
+}
+
+
+// 处理圆角和边框
+.dy-input-group.dy-prepend.dy-append {
+  .dy-input {
+    border-radius: 0;
+  }
+
+  .dy-input-group-prepend {
+    @include border-radius(left);
+    border-right: 0;
+  }
+
+  .dy-input-group-append {
+    @include border-radius(right);
+    border-left: 0;
+  }
+}
+
+.dy-input-group.dy-prepend {
+  .dy-input {
+    @include border-radius(right);
+  }
+
+  .dy-input-group-prepend {
+    @include border-radius(left);
+    border-right: 0;
+  }
+}
+
+.dy-input-group.dy-append {
+  .dy-input {
+    @include border-radius(left);
+  }
+
+  .dy-input-group-append {
+    @include border-radius(right);
+    border-left: 0;
+  }
+}
+
+
+// input-number
+.input-number {
+  position: relative;
+
+  .number-button {
+    width: 25px;
+    border-left: $--border-base;
+    border-radius: 0 4px 4px 0;
+    background: $--color-white;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+    z-index: 1;
+    box-sizing: border-box;
+
+    .input-number-btn {
+      display: block;
+      width: 100%;
+      height: 19px;
+      line-height: 19px;
+      text-align: center;
+      overflow: hidden;
+      color: #333;
+      position: relative;
+
+      &:hover {
+        color: $--color-primary;
+      }
+
+      &.upDisabled {
+        color: $--border-color-base;
+        cursor: not-allowed;
+      }
+
+      &.downDisabled {
+        color: $--border-color-base;
+        cursor: not-allowed;
+      }
+    }
+
+    .down-number {
+      border-top: $--border-base;
+      line-height: 15px;
+    }
+  }
+
+  &:hover {
+    .input-number-wrapper .dy-input {
+      border: 1px solid $--color-primary;
+      transition: $--all-transition;
+    }
+  }
+
+  .input-number-wrapper input {
+    width: 100%;
+    height: 40px;
     position: relative;
     display: inline-block;
     padding: 0 10px;
@@ -9,211 +202,19 @@
     transition: $--all-transition;
     border: $--border-base;
     border-radius: $--border-radius-default;
-    font-size: $--font-size-small;
 
     &:focus,
     &:hover {
-        border-color: $--color-primary;
+      border-color: $--color-primary;
     }
 
     &.dy-input-disabled {
-        opacity: .8;
-        pointer-events: none;
-        user-select: none;
-        background-color: $--input-group-bg;
+      opacity: .8;
+      pointer-events: none;
+      user-select: none;
+      background-color: $--input-group-bg;
     }
+  }
 
-}
-
-.dy-input-error {
-    border-color: $--danger-color;
-
-    &:focus {
-        border-color: $--danger-color;
-    }
-}
-
-.dy-input-error-msg {
-    color: $--danger-color;
-    font-size: $--font-size-small;
-    min-height: 18px;
-    margin-top: 2px;
-}
-
-.dy-textarea {
-    position: relative;
-    display: inline-block;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    outline: none;
-    resize: none;
-    min-height: 80px;
-    overflow: auto;
-    font-family: inherit;
-    transition: $--border-transition-base;
-    border: $--border-base;
-    border-radius: $--border-radius-default;
-    
-    &:focus,
-    &:hover {
-        border-color: $--color-primary;
-    }
-}
-
-.dy-input-group {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    border-collapse: separate;
-
-    .dy-input-group-box {
-        position: relative;
-        z-index: 2;
-        float: left;
-        width: 100%;
-        margin-bottom: 0;
-    }
-
-    .dy-input-group-prepend, .dy-input-group-append {
-        display: table-cell;
-        box-sizing: border-box;
-        padding: 0 15px;
-        font-size: $--font-size-base;
-        text-align: center;
-        width: auto;
-        white-space: nowrap;
-        vertical-align: middle;
-        height: 40px;
-        line-height: 40px;
-        background-color: $--input-group-bg;
-        color: $--color-text-secondary;
-        border: $--border-base;
-        border-radius: $--border-radius-default;
-        user-select: none;
-    }
-}
-
-
-// 处理圆角和边框
-.dy-input-group.dy-prepend.dy-append {
-    .dy-input {
-        border-radius: 0;
-    }
-
-    .dy-input-group-prepend {
-        @include border-radius(left);
-        border-right: 0;
-    }
-
-    .dy-input-group-append {
-        @include border-radius(right);
-        border-left: 0;
-    }
-}
-
-.dy-input-group.dy-prepend {
-    .dy-input {
-        @include border-radius(right);
-    }
-
-    .dy-input-group-prepend {
-        @include border-radius(left);
-        border-right: 0;
-    }
-}
-
-.dy-input-group.dy-append {
-    .dy-input {
-        @include border-radius(left);
-    }
-
-    .dy-input-group-append {
-        @include border-radius(right);
-        border-left: 0;
-    }
-}
-
-
-// input-number
-.input-number {
-    position: relative;
-
-    .number-button {
-        width: 25px;
-        border-left: $--border-base;
-        border-radius: 0 4px 4px 0;
-        background: $--color-white;
-        position: absolute;
-        top: 1px;
-        right: 1px;
-        opacity: 1;
-        transition: opacity .2s ease-in-out;
-        z-index: 1;
-        box-sizing: border-box;
-
-        .input-number-btn {
-            display: block;
-            width: 100%;
-            height: 19px;
-            line-height: 19px;
-            text-align: center;
-            overflow: hidden;
-            color: #333;
-            position: relative;
-
-            &:hover {
-                color: $--color-primary;
-            }
-
-            &.upDisabled {
-                color: $--border-color-base;
-                cursor: not-allowed;
-            }
-
-            &.downDisabled {
-                color: $--border-color-base;
-                cursor: not-allowed;
-            }
-        }
-
-        .down-number {
-            border-top: $--border-base;
-            line-height: 15px;
-        }
-    }
-
-    &:hover {
-        .input-number-wrapper .dy-input {
-            border: 1px solid $--color-primary;
-            transition: $--all-transition;
-        }
-    }
-
-    .input-number-wrapper input {
-        width: 100%;
-        height: 40px;
-        position: relative;
-        display: inline-block;
-        padding: 0 10px;
-        box-sizing: border-box;
-        outline: none;
-        transition: $--all-transition;
-        border: $--border-base;
-        border-radius: $--border-radius-default;
-
-        &:focus,
-        &:hover {
-            border-color: $--color-primary;
-        }
-
-        &.dy-input-disabled {
-            opacity: .8;
-            pointer-events: none;
-            user-select: none;
-            background-color: $--input-group-bg;
-        }
-    }
-    
 
 }

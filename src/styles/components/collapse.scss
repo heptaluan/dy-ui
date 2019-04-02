@@ -1,37 +1,37 @@
 .dy-collpase {
 
-    border-top: $--border-base;
+  border-top: $--border-base;
 
-    .dy-collapse-item {
-        border-bottom: $--border-base;
-        font-size: 14px;
-        color: $--color-text-regular;
+  .dy-collapse-item {
+    border-bottom: $--border-base;
+    font-size: 14px;
+    color: $--color-text-regular;
 
-        .dy-collapse-item-header {
-            width: 100%;
-            padding: 15px 0;
-            cursor: pointer;
+    .dy-collapse-item-header {
+      width: 100%;
+      padding: 15px 0;
+      cursor: pointer;
 
-            .dy-collapse-icon {
-                margin-right: 10px;
-                transition: $--all-transition;
-                float: right;
-                line-height: 20px;
-            }
-        }
-
-        .dy-collapse-content {
-            .dy-collapse-content-box {
-                line-height: 25px;
-                padding-bottom: 15px;
-            }
-        }
-
-        &.dy-collapse-item-active {
-            .dy-collapse-icon {
-                transition: $--all-transition;
-                transform: rotate(90deg);
-            }
-        }
+      .dy-collapse-icon {
+        margin-right: 10px;
+        transition: $--all-transition;
+        float: right;
+        line-height: 20px;
+      }
     }
+
+    .dy-collapse-content {
+      .dy-collapse-content-box {
+        line-height: 25px;
+        padding-bottom: 15px;
+      }
+    }
+
+    &.dy-collapse-item-active {
+      .dy-collapse-icon {
+        transition: $--all-transition;
+        transform: rotate(90deg);
+      }
+    }
+  }
 }

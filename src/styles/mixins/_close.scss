@@ -1,13 +1,13 @@
 // close button
 @mixin closeButton() {
-    display: inline-block;
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    opacity: .4;
-    text-align: center;
-    text-shadow: $--border-shadow;
-    cursor: pointer;
-    color: $--color-black;
-    transition: $--all-transition;
+  display: inline-block;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  opacity: .4;
+  text-align: center;
+  text-shadow: $--border-shadow;
+  cursor: pointer;
+  color: $--color-black;
+  transition: $--all-transition;
 }

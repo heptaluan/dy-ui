@@ -1,106 +1,106 @@
 .dy-tab {
-    .dy-tab-nav {
-        overflow: hidden;
-        font-size: $--font-size-base;
-        margin-bottom: -1px;
+  .dy-tab-nav {
+    overflow: hidden;
+    font-size: $--font-size-base;
+    margin-bottom: -1px;
 
-        li {
-            display: inline-block;
-            padding: 10px 20px;
-            border: 1px solid transparent;
-            cursor: pointer;
-            transition: $--all-transition;
+    li {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: $--all-transition;
 
-            &.dy-tab-active {
-                border: 1px solid $--border-color-base;
-                border-bottom-color: $--color-white;
-                color: $--color-primary;
-            }
-        }
-    }
-
-    .dy-tab-lists {
-        overflow: hidden;
+      &.dy-tab-active {
         border: 1px solid $--border-color-base;
-
-        .dy-tab-list {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            padding: 10px 20px;
-            visibility: hidden;
-            transition: transform .3s;
-            transform: translateX(-100%);
-            line-height: 1.5;
-
-            &.dy-list-active {
-                position: relative;
-                z-index: 100;
-                visibility: visible;
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
-            }
-
-            p {
-                font-size: $--font-size-base;
-            }
-        }
+        border-bottom-color: $--color-white;
+        color: $--color-primary;
+      }
     }
+  }
+
+  .dy-tab-lists {
+    overflow: hidden;
+    border: 1px solid $--border-color-base;
+
+    .dy-tab-list {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 10px 20px;
+      visibility: hidden;
+      transition: transform .3s;
+      transform: translateX(-100%);
+      line-height: 1.5;
+
+      &.dy-list-active {
+        position: relative;
+        z-index: 100;
+        visibility: visible;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+
+      p {
+        font-size: $--font-size-base;
+      }
+    }
+  }
 }
 
 
 // 竖直方向
 .dy-tab-vertical {
+  overflow: hidden;
+  height: 100%;
+  background-color: #F4F6F8;
+
+  .dy-tab-nav {
+    width: 15%;
     overflow: hidden;
+    float: left;
+    padding-left: 10px;
+    background-color: #F7F9FA;
     height: 100%;
-    background-color: #F4F6F8;
 
-    .dy-tab-nav {
-        width: 15%;
-        overflow: hidden;
-        float: left;
-        padding-left: 10px;
-        background-color: #F7F9FA;
-        height: 100%;
+    li {
+      float: left;
+      width: 100%;
+      font-size: 14px;
+      text-align: center;
+      padding: 5px 0;
+      margin-bottom: 10px;
+      cursor: pointer;
+      border: 1px solid transparent;
 
-        li {
-            float: left;
-            width: 100%;
-            font-size: 14px;
-            text-align: center;
-            padding: 5px 0;
-            margin-bottom: 10px;
-            cursor: pointer;
-            border: 1px solid transparent;
-
-            &.dy-tab-active {
-                color: $--color-primary;
-                border: 1px solid #d7dde4;
-                border-right: 1px solid #F7F9FA;
-                position: relative;
-                z-index: 2;
-                border-radius: 4px 0 0 4px;
-            }
-        }
-    }
-
-    .dy-tab-lists {
-        float: left;
-        width: 85%;
-        padding: 10px;
-        height: 100%;
+      &.dy-tab-active {
+        color: $--color-primary;
         border: 1px solid #d7dde4;
-        margin-left: -1px;
-
-        .dy-tab-list {
-            display: none;
-
-            &.dy-list-active {
-                display: block;
-                height: 100%;
-            }
-        }
-        
+        border-right: 1px solid #F7F9FA;
+        position: relative;
+        z-index: 2;
+        border-radius: 4px 0 0 4px;
+      }
     }
+  }
+
+  .dy-tab-lists {
+    float: left;
+    width: 85%;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid #d7dde4;
+    margin-left: -1px;
+
+    .dy-tab-list {
+      display: none;
+
+      &.dy-list-active {
+        display: block;
+        height: 100%;
+      }
+    }
+
+  }
 }

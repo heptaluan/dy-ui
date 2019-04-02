@@ -1,109 +1,112 @@
 .dy-carousel-box {
-    margin: 0 0 20px;
-    background-color: $--color-white;
-    border-radius: 2px;
-    box-shadow: $--border-shadow-little;
+  margin: 0 0 20px;
+  background-color: $--color-white;
+  border-radius: 2px;
+  box-shadow: $--border-shadow-little;
+  position: relative;
+  transition: $--all-transition;
+
+  &:hover {
+
+    .dy-carousel-prev a,
+    .dy-carousel-next a {
+      opacity: 1 !important;
+    }
+  }
+
+  .dy-carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     position: relative;
-    transition: $--all-transition;
 
-    &:hover {
-        .dy-carousel-prev a, .dy-carousel-next a {
-            opacity: 1 !important;
-        }
-    }
+    .dy-carousel-item {
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      overflow: hidden;
+      z-index: 0;
+      transition: $--all-transition;
 
-    .dy-carousel {
+      img {
         width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
+        display: block;
+        box-sizing: border-box;
+        border: 0;
+      }
+    }
+  }
 
-        .dy-carousel-item {
-            -webkit-backface-visibility: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-            overflow: hidden;
-            z-index: 0;
-            transition: $--all-transition;
+  .dy-carousel-nav {
 
-            img {
-                width: 100%;
-                display: block;
-                box-sizing: border-box;
-                border: 0;
-            }
-        }
+    .dy-carousel-prev a,
+    .dy-carousel-next a {
+      border: none;
+      outline: none;
+      padding: 0;
+      margin: 0;
+      height: 36px;
+      width: 36px;
+      cursor: pointer;
+      transition: .3s;
+      border-radius: 50%;
+      background-color: $--color-text-secondary;
+      color: $--color-white;
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      transform: translateY(-50%);
+      text-align: center;
+      opacity: .35;
+
+      .iconfont {
+        color: $--color-white;
+        vertical-align: baseline;
+        line-height: 36px !important;
+      }
     }
 
-    .dy-carousel-nav {
-
-        .dy-carousel-prev a, .dy-carousel-next a {
-            border: none;
-            outline: none;
-            padding: 0;
-            margin: 0;
-            height: 36px;
-            width: 36px;
-            cursor: pointer;
-            transition: .3s;
-            border-radius: 50%;
-            background-color: $--color-text-secondary;
-            color: $--color-white;
-            position: absolute;
-            top: 50%;
-            z-index: 10;
-            transform: translateY(-50%);
-            text-align: center;
-            opacity: .35;
-
-            .iconfont {
-                color: $--color-white;
-                vertical-align: baseline;
-                line-height: 36px !important;
-            }
-        }
-
-        .dy-carousel-prev a {
-            left: 10px;
-        }
-
-        .dy-carousel-next a {
-            right: 10px;
-        }
+    .dy-carousel-prev a {
+      left: 10px;
     }
 
-    .dy-carousel-control {
-        width: 100%;
-        position: absolute;
-        bottom: -15px;
-        text-align: center;
-
-        li {
-            margin: 0 6px;
-            display: inline-block;
-
-            a {
-                width: 8px;
-                height: 8px;
-                display: block;
-                background-color: $--color-text-secondary;
-                background-color: rgba(0,0,0,.5);
-                line-height: 0;
-                font-size: 0;
-                cursor: pointer;
-                text-indent: -9999px;
-                border-radius: 20px;
-                box-shadow: $--border-shadow-little;
-
-                &.dy-carousel-control-active {
-                    background-color: $--color-primary;
-                    cursor: default;
-                }
-            }
-        }
+    .dy-carousel-next a {
+      right: 10px;
     }
+  }
+
+  .dy-carousel-control {
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+    text-align: center;
+
+    li {
+      margin: 0 6px;
+      display: inline-block;
+
+      a {
+        width: 8px;
+        height: 8px;
+        display: block;
+        background-color: $--color-text-secondary;
+        background-color: rgba(0, 0, 0, .5);
+        line-height: 0;
+        font-size: 0;
+        cursor: pointer;
+        text-indent: -9999px;
+        border-radius: 20px;
+        box-shadow: $--border-shadow-little;
+
+        &.dy-carousel-control-active {
+          background-color: $--color-primary;
+          cursor: default;
+        }
+      }
+    }
+  }
 }

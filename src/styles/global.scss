@@ -147,12 +147,14 @@ $--slider-border: 2px solid #C0D4EB;
 $--progress-bg: #ebeef5;
 $--progress-images-gradient: linear-gradient(45deg,hsla(0,0%,100%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,100%,.15) 0,hsla(0,0%,100%,.15) 75%,transparent 0,transparent);
 
+
 // 斑马线动画
 @keyframes progress-bar-stripes {
-    from {
-        background-position: 36px 0;
-    }
-    to {
-        background-position: 0 0;
-    }
+  from {
+    background-position: 36px 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
 }

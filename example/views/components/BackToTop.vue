@@ -1,29 +1,32 @@
 <template>
-<div class="components-box">
+  <div class="components-box">
+    <div class="components-title">BackToTop 回到顶部</div>
 
-        <div class="components-title">BackToTop 回到顶部</div>
+    <div class="components-wrapper">
+      <ul>
+        <li>
+          <div class="components-content">
+            <div class="components-content">
+              <h2 class="h2">BackToTop 回到顶部</h2>
+            </div>
+          </div>
 
-        <div class="components-wrapper">
-            <ul>
-                <li>
+          <div class="components-code">
+            <div class="code-title">示例代码</div>
+            <div class="code-tip">
+              <p>
+                直接使用
+                <code>back-to-top</code> 组件即可，
+                <code>click</code> 事件已经封装在内部
+              </p>
+              <p>
+                按钮内部显示内容可以自行定义，这里使用的是
+                <code>Icon</code> 组件
+              </p>
+            </div>
+          </div>
 
-
-<div class="components-content">
-    <div class="components-content">
-        <h2 class="h2">BackToTop 回到顶部</h2>
-    </div>
-</div>
-
-
-<div class="components-code">
-    <div class="code-title">示例代码</div>
-    <div class="code-tip">
-        <p>直接使用 <code>back-to-top</code> 组件即可，<code>click</code> 事件已经封装在内部</p>
-        <p>按钮内部显示内容可以自行定义，这里使用的是 <code>Icon</code> 组件</p>
-    </div>
-</div>
-
-<pre v-highlightjs>
+          <pre v-highlightjs>
     <code class="html">
     &lt;template&gt;
         
@@ -34,28 +37,23 @@
     &lt;/template&gt;
     </code>
 </pre>
+        </li>
+      </ul>
+    </div>
 
-
-                </li>
-            </ul>
-        </div>
-        
-
-<!-- 测试用 div -->
-<div style="height:800px;"></div>
-
-
-</div>
+    <!-- 测试用 div -->
+    <div style="height:800px;"></div>
+  </div>
 </template>
 
 
 <style lang="scss">
 .dy-close {
-    margin-left: 25px;
+  margin-left: 25px;
 
-    &:first-child {
-        margin-left: 0;
-    }
+  &:first-child {
+    margin-left: 0;
+  }
 }
 </style>
 
