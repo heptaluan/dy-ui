@@ -1,85 +1,85 @@
 .header {
-	width: 90%;
-	margin: 0 auto;
-	height: 80px;
-	line-height: 80px;
-	font-size: 18px;
+  width: 90%;
+  margin: 0 auto;
+  height: 80px;
+  line-height: 80px;
+  font-size: 18px;
 }
 
 .wrapper {
-	background: #eee;
-	padding: 1px;
+  background: #eee;
+  padding: 1px;
 
-	.wrapper-container {
-		background: #fff;
-		width: 1280px;
-		margin: 30px auto 20px;
-		border-radius: 6px;
-		box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
-		overflow: hidden;
+  .wrapper-container {
+    background: #fff;
+    width: 1280px;
+    margin: 30px auto 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+    overflow: hidden;
 
-		.wrapper-list {
-			float: left;
-			display: block;
-    		width: 15.66666667%;
-			padding: 15px 0;
+    .wrapper-list {
+      float: left;
+      display: block;
+      width: 15.66666667%;
+      padding: 15px 0;
 
-            .list-title {
-                height: 48px;
-                line-height: 48px;
-                font-size: 14px;
-                padding-left: 28px;
-                color: #999;
+      .list-title {
+        height: 48px;
+        line-height: 48px;
+        font-size: 14px;
+        padding-left: 28px;
+        color: #999;
+      }
+
+      ul {
+        width: auto;
+        padding: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+
+        li {
+          position: relative;
+          cursor: pointer;
+          z-index: 1;
+          transition: all .2s ease-in-out;
+
+          a {
+            padding: 14px 24px;
+            display: inline-block;
+            width: 100%;
+            font-size: 14px;
+            color: #495060;
+
+            &.router-link-active {
+              color: #129CFF;
             }
+          }
 
-			ul {
-				width: auto;
-				padding: 0;
-				 -ms-flex: 0 0 auto;
-    			flex: 0 0 auto;
+          &:hover {
+            background: #f3f3f3;
+          }
+        }
+      }
+    }
 
-				li {
-					position: relative;
-					cursor: pointer;
-					z-index: 1;
-                    transition: all .2s ease-in-out;
+    .wrapper-content {
+      float: left;
+      display: block;
+      width: 84.33333333%;
+      position: relative;
+      padding: 20px 0;
 
-					a {
-						padding: 14px 24px;
-						display: inline-block;
-                        width: 100%;
-                        font-size: 14px;
-						color: #495060;
-						
-						&.router-link-active {
-							color: #129CFF;
-						}
-                    }
-                    
-                    &:hover {
-                        background: #f3f3f3;
-                    }
-				}
-			}
-		}
-
-		.wrapper-content {
-			float: left;
-			display: block;
-			width: 84.33333333%;
-			position: relative;
-			padding: 20px 0;
-
-			&::after {
-				content: "";
-				display: block;
-				width: 1px;
-				background: #d7dde4;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: -1px;
-			}
-		}
-	}
+      &::after {
+        content: "";
+        display: block;
+        width: 1px;
+        background: #d7dde4;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -1px;
+      }
+    }
+  }
 }

@@ -1,62 +1,61 @@
 <template>
-    <li
-        class="dy-nav-item"
-        :class="{ 'dy-nav-active': this.$parent.navActiveIndex === this.index}"
-    >
-        <router-link v-if="link && router" :to="link">
-            <slot></slot>
-        </router-link>
-        <a class="dy-nav-a" :href="link" v-if="link && !router">
-            <slot></slot>
-        </a>
-        <slot v-if="!link"></slot>
-    </li>
+  <li class="dy-nav-item" :class="{ 'dy-nav-active': this.$parent.navActiveIndex === this.index}">
+    <router-link v-if="link && router" :to="link">
+      <slot></slot>
+    </router-link>
+    <a class="dy-nav-a" :href="link" v-if="link && !router">
+      <slot></slot>
+    </a>
+    <slot v-if="!link"></slot>
+  </li>
 </template>
 
 <script>
-    
-    export default {
-        name: "dy-nav-item",
-        props: {
-            router: {
-                type: Boolean,
-                default: true
-            },
-            to: {
-                validator(val) {
-                    return (typeof val === "string") || (toString.call(val) === "[object, object]" && val.path)
-                }
-            },
-            index: {
-                type: [String, Number]
-            }
-        },
-        computed: {
-            link() {
-                if (typeof this.to === "string") {
-                    return this.to;
-                } else if (toString.call(this.to) === "[object, object]") {
-                    let link = this.to.path;
-
-                    if (this.to.params) {
-                        for (let param in this.to.params) {
-                            link += `/${this.to.params[param]}`
-                        }
-                    }
-
-                    if (this.to.query) {
-                        let querys = [];
-                        for (let property in this.to.querys) {
-                            querys.push(property + "=" + this.to.query[property])
-                        }
-                        link += `?${querys.join("&")}`
-                    }
-
-                    return link;
-                } else {
-                    return false;
-                }
-            }
-        }
+export default {
+  name: "dy-nav-item",
+  props: {
+    router: {
+      type: Boolean,
+      default: true
+    },
+    to: {
+      validator(val) {
+        return (
+          typeof val === "string" ||
+          (toString.call(val) === "[object, object]" && val.path)
+        );
+      }
+    },
+    index: {
+      type: [String, Number]
     }
+  },
+  computed: {
+    link() {
+      if (typeof this.to === "string") {
+        return this.to;
+      } else if (toString.call(this.to) === "[object, object]") {
+        let link = this.to.path;
+
+        if (this.to.params) {
+          for (let param in this.to.params) {
+            link += `/${this.to.params[param]}`;
+          }
+        }
+
+        if (this.to.query) {
+          let querys = [];
+          for (let property in this.to.querys) {
+            querys.push(property + "=" + this.to.query[property]);
+          }
+          link += `?${querys.join("&")}`;
+        }
+
+        return link;
+      } else {
+        return false;
+      }
+    }
+  }
+};
 </script>

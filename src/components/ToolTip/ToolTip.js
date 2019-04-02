@@ -61,7 +61,7 @@ var RealTooltip = Vue.extend({
 			this._createPopup()
 			this._setPopupContent()
 
-			this.$nextTick( () => {
+			this.$nextTick(() => {
 				this.popup.show()
 			})
 		},
@@ -174,7 +174,7 @@ var RealTooltipPopup = Vue.extend({
 			attrs: {
 				"x-placement": this.placement
 			}
-		}).push( createToolTip("div.dy-tooltip-popup-inner", {}, [this.content]) )
+		}).push(createToolTip("div.dy-tooltip-popup-inner", {}, [this.content]))
 
 		return $wrapper.resolve(h)
 	}

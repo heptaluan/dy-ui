@@ -4,8 +4,8 @@ import ModelBody from "./ModelBody.vue";
 import ModelFooter from "./ModelFooter.vue";
 
 export {
-    Model,
-    ModelHeader,
-    ModelBody,
-    ModelFooter
+  Model,
+  ModelHeader,
+  ModelBody,
+  ModelFooter
 }

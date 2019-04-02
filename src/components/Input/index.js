@@ -3,7 +3,7 @@ import InputGroup from "./InputGroup.vue"
 import InputNumber from './InputNumber.vue'
 
 export {
-    Input,
-    InputGroup,
-    InputNumber
+  Input,
+  InputGroup,
+  InputNumber
 }

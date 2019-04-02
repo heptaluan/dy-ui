@@ -1,75 +1,75 @@
 .components-box {
 
-    .components-title {
-        font-size: 22px;
-        margin: 24px 0;
-        color: #129CFF;
-        padding: 0 40px;
-    }
+  .components-title {
+    font-size: 22px;
+    margin: 24px 0;
+    color: #129CFF;
+    padding: 0 40px;
+  }
 
-    .components-wrapper {
+  .components-wrapper {
 
-        ul {
-        
-            li {
-                padding: 10px 40px 5px;
-                border-top: 1px solid #d7dde4;
+    ul {
 
-                .components-content {
-                    margin-top: 15px;
-                    margin-bottom: 20px;
-                    
-                    h2 {
-                        font-size: 16px;
-                        font-weight: normal;
-                        margin: 20px 0;
-                        font-weight: 600;
-                    }
+      li {
+        padding: 10px 40px 5px;
+        border-top: 1px solid #d7dde4;
 
-                    .subBox {
-                        font-size: 14px;
-                    }
-                }
+        .components-content {
+          margin-top: 15px;
+          margin-bottom: 20px;
 
-                .components-code {
-                    
+          h2 {
+            font-size: 16px;
+            font-weight: normal;
+            margin: 20px 0;
+            font-weight: 600;
+          }
 
-                    .code-title {
-                        font-size: 14px;
-                        margin-bottom: 15px;
-                    }
-
-                    .code-tip {
-                        display: block;
-                        padding: .5em;
-                        background: #23241f;
-                        color: #fff;
-                        font-size: 14px;
-                        text-indent: 10px;
-                        padding: 10px 0;
-
-                        p {
-                            margin: 5px;
-                        }
-
-                        code {
-                            color: #9CDCFE;
-                        }
-                    }
-                }
-            }
+          .subBox {
+            font-size: 14px;
+          }
         }
-    }
 
-    pre {
-        display: block;
-        font-size: 14px;
-        margin: -30px 0 0 0;
-        padding: 0;
-        width: 100%;
+        .components-code {
+
+
+          .code-title {
+            font-size: 14px;
+            margin-bottom: 15px;
+          }
+
+          .code-tip {
+            display: block;
+            padding: .5em;
+            background: #23241f;
+            color: #fff;
+            font-size: 14px;
+            text-indent: 10px;
+            padding: 10px 0;
+
+            p {
+              margin: 5px;
+            }
+
+            code {
+              color: #9CDCFE;
+            }
+          }
+        }
+      }
     }
+  }
+
+  pre {
+    display: block;
+    font-size: 14px;
+    margin: -30px 0 0 0;
+    padding: 0;
+    width: 100%;
+  }
 }
 
 code {
-    font-family: Menlo,Monaco,Consolas,Courier,monospace;
+  font-family: Menlo, Monaco, Consolas, Courier, monospace;
 }
