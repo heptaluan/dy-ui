@@ -12,7 +12,7 @@ A UI components Library with Vue.js
 
 ## Doc & Demo
 
-[https://heptaluan.github.io/](https://heptaluan.github.io/)
+[https://heptaluan.github.io/dyui-example/](https://heptaluan.github.io/dyui-example/)
 
 ## NPM
 
