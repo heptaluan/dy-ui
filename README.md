@@ -12,7 +12,7 @@ A UI components Library with Vue.js
 
 ## Doc & Demo
 
-[dyui-example](https://heptaluan.github.io/dyui-example/index.html)
+[example](https://heptaluan.github.io/dyui-example/index.html)
 
 ## NPM
 
@@ -33,19 +33,19 @@ npm install dyui --save
 ## Usage
 
 ```js
-import Vue from "vue";
-import router from "./router";
-import App from "./App.vue";
+import Vue from 'vue';
+import router from "./router';
+import App from './App.vue';
 
 // import and use
-import dyui from "dyui";
+import dyui from 'dyui';
 Vue.use(dyui);
 
 new Vue({
-    el: "#app",
-    router,
-    template: "<App/>",
-    components: { App }
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: { App }
 })
 
 ```
