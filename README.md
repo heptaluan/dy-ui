@@ -2,15 +2,7 @@
 
 A UI components Library with Vue.js
 
-> there may be bugs, don't use it in production environment
-
-> theme by element, thanks to [element](https://github.com/ElemeFE/element)
-
-## GitHub
-
-[https://github.com/heptaluan/dy-ui](https://github.com/heptaluan/dy-ui)
-
-## Doc & Demo
+## Example & Doc
 
 [example](https://heptaluan.github.io/dyui-example/index.html)
 
